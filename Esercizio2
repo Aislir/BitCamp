@@ -305,11 +305,11 @@
     </mxGraphModel>
   </diagram>
   <diagram id="sF83ffcVxZ2YoaAbrgXo" name="Pagina-4">
-    <mxGraphModel dx="1430" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1185" dy="651" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="_06rt207cARqU3DLe2Ya-1" value="ESERCIZIO 6&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Inizio&lt;/div&gt;&lt;div&gt;2. Inserisci un numero&lt;/div&gt;&lt;div&gt;3. Verifica se il numero sia positivo o negativo&lt;/div&gt;&lt;div&gt;4. Se e&#39; positivo, calcola la radice quadrata, altrimenti da&#39; errore&lt;/div&gt;&lt;div&gt;5. Fine&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="_06rt207cARqU3DLe2Ya-1" value="ESERCIZIO 6&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Inizio&lt;/div&gt;&lt;div&gt;2. Inserisci un numero&lt;/div&gt;&lt;div&gt;3. Verifica se il numero e&#39; positivo&lt;/div&gt;&lt;div&gt;4. Se e&#39; positivo, calcola la radice quadrata, altrimenti da&#39; errore&lt;/div&gt;&lt;div&gt;5. Fine&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="234" y="40" width="360" height="110" as="geometry" />
         </mxCell>
         <mxCell id="_06rt207cARqU3DLe2Ya-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_06rt207cARqU3DLe2Ya-2" target="_06rt207cARqU3DLe2Ya-3">
