@@ -124,12 +124,12 @@
     </mxGraphModel>
   </diagram>
   <diagram id="dwJBkwd-oxi3XPqIGU6u" name="Pagina-2">
-    <mxGraphModel dx="1185" dy="651" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1185" dy="1820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="KSd2svwKP0l6ZZcEitFI-1" value="ESERCIZIO 4&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Inizio&lt;/div&gt;&lt;div&gt;2. Crea un numero segreto in modo casuale&lt;/div&gt;&lt;div&gt;3. Inserire un numero&lt;/div&gt;&lt;div&gt;4. Verifica se il numero inserito sia uguale al numero segreto&lt;/div&gt;&lt;div&gt;5. Se il numero e&#39; uguale, hai vinto&lt;/div&gt;&lt;div&gt;6. Se e&#39; diverso, controlla se il numero inserito sia maggiore o&amp;nbsp;&lt;/div&gt;&lt;div&gt;minore del numero segreto&lt;/div&gt;&lt;div&gt;7. Visualizza se il numero sia maggiore o minore e torna al punto 3&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="224" width="380" height="160" as="geometry" />
+        <mxCell id="KSd2svwKP0l6ZZcEitFI-1" value="ESERCIZIO 4&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Inizio&lt;/div&gt;&lt;div&gt;2. Crea un numero segreto in modo casuale&lt;/div&gt;&lt;div&gt;3. Inserire un numero&lt;/div&gt;&lt;div&gt;4. Verifica se il numero inserito sia uguale al numero segreto&lt;/div&gt;&lt;div&gt;5. Se il numero e&#39; uguale, hai vinto&lt;/div&gt;&lt;div&gt;6. Se e&#39; diverso, controlla se il numero inserito sia maggiore o&amp;nbsp;&lt;/div&gt;&lt;div&gt;minore del numero segreto&lt;/div&gt;&lt;div&gt;7. Visualizza se il numero sia maggiore o minore e torna al punto 3&lt;/div&gt;&lt;div&gt;8. Fine&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="224" y="-5" width="380" height="170" as="geometry" />
         </mxCell>
         <mxCell id="yUeMDuwrckHV0RSJEI8P-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yUeMDuwrckHV0RSJEI8P-1" target="yUeMDuwrckHV0RSJEI8P-2">
           <mxGeometry relative="1" as="geometry" />
