@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.17" pages="3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.17" pages="5">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="988" dy="543" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -223,7 +223,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="7n-rZaTH4B8O23qZeAkH" name="Pagina-3">
-    <mxGraphModel dx="988" dy="2881" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1430" dy="3124" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -245,7 +245,7 @@
         <mxCell id="-xRFeKUygIIf-XBN7vl2-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-xRFeKUygIIf-XBN7vl2-9" target="-xRFeKUygIIf-XBN7vl2-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-xRFeKUygIIf-XBN7vl2-9" value="Inserisci i = 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="-xRFeKUygIIf-XBN7vl2-9" value="i = 0" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="354" y="-1950" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-xRFeKUygIIf-XBN7vl2-11" value="i++" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -300,6 +300,104 @@
         </mxCell>
         <mxCell id="-xRFeKUygIIf-XBN7vl2-24" value="Fine" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="190" y="-1752.5" width="80" height="55" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="sF83ffcVxZ2YoaAbrgXo" name="Pagina-4">
+    <mxGraphModel dx="988" dy="543" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_06rt207cARqU3DLe2Ya-1" value="ESERCIZIO 6&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Inizio&lt;/div&gt;&lt;div&gt;2. Inserisci un numero&lt;/div&gt;&lt;div&gt;3. Verifica se il numero sia positivo o negativo&lt;/div&gt;&lt;div&gt;4. Se e&#39; positivo, calcola la radice quadrata, altrimenti da&#39; errore&lt;/div&gt;&lt;div&gt;5. Fine&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="234" y="40" width="360" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_06rt207cARqU3DLe2Ya-2" target="_06rt207cARqU3DLe2Ya-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-2" value="Inizio" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="374" y="210" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_06rt207cARqU3DLe2Ya-3" target="_06rt207cARqU3DLe2Ya-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-3" value="Inserisci un numero" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="341" y="300" width="146" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_06rt207cARqU3DLe2Ya-5" target="_06rt207cARqU3DLe2Ya-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-9" value="True" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_06rt207cARqU3DLe2Ya-8">
+          <mxGeometry x="-0.4095" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_06rt207cARqU3DLe2Ya-5" target="_06rt207cARqU3DLe2Ya-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-14" value="False" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_06rt207cARqU3DLe2Ya-11">
+          <mxGeometry x="-0.2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-5" value="n &amp;gt; 0&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="374" y="400" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_06rt207cARqU3DLe2Ya-7" target="_06rt207cARqU3DLe2Ya-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-7" value="Calcolo radice quadrata di n" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="194" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_06rt207cARqU3DLe2Ya-10" target="_06rt207cARqU3DLe2Ya-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-10" value="!ERRORE" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="514" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_06rt207cARqU3DLe2Ya-12" target="_06rt207cARqU3DLe2Ya-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-12" value="Visualizza risultato" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="186" y="525" width="136" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_06rt207cARqU3DLe2Ya-15" value="Fine" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="374" y="532.5" width="80" height="45" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="seWPcPgHwZUT7OIxTn8u" name="Pagina-5">
+    <mxGraphModel dx="988" dy="1712" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6NeReFyUPM7r3XF0JmJx-1" value="ESERCIZIO 7&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Inizio&lt;/div&gt;&lt;div&gt;2. Inserisci un numero tra 1 e 10&lt;/div&gt;&lt;div&gt;3. Inizializza numero vincente casuale tra 1 e 10&lt;/div&gt;&lt;div&gt;4. Verifica se il numero e&#39; vincente&lt;/div&gt;&lt;div&gt;5. Se il numero combacia, l&#39;utente ha vinto. Se il numero&lt;/div&gt;&lt;div&gt;e&#39; diverso, pone i = 1&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="254" y="-10" width="320" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="nLzIeJjNGztEU1Sr5FEF-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nLzIeJjNGztEU1Sr5FEF-1" target="nLzIeJjNGztEU1Sr5FEF-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nLzIeJjNGztEU1Sr5FEF-1" value="Inizio" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="180" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nLzIeJjNGztEU1Sr5FEF-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="nLzIeJjNGztEU1Sr5FEF-1" target="nLzIeJjNGztEU1Sr5FEF-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nLzIeJjNGztEU1Sr5FEF-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nLzIeJjNGztEU1Sr5FEF-3" target="nLzIeJjNGztEU1Sr5FEF-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nLzIeJjNGztEU1Sr5FEF-3" value="Inserisci un numero compreso tra 1 e 10" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="260" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nLzIeJjNGztEU1Sr5FEF-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nLzIeJjNGztEU1Sr5FEF-5" target="nLzIeJjNGztEU1Sr5FEF-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nLzIeJjNGztEU1Sr5FEF-5" value="Inizializza un numero vincente compreso tra 1 e 10" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nLzIeJjNGztEU1Sr5FEF-9" value="Inserisci contatore i = 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="440" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
