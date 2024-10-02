@@ -227,8 +227,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="-xRFeKUygIIf-XBN7vl2-1" value="ESERCIZIO 5&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Inizio&lt;/div&gt;&lt;div&gt;2. Inserisci il numero 5&lt;/div&gt;&lt;div&gt;3. i++&lt;/div&gt;&lt;div&gt;4. Moltiplica &#39;i&#39; per il numero inserito fino a quando i &amp;lt;= 10&lt;/div&gt;&lt;div&gt;5. Visualizza la tabellina e torna al passo 3&lt;/div&gt;&lt;div&gt;6. Fine&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="249" y="-2320" width="330" height="130" as="geometry" />
+        <mxCell id="-xRFeKUygIIf-XBN7vl2-1" value="ESERCIZIO 5&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Inizio&lt;/div&gt;&lt;div&gt;2. Inserisci il numero 5&lt;/div&gt;&lt;div&gt;3. i++&lt;/div&gt;&lt;div&gt;4. Moltiplica &#39;i&#39; per il numero inserito fino a quando i &amp;lt; 11&lt;/div&gt;&lt;div&gt;5. Visualizza la tabellina e torna al passo 3&lt;/div&gt;&lt;div&gt;6. Fine&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="254" y="-2320" width="320" height="130" as="geometry" />
         </mxCell>
         <mxCell id="-xRFeKUygIIf-XBN7vl2-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-xRFeKUygIIf-XBN7vl2-2" target="-xRFeKUygIIf-XBN7vl2-5">
           <mxGeometry relative="1" as="geometry" />
@@ -305,7 +305,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="sF83ffcVxZ2YoaAbrgXo" name="Pagina-4">
-    <mxGraphModel dx="988" dy="543" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1430" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
