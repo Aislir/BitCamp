@@ -1,11 +1,11 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.17">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1185" dy="651" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2074" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="wpcpHTcB4ovZIHiMq7sZ-0" value="&lt;div&gt;ESERCIZIO DEL LABIRINTO&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;1. Inizio da cella 6I&lt;div&gt;2. Sugli 0 e’ possibile muoversi, mentre gli 1 rappresentano I muri&lt;/div&gt;&lt;div&gt;3. Inserimento dell’indicatore direzionale, uno compreso tra su, giu’, destra e sinistra&lt;br&gt;&lt;/div&gt;&lt;div&gt;4. Verifica se l’indicatore di movimento scelto porti a 0, se falso rimani dove sei e passa al punto 6&lt;br&gt;&lt;/div&gt;&lt;div&gt;5. Se vero, verifica se la casella in cui ci si e’ spostati combaci con 33AG (fine percorso).&amp;nbsp;&lt;/div&gt;&lt;div&gt;Se quest’ultima corrisponde, hai vinto e passa al punto 7&lt;br&gt;&lt;/div&gt;&lt;div&gt;6. Visualizzazione del risultato della verifica e torna al punto 3&lt;br&gt;&lt;/div&gt;&lt;div&gt;7. Fine&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry y="25" width="540" height="160" as="geometry" />
+        <mxCell id="wpcpHTcB4ovZIHiMq7sZ-0" value="&lt;div&gt;ESERCIZIO DEL LABIRINTO&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. Inizio da cella 6I&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2. Sugli 0 e’ possibile muoversi, mentre gli 1 rappresentano I muri&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;3. Inserimento dell’indicatore direzionale, uno compreso tra su, giu’, destra e sinistra&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;4. Verifica se l’indicatore di movimento scelto porti a 0, se falso rimani dove sei e passa al punto 6&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;5. Se vero, verifica se la casella in cui ci si e’ spostati combaci con 33AG (fine percorso).&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Se quest’ultima corrisponde, hai vinto e passa al punto 7&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;6. Visualizzazione del risultato della verifica e torna al punto 3&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;7. Fine&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="144" y="50" width="540" height="160" as="geometry" />
         </mxCell>
         <mxCell id="wpcpHTcB4ovZIHiMq7sZ-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wpcpHTcB4ovZIHiMq7sZ-1" target="wpcpHTcB4ovZIHiMq7sZ-2">
           <mxGeometry relative="1" as="geometry" />
@@ -78,8 +78,8 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wpcpHTcB4ovZIHiMq7sZ-16" value="Cella di destinazione == Cella finale" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="351" y="770" width="126" height="100" as="geometry" />
+        <mxCell id="wpcpHTcB4ovZIHiMq7sZ-16" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Cella di destinazione&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;==&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Cella finale&lt;/font&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="326" y="775" width="176" height="100" as="geometry" />
         </mxCell>
         <mxCell id="wpcpHTcB4ovZIHiMq7sZ-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wpcpHTcB4ovZIHiMq7sZ-19" target="wpcpHTcB4ovZIHiMq7sZ-22">
           <mxGeometry relative="1" as="geometry" />
@@ -94,7 +94,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="wpcpHTcB4ovZIHiMq7sZ-24" value="&quot;Ti sei spostato in &quot; +Cella di destinazione+&quot;!&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="100" y="775" width="178" height="90" as="geometry" />
+          <mxGeometry x="100" y="780" width="178" height="90" as="geometry" />
         </mxCell>
         <mxCell id="wpcpHTcB4ovZIHiMq7sZ-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wpcpHTcB4ovZIHiMq7sZ-28">
           <mxGeometry relative="1" as="geometry">
@@ -106,7 +106,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="wpcpHTcB4ovZIHiMq7sZ-28" value="Cella di stato = Cella di destinazione" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="129" y="620" width="120" height="60" as="geometry" />
+          <mxGeometry x="129" y="555" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
