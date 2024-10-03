@@ -4,20 +4,20 @@
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="wpcpHTcB4ovZIHiMq7sZ-0" value="&lt;div&gt;ESERCIZIO DEL LABIRINTO&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;1. Inizio da cella 5I&lt;div&gt;2. Sugli 0 e’ possibile muoversi, mentre gli 1 rappresentano I muri&lt;/div&gt;&lt;div&gt;3. Inserimento dell’indicatore direzionale, uno compreso tra su, giu’, destra e sinistra&lt;br&gt;&lt;/div&gt;&lt;div&gt;4. Verifica se l’indicatore di movimento scelto porti a 0, se falso rimani dove sei e passa al punto 6&lt;br&gt;&lt;/div&gt;&lt;div&gt;5. Se vero, verifica se la casella in cui ci si e’ spostati combaci con 32AG (fine percorso).&amp;nbsp;&lt;/div&gt;&lt;div&gt;Se quest’ultima corrisponde, hai vinto e passa al punto 7&lt;br&gt;&lt;/div&gt;&lt;div&gt;6. Visualizzazione del risultato della verifica e torna al punto 3&lt;br&gt;&lt;/div&gt;&lt;div&gt;7. Fine&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="wpcpHTcB4ovZIHiMq7sZ-0" value="&lt;div&gt;ESERCIZIO DEL LABIRINTO&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;1. Inizio da cella 6I&lt;div&gt;2. Sugli 0 e’ possibile muoversi, mentre gli 1 rappresentano I muri&lt;/div&gt;&lt;div&gt;3. Inserimento dell’indicatore direzionale, uno compreso tra su, giu’, destra e sinistra&lt;br&gt;&lt;/div&gt;&lt;div&gt;4. Verifica se l’indicatore di movimento scelto porti a 0, se falso rimani dove sei e passa al punto 6&lt;br&gt;&lt;/div&gt;&lt;div&gt;5. Se vero, verifica se la casella in cui ci si e’ spostati combaci con 33AG (fine percorso).&amp;nbsp;&lt;/div&gt;&lt;div&gt;Se quest’ultima corrisponde, hai vinto e passa al punto 7&lt;br&gt;&lt;/div&gt;&lt;div&gt;6. Visualizzazione del risultato della verifica e torna al punto 3&lt;br&gt;&lt;/div&gt;&lt;div&gt;7. Fine&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry y="25" width="540" height="160" as="geometry" />
         </mxCell>
         <mxCell id="wpcpHTcB4ovZIHiMq7sZ-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wpcpHTcB4ovZIHiMq7sZ-1" target="wpcpHTcB4ovZIHiMq7sZ-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="wpcpHTcB4ovZIHiMq7sZ-1" value="Inizio da cella 5I" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="wpcpHTcB4ovZIHiMq7sZ-1" value="Inizio da cella 6I" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="369" y="230" width="90" height="50" as="geometry" />
         </mxCell>
         <mxCell id="wpcpHTcB4ovZIHiMq7sZ-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wpcpHTcB4ovZIHiMq7sZ-2" target="wpcpHTcB4ovZIHiMq7sZ-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="wpcpHTcB4ovZIHiMq7sZ-2" value="Cella iniziale = 5I&lt;div&gt;Cella finale = 32AG&lt;/div&gt;&lt;div&gt;Cella di stato = 5I&lt;/div&gt;&lt;div&gt;Cella di destinazione = 0&lt;/div&gt;&lt;div&gt;Percorso = 0&lt;/div&gt;&lt;div&gt;Muri = 1&lt;/div&gt;&lt;div&gt;Indicatori direzionali = su, giu, destra, sinistra&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="290.5" y="310" width="247" height="100" as="geometry" />
+        <mxCell id="wpcpHTcB4ovZIHiMq7sZ-2" value="Cella iniziale = 6I&lt;div&gt;Cella finale = 33AG&lt;/div&gt;&lt;div&gt;Cella di stato = 5I&lt;/div&gt;&lt;div&gt;Cella di destinazione = 0&lt;/div&gt;&lt;div&gt;Percorso = 0&lt;/div&gt;&lt;div&gt;Muri = 1&lt;/div&gt;&lt;div&gt;Indicatori direzionali = su, giu, destra, sinistra&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="290.5" y="300" width="247" height="110" as="geometry" />
         </mxCell>
         <mxCell id="wpcpHTcB4ovZIHiMq7sZ-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wpcpHTcB4ovZIHiMq7sZ-4" target="wpcpHTcB4ovZIHiMq7sZ-8">
           <mxGeometry relative="1" as="geometry" />
@@ -85,10 +85,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="wpcpHTcB4ovZIHiMq7sZ-19" value="Sei arrivato all&#39;uscita, hai vinto!" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="319" y="940" width="190" height="70" as="geometry" />
+          <mxGeometry x="319" y="930" width="190" height="70" as="geometry" />
         </mxCell>
         <mxCell id="wpcpHTcB4ovZIHiMq7sZ-22" value="Fine" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="374" y="1050" width="80" height="50" as="geometry" />
+          <mxGeometry x="374" y="1040" width="80" height="50" as="geometry" />
         </mxCell>
         <mxCell id="wpcpHTcB4ovZIHiMq7sZ-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wpcpHTcB4ovZIHiMq7sZ-24" target="wpcpHTcB4ovZIHiMq7sZ-28">
           <mxGeometry relative="1" as="geometry" />
