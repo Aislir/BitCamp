@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CoffeeHouse - Chi siamo" />
+    <meta name="keywords" content="CoffeeHouse, Azienda, Caffè" />
+    <meta name="author" content="Team2 bitCamp" />
+    <meta name="robots" content="index, follow" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="language" content="it" />
+
+    <title>CoffeeHouse - Chi siamo</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .header {
+            /*Stile Header*/
+            margin: 0;
+            padding: 15px;
+            color: white;
+            background: url('img/roasted_coffe.jpg');
+            background-size: cover;
+            display: flex;
+        }
+
+        .titolo {
+            padding: 20px;
+            margin-left: 50px;
+        }
+
+            .titolo h1 {
+                font-size: 48px;
+            }
+
+            .titolo p {
+                font-size: 30px;
+            }
+
+        .header img {
+            width: 250px;
+            height: 250px;
+            padding: 10px 20px 0 30px;
+        }
+
+        .navbar {
+            padding: 10px;
+            background-color: black;
+            text-align: center;
+            margin: 0;
+        }
+
+            .navbar a {
+                text-decoration: none;
+                color: white;
+                margin: 0 15px;
+            }
+
+        .container {
+            background: url(img/caffe_tramonto.jpg);
+            background-size: cover;
+            padding: 30px;
+        }
+
+        .container p {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        #città {
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 50px;
+            margin-bottom: 1px;
+        }
+
+        .main-contentCittà {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 0;
+        }
+
+        .box-città img {
+            border-radius: 20%;
+        }
+
+        .box-città {
+            padding: 30px;
+            width:33%;
+        }
+
+        .box-città h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .box-città p {
+            text-align: justify;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0px;
+            margin-bottom: 0;
+        }
+
+        .content-box {
+            justify-content: center;
+            background: rgba(255,255,255,0.6);
+            border-radius: 30px;
+            margin: 0 10px;
+            padding: 0 10px;
+            text-align: center;
+            box-shadow: 0 8px 8px;
+        }
+
+            .content-box h2 {
+                text-align: center;
+            }
+
+            .content-box p {
+                text-align: justify;
+                color: black;
+            }
+
+            .content-box img {
+                box-shadow: 0 8px 8px;
+            }
+
+            .box-staff img {
+                border-radius: 50%;
+            }
+
+        .box-staff h2, p {
+            color: white;
+            text-align: center;
+        }
+
+        .info {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            justify-content: space-around;
+            padding: 10px;
+            display: flex;
+            margin: 0;
+        }
+
+        .info-column {
+            text-align: center;
+            color: white;
+        }
+
+            .info-column p {
+                padding: 0;
+            }
+
+        .LinkedIn {
+            background-color: black;
+            color: white;
+            justify-content: space-around;
+            margin-top: 0;
+            padding: 5px;
+            text-align: center;
+        }
+
+            .LinkedIn a {
+                color: white;
+                padding: 10px;
+            }
+
+        .footer {
+            background-color: black;
+            color: white;
+            justify-content: space-around;
+            margin-top: 0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /*Media Query per la gestione degli schermi più piccoli*/
+        @media (max-width: 768px) {
+            .header, .main-content {
+                flex-direction: column;
+                padding: 20px;
+                align-items: center;
+            }
+
+            .content-box {
+                width: 100%;
+                margin: 5px 20px;
+            }
+        }
+    </style>
+
+    <body>
+
+        <!--CONTAINER PER HEADER-->
+        <div class="header">
+
+            <!--LOGO-->
+            <div class="img">
+                <img src="img/Logo.jpg" alt="CoffeeHouse Logo" width="150" height="150" />
+            </div>
+
+            <!--TITOLO-->
+            <div class="titolo">
+                <h1>CoffeeHouse</h1>
+                <p>Torrefazione Caffè, Caffetteria & Pasticceria </p>
+            </div>
+
+        </div>
+
+        <!--CONTAINER NAVBAR-->
+        <div class="navbar">
+            <a href="index.html">HOME</a>
+            <a href="menu.html">MENU</a>
+            <a href="chisiamo.html">CHI SIAMO</a>
+            <a href="contatti.html">CONTATTI</a>
+            <a href="prenotazioni.html">PRENOTAZIONI</a>
+            <a href="premi.html">PREMI</a>
+        </div>
+
+        <!--CONTAINER GENERALE-->
+        <div class="container">
+
+            <!--CONTAINER PER I DUE BOX (LA NOSTRA STORIA E LA NOSTRA MISSIONE)-->
+            <div class="main-content">
+
+                <!--BOX 1-->
+                <div class="content-box">
+                    <h2>La Nostra Storia</h2>
+                    <p>CoffeeHouse <strong>nasce nel 1940</strong> dall'idea di un gruppo di amici appassionati di caffè, desiderosi di creare un luogo dove la qualità del prodotto e l'accoglienza fossero al centro dell'esperienza. Partita come una piccola caffetteria nel cuore di Napoli, l'azienda ha rapidamente guadagnato popolarità grazie alla cura nella selezione dei chicchi e alla costante ricerca di miscele esclusive. Con il passare degli anni, CoffeeHouse si è espansa in tutto il paese, diventando un punto di riferimento per gli amanti del caffè, senza mai perdere di vista i valori di artigianalità e autenticità che l'hanno resa unica.</p>
+                </div>
+
+                <!--BOX 2-->
+                <div class="content-box">
+                    <h2>La Nostra Missione</h2>
+                    <p>La missione di CoffeeHouse è offrire ai nostri clienti non solo un ottimo caffè, ma anche un'esperienza che unisca <strong>gusto, sostenibilità e benessere</strong>. Ci impegniamo a utilizzare materie prime di alta qualità, provenienti da fornitori etici e certificati, per garantire un prodotto eccellente che rispetti l'ambiente e le comunità locali. Il nostro obiettivo è creare un ambiente dove le persone possano sentirsi a casa, rilassarsi e godere di un momento di pausa, contribuendo al tempo stesso a un mondo più sostenibile attraverso pratiche responsabili e innovative.</p>
+                </div>
+
+
+            </div>
+
+            <!--DIV AROUND THE WORLD-->
+            <h2 id="città">COFFEE-HOUSE AROUND THE WORLD</h2>
+            <p>CoffeeHouse arriva nelle più grandi città del mondo</p>
+
+            <!--CONTAINER BOX DELLE CITTA'-->
+            <div class="main-contentCittà">
+
+                <!--BOX ROMA-->
+                <div class="box-città">
+                    <img src="img/Roma.jpg" alt="Foto del Colosseo" width="350" height="350" />
+                    <h2 style="font-family: 'Times New Roman'; color: #FFD700">ROMA</h2>
+                    <p style="font-family:'Times New Roman'">Roma, la capitale d'Italia, è una città ricca di storia e cultura. Conosciuta come "la Città Eterna".</p>
+                    <br /><p>Via Napoli, 95 <br />Telefono +06/ 1234567890</p>
+                </div>
+
+                <!--BOX NEW-YORK-->
+                <div class="box-città">
+                    <img src="img/NewYork.jpg" alt="" width="350" height="350" />
+                    <h2 style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: #003366;"><strong>NEW YORK</strong></h2>
+                    <p style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif">New York, spesso definita "la Grande Mela". Famosa per la sua skyline caratterizzata da grattacieli come l'Empire State Building e il One World Trade Center e la Statua della Libertà.</p>
+                    <br /><p>Via 1500 Broadway <br />Telefono +212/ 1234567890</p>
+                </div>
+
+                <!--BOX TOKYO-->
+                <div class="box-città">
+                    <img src="img/Tokyo.png" alt="Foto del centro di Tokyo" width="350" height="350" />
+                    <h2 style="font-family: 'Comic Sans MS'; color: #E60012">TOKYO</h2>
+                    <p style="font-family:'Comic Sans MS'">Tokyo è una metropoli famosa per la sua fusione unica di tradizione e modernità.</p>
+                    <br /><p mar>Via Shibuya <br />Telefono +81/ 1234567890</p>
+                </div>
+
+            </div>
+
+
+            <!--DIV PER GESTIRE LA PRESENTAZIONE DELLO STAFF-->
+            <div class="main-content">
+
+                <!--BOX CEO-->
+                <div class="box-staff">
+                    <img src="img/Mario_Rossi.jpg" alt="Mario Rossi" width="350" height="350" />
+                    <h2>CEO - Mario Rossi</h2>
+                    <p>Mario Rossi è il CEO di CoffeeHouse dal 2018. Grazie alla sua leadership visionaria e alla profonda conoscenza del settore, ha trasformato l'azienda in una delle catene di caffetterie più apprezzate a livello nazionale. Laureato in economia e con un'esperienza di oltre 20 anni nel management, Mario è appassionato di innovazione e sostenibilità. Sotto la sua guida, CoffeeHouse ha implementato diverse iniziative green, promuovendo l'uso di materiali riciclabili e l'adozione di pratiche commerciali etiche.</p>
+                </div>
+
+                <!--BOX BARISTI-->
+                <div class="box-staff">
+                    <img src="img/Valeria_Verdi.jpg" alt="Valeria Verdi" width="350" height="350" />
+                    <h2>STAFF - Valeria Verdi</h2>
+                    <p>Valeria Verdi lavora come barista presso CoffeeHouse da 5 anni. Con il suo sorriso accogliente e l'attenzione al dettaglio, è molto amata dai clienti abituali. Valeria ha una passione per la preparazione di caffè artigianale e, negli anni, ha partecipato a diversi corsi di formazione per perfezionare le sue competenze. È sempre pronta a consigliare nuove bevande e a personalizzare le esperienze dei clienti, contribuendo a creare un ambiente familiare e rilassante.</p>
+                </div>
+
+                <!--BOX LOGISTICA-->
+                <div class="box-staff">
+                    <img src="img/Renato_Bianchi.jpg" alt="Renato Bianchi" width="350" height="350" />
+                    <h2>STAFF - Renato Bianchi</h2>
+                    <p>Renato Bianchi è parte del team logistico di CoffeeHouse da 3 anni. Responsabile della gestione delle forniture e del magazzino, Renato assicura che tutte le caffetterie siano costantemente rifornite di ingredienti freschi e di qualità. Preciso e affidabile, è noto per la sua efficienza e per la capacità di risolvere rapidamente eventuali problemi operativi. Grazie alla sua dedizione, CoffeeHouse può garantire un servizio senza intoppi, soddisfacendo le esigenze dei suoi clienti.</p>
+                </div>
+
+            </div>
+
+            <!--CONTENITORE PER DUE COLONNE DI INFO EXTRA-->
+            <div class="info">
+
+                <!--PRIMA COLONNA INFO EXTRA-->
+                <div class="info-column">
+                    <h2>COFFEE HOUSE</h2>
+                    <p>P.IVA 051998468215</p>
+                    <p>Via Roma, 25</p>
+                    <p>80100 Napoli (NA)</p>
+                </div>
+
+                <!--SECONDA COLONNA INFO EXTRA-->
+                <div class="info-column">
+                    <h2>CONTATTI</h2>
+                    <p>Tel. 3496652975 / 0810569847</p>
+                    <p>Fax. 059458765156</p>
+                    <p>Email info@coffeehouse.com</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!--PROFILI LINKEDIN SVILUPPATORI-->
+        <div class="LinkedIn">
+            <p>Profilo LinkedIn degli sviluppatori:</p>
+            <a href="https://www.linkedin.com/in/raffaeledemicco/" target="_blank">Raffaele De Micco</a>
+            <a href="https://www.linkedin.com/in/alessandro-di-venere-630646173" target="_blank">Alessandro Di Venere</a>
+            <a href="https://www.linkedin.com/in/daniele-barba-400993317" target="_blank">Daniele Barba</a>
+            <a href="https://www.linkedin.com/in/riccardo-rossi-198b2b269/" target="_blank">Riccardo Rossi</a>
+        </div>
+
+        <!--FOOTER-->
+        <div class="footer">
+            <p>Copyright &copy; 2024 CoffeeHouse. Tutti i diritti riservati.</p>
+        </div>
+
+    </body>
+</html>

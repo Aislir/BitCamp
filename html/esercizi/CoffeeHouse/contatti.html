@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CoffeeHouse - Contatti" />
+    <meta name="keywords" content="CoffeeHouse, Azienda, Caffè" />
+    <meta name="author" content="Team2 bitCamp" />
+    <meta name="robots" content="index, follow" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="language" content="it" />
+
+    <title>CoffeeHouse - Contatti</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .header {
+            /*Stile Header*/
+            margin: 0;
+            padding: 15px;
+            color: white;
+            background: url('img/roasted_coffe.jpg');
+            background-size: cover;
+            display: flex;
+        }
+
+        .titolo {
+            padding: 20px;
+            margin-left: 50px;
+        }
+
+            .titolo h1 {
+                font-size: 48px;
+            }
+
+            .titolo p {
+                font-size: 30px;
+            }
+
+        .header img {
+            width: 250px;
+            height: 250px;
+            padding: 10px 20px 0 30px;
+        }
+
+        .navbar {
+            padding: 10px;
+            background-color: black;
+            text-align: center;
+            margin: 0;
+        }
+
+            .navbar a {
+                text-decoration: none;
+                color: white;
+                margin: 0 15px;
+            }
+
+        .container {
+            background: url(img/caffe_tramonto.jpg);
+            background-size: cover;
+            padding: 30px;
+        }
+
+        #contatti {
+            background: rgba(255,255,255,0.6);
+            padding: 10px;
+            border-radius: 35px;
+            text-align: center;
+        }
+
+            #contatti li {
+                list-style: none;
+            }
+
+        /*Stile per il form di prenotazione*/
+        form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255,255,255,0.8);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+            form label {
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            form input {
+                width: 550px;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid lightgray;
+                border-radius: 5px;
+            }
+
+        textarea {
+            max-width: 550px;
+        }
+
+        /*Stile per il button*/
+        form button {
+            background: dodgerblue;
+            color: white;
+            padding: 10px 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 50%;
+        }
+
+        .info {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            justify-content: space-around;
+            padding: 10px;
+            display: flex;
+            margin: 0;
+        }
+
+        .info-column {
+            text-align: center;
+            color: white;
+        }
+
+            .info-column p {
+                padding: 0;
+            }
+
+        .LinkedIn {
+            background-color: black;
+            color: white;
+            justify-content: space-around;
+            margin-top: 0;
+            padding: 5px;
+            text-align: center;
+        }
+
+            .LinkedIn a {
+                color: white;
+                padding: 10px;
+            }
+
+        .footer {
+            background-color: black;
+            color: white;
+            justify-content: space-around;
+            margin-top: 0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /*Media Query per la gestione degli schermi più piccoli*/
+        @media (max-width: 768px) {
+            .header, .main-content {
+                flex-direction: column;
+                padding: 20px;
+                align-items: center;
+            }
+
+            .content-box {
+                width: 100%;
+                margin: 5px 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--CONTAINER PER HEADER-->
+    <div class="header">
+
+        <!--LOGO-->
+        <div class="img">
+            <img src="img/Logo.jpg" alt="CoffeeHouse Logo" width="150" height="150" />
+        </div>
+
+        <!--TITOLO-->
+        <div class="titolo">
+            <h1>CoffeeHouse</h1>
+            <p>Torrefazione Caffè, Caffetteria & Pasticceria </p>
+        </div>
+
+    </div>
+
+    <!--CONTAINER NAVBAR-->
+    <div class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="menu.html">MENU</a>
+        <a href="chisiamo.html">CHI SIAMO</a>
+        <a href="contatti.html">CONTATTI</a>
+        <a href="prenotazioni.html">PRENOTAZIONI</a>
+        <a href="premi.html">PREMI</a>
+    </div>
+
+    <!--CONTAINER GENERALE-->
+    <div class="container">
+
+        <!--SEZIONE PER I CONTATTI-->
+        <div id="contatti">
+            <h2><strong>Benvenuto nella sezione contatti.</strong></h2>
+            <p>
+                I nostri clienti sono la nostra priorità.
+                <br /> Per qualsiasi dubbio o richiesta non esitare a contattarci tramite i nostri contatti, oppure compilando direttamente il form:
+            </p>
+            <ul>
+                <li><address>Via Roma, 25 - 80100 Napoli (NA)</address></li>
+                <li>Tel. 3496652975 / 0810569847</li>
+                <li>Fax. 059458765156</li>
+                <li><a href="mailto:info@coffeehouse.com">info@coffeehouse.com</a></li>
+            </ul>
+        </div>
+
+        <!--FORM-->
+        <form action="#" method="get">
+            <h2><strong>Puoi contattarci direttamente tramite il form:</strong></h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required />
+            <br />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <br />
+            <label for="oggetto">Oggetto:</label>
+            <input type="text" id="oggetto" name="oggetto" required />
+            <br />
+            <label for="messaggio">Messaggio:</label>
+            <textarea id="messaggio" name="messaggio"></textarea>
+            <br />
+            <button type="submit">INVIA</button>
+        </form>
+
+        <!--CONTENITORE PER DUE COLONNE DI INFO EXTRA-->
+        <div class="info">
+
+            <!--PRIMA COLONNA INFO EXTRA-->
+            <div class="info-column">
+                <h2>COFFEE HOUSE</h2>
+                <p>P.IVA 051998468215</p>
+                <p>Via Roma, 25</p>
+                <p>80100 Napoli (NA)</p>
+            </div>
+
+            <!--SECONDA COLONNA INFO EXTRA-->
+            <div class="info-column">
+                <h2>CONTATTI</h2>
+                <p>Tel. 3496652975 / 0810569847</p>
+                <p>Fax. 059458765156</p>
+                <p>Email info@coffeehouse.com</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--PROFILI LINKEDIN SVILUPPATORI-->
+    <div class="LinkedIn">
+        <p>Profilo LinkedIn degli sviluppatori:</p>
+        <a href="https://www.linkedin.com/in/raffaeledemicco/" target="_blank">Raffaele De Micco</a>
+        <a href="https://www.linkedin.com/in/alessandro-di-venere-630646173" target="_blank">Alessandro Di Venere</a>
+        <a href="https://www.linkedin.com/in/daniele-barba-400993317" target="_blank">Daniele Barba</a>
+        <a href="https://www.linkedin.com/in/riccardo-rossi-198b2b269/" target="_blank">Riccardo Rossi</a>
+    </div>
+
+    <!--FOOTER-->
+    <div class="footer">
+        <p>Copyright &copy; 2024 CoffeeHouse. Tutti i diritti riservati.</p>
+    </div>
+
+</body>
+</html>

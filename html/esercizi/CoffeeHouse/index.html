@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Homepage CoffeeHouse" />
+    <meta name="keywords" content="CoffeeHouse, Azienda, Caffè" />
+    <meta name="author" content="Team2 bitCamp" />
+    <meta name="robots" content="index, follow" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="language" content="it" />
+
+    <title>CoffeeHouse</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .header {
+            /*Stile Header*/
+            margin: 0;
+            padding: 15px;
+            color: white;
+            background: url('img/roasted_coffe.jpg');
+            background-size: cover;
+            display: flex;
+        }
+
+        .titolo {
+            padding: 20px;
+            margin-left: 50px;
+        }
+
+            .titolo h1 {
+                font-size: 48px;
+            }
+
+            .titolo p {
+                font-size: 30px;
+            }
+
+        .header img {
+            width: 250px;
+            height: 250px;
+            padding: 10px 20px 0 30px;
+            
+        }
+
+        .navbar {
+            padding: 10px;
+            background-color: black;
+            text-align: center;
+            margin: 0;
+        }
+
+            .navbar a {
+                text-decoration: none;
+                color: white;
+                margin: 0 15px;
+            }
+
+        .container {
+            background: url(img/caffe_tramonto.jpg);
+            background-size: cover;
+            padding: 30px;
+        }
+
+        #descrizione {
+            background: rgba(255,255,255,0.6);
+            padding: 10px;
+            border-radius: 35px;
+        }
+
+        .container p {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0px;
+            margin-bottom: 0;
+        }
+
+        .content-box {
+            justify-content: center;
+            background: rgba(255,255,255,0.6);
+            border-radius: 30px;
+            margin: 0 10px;
+            padding: 0 10px;
+            text-align: center;
+            box-shadow: 0 8px 8px;
+        }
+
+            .content-box h2 {
+                text-align: center;
+            }
+
+            .content-box p {
+                text-align: justify;
+            }
+
+            .content-box img {
+                box-shadow: 0 8px 8px;
+            }
+
+        .info {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            justify-content: space-around;
+            padding: 10px;
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .info-column {
+            text-align: center;
+            color: white;
+        }
+
+        .info-column p {
+            padding: 0;
+        }
+
+        .LinkedIn {
+            background-color: black;
+            color: white;
+            justify-content: space-around;
+            margin-top: 0;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .LinkedIn a {
+            color: white;
+            padding: 10px;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            justify-content: space-around;
+            margin-top: 0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /*Media Query per la gestione degli schermi più piccoli*/
+        @media (max-width: 768px) {
+            .header, .main-content {
+                flex-direction: column;
+                padding: 20px;
+                align-items: center;
+            }
+
+            .content-box {
+                width: 100%;
+                margin: 5px 20px;
+            }
+        }
+    </style>
+
+    <body>
+
+        <!--CONTAINER PER HEADER-->
+        <div class="header">
+
+            <!--LOGO-->
+            <div class="img">
+                <img src="img/Logo.jpg" alt="CoffeeHouse Logo" width="150" height="150" />
+            </div>
+
+            <!--TITOLO-->
+            <div class="titolo">
+                <h1>CoffeeHouse</h1>
+                <p>Torrefazione Caffè, Caffetteria & Pasticceria </p>
+            </div>
+
+        </div>
+
+        <!--CONTAINER NAVBAR-->
+        <div class="navbar">
+            <a href="index.html">HOME</a>
+            <a href="menu.html">MENU</a>
+            <a href="chisiamo.html">CHI SIAMO</a>
+            <a href="contatti.html">CONTATTI</a>
+            <a href="prenotazioni.html">PRENOTAZIONI</a>
+            <a href="premi.html">PREMI</a>
+        </div>
+
+        <!--CONTAINER GENERALE HOME-->
+        <div class="container">
+
+            <!--SEZIONE PER LA DESCRIZIONE INIZIALE-->
+            <div id="descrizione">
+                <p>Benvenuti nella nostra <strong>CoffeeHouse &copy;</strong>, un luogo dove il piacere del <strong>caffè</strong>, del <strong>tè</strong> e della <strong>pasticceria</strong> si uniscono per offrirvi un'<em>esperienza unica e autentica</em>. Siamo un team di appassionati artigiani del gusto, specializzati nella selezione dei migliori chicchi di caffè e delle foglie di tè più pregiate, preparati con cura per esaltare ogni sfumatura di sapore. Ogni nostro prodotto di pasticceria è realizzato a mano, utilizzando ingredienti freschi e genuini, per accompagnare perfettamente la vostra pausa di relax. Ciò che ci rende unici è l'<em>attenzione al dettaglio</em> e <em>l'amore per la qualità</em>, con un ambiente accogliente e uno staff sempre pronto a farvi sentire come a casa.</p>
+            </div>
+
+            <!--CONTAINER PER GESTIRE I PRODOTTI IN EVIDENZA-->
+            <div class="main-content">
+
+                <!--BOX 1-->
+                <div class="content-box">
+                    <h2>Caffè</h2>
+                    <img src="img/caffè.jpg" alt="Caffè" width="90" height="90" />
+                    <p>Selezioniamo solo i migliori chicchi da coltivazioni sostenibili, provenienti da regioni rinomate per la qualità del caffè. Ogni tazza è preparata con cura, per esaltare note aromatiche uniche, dal corposo espresso italiano ai delicati filtri per veri intenditori. Che tu preferisca un caffè dal gusto deciso o uno più dolce e bilanciato, troverai la miscela perfetta per ogni momento della giornata.</p>
+                </div>
+
+                <!--BOX 2-->
+                <div class="content-box">
+                    <h2>Pasticceria</h2>
+                    <img src="img/pasticceria.jpg" alt="Pasticceria" width="90" height="90" />
+                    <p>Ogni giorno sforniamo prodotti di pasticceria artigianale, creati con ingredienti freschi e genuini. Dalle fragranti brioche ai croissant appena sfornati, fino a torte e biscotti irresistibili, la nostra offerta è ideale per accompagnare il tuo caffè o tè. Ogni dolce è una piccola opera d’arte, pensata per deliziare occhi e palato.</p>
+                </div>
+
+                <!--BOX 3-->
+                <div class="content-box">
+                    <h2>Tè</h2>
+                    <img src="img/tè.jpg" alt="Tè" width="90" height="90" />
+                    <p>Offriamo una selezione di tè pregiati, dalle foglie verdi fresche alle miscele nere più intense, provenienti dalle migliori piantagioni mondiali. Le nostre varietà includono classici come l’Earl Grey e il tè verde, oltre a infusi esotici per un viaggio sensoriale. Ogni tazza è un rituale di tranquillità e benessere, preparato con precisione per sprigionare il sapore autentico di ogni foglia.</p>
+                </div>
+
+            </div>
+
+            <!--CONTENITORE PER DUE COLONNE DI INFO EXTRA-->
+            <div class="info">
+
+                <!--PRIMA COLONNA INFO EXTRA-->
+                <div class="info-column">
+                    <h2>COFFEE HOUSE</h2>
+                    <p>P.IVA 051998468215</p>
+                    <p>Via Roma, 25</p>
+                    <p>80100 Napoli (NA)</p>
+                </div>
+
+                <!--SECONDA COLONNA INFO EXTRA-->
+                <div class="info-column">
+                    <h2>CONTATTI</h2>
+                    <p>Tel. 3496652975 / 0810569847</p>
+                    <p>Fax. 059458765156</p>
+                    <p>Email info@coffeehouse.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--PROFILI LINKEDIN SVILUPPATORI-->
+        <div class="LinkedIn">
+        <p>Profilo LinkedIn degli sviluppatori:</p>
+        <a href="https://www.linkedin.com/in/raffaeledemicco/" target="_blank">Raffaele De Micco</a>
+        <a href="https://www.linkedin.com/in/alessandro-di-venere-630646173" target="_blank">Alessandro Di Venere</a>
+        <a href="https://www.linkedin.com/in/daniele-barba-400993317" target="_blank">Daniele Barba</a>
+        <a href="https://www.linkedin.com/in/riccardo-rossi-198b2b269/" target="_blank">Riccardo Rossi</a>
+        </div>
+
+        <!--FOOTER-->
+        <div class="footer">
+            <p>Copyright &copy; 2024 CoffeeHouse. Tutti i diritti riservati.</p>
+        </div>
+
+    </body>
+</html>
