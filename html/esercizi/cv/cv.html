@@ -10,54 +10,175 @@
     <meta name="referrer" content="no-referrer">
     <meta name="language" content="general">
     <meta name="language" content="it">
+    <style>
+        body {
+            padding: 0;
+            width: 100vi;
+            height: max-content;
+            margin: 0;
+            border: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header {
+            margin: 0;
+            border: 0;
+            background-color: #1f2937;            
+            color: #f9faf8;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .container_info {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            background: white;
+        }
+
+        .container_info .info {
+            background: #e5e7eb;
+            color: #1f2937;
+            padding: 10px;
+            border-radius: 15px;
+            border: 0;
+            margin: 0;
+            text-align: center;
+            width: 25%;
+        }
+
+        .esp {
+            text-align: center;
+            margin: 0;
+            border: 0;
+            padding: 5px 50px 40px;
+            background: #1f2937;
+            color: #f9faf8;
+        }
+
+        .esp_container {
+            display: flex;
+            margin: 0;
+            border: 0;
+            justify-content: space-around;
+        }
+
+        .esp_lav {
+            text-align: left;
+            padding: 30px;
+            background: white;
+            color: #1f2937;
+            border-radius: 15px;
+            width: 25%;
+        }
+
+        .istr_container {
+            background: white;
+            padding: 50px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .istr {
+            background: royalblue;
+            border-radius: 15px;
+            color: #f9faf8;
+            padding: 10px 10px 10px;
+            width: 40%;
+            text-align: center;
+        }
+
+        .istr li {
+            text-align: left;
+        }
+
+        @media (max-width: 768px){
+
+            .container_info {
+                flex-direction: column;
+                flex-grow: 1;
+                flex-shrink: 0;
+                padding: 20px;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                height: 100vmin;
+            }
+
+            .container_info .info {
+                padding: 10px;
+                width: 70%;
+                border-bottom: 10px;
+            }
+
+            .esp_container {
+                flex-direction: column;
+            }
+
+            .istr_container {
+                flex-direction: column;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <header><Strong>Curriculum Vitae di Riccardo Rossi</Strong>
-    <p>Sono un venticinquenne volenteroso e determinato, con grande voglia di mettersi in gioco in contesti dinamici con forte possibilita' di crescita personale.</p>
+    <header>
+        <h1>Curriculum Vitae di Riccardo Rossi</h1>
+        <p>Sono un venticinquenne volenteroso e determinato, con grande voglia di mettersi in gioco in contesti dinamici con forte possibilita' di crescita personale.</p>
     </header>
-    <section id="informazioni">
-        <h3><strong>Informazioni di contatto</strong></h3>
-        <ul>
-            <li><strong>Email:</strong> rikyrossi1999.lav@gmail.com</li>
-            <li><strong>Telefono:</strong> +39 348 41 39 435</li>
-            <li><Strong>Indirizzo:</Strong> Via Brigata Casale 9, 37137, Verona, Italia</li>
-        </ul>
-        <h3>Informazioni personali</h3>
-        <ul>
-            <li><Strong>Sesso: </Strong>Uomo</li>
-            <li><Strong>Data di nascita:</Strong> 08/08/1999</li>
-            <li><Strong>Nazionalita': </Strong>Italiana</li>
-        </ul>
-    </section>
-    <section>
-        <div id="esp_lav">
-            <h3>Esperienze lavorative</h3>
-            <li><Strong>Sports & Activity Instructor: </Strong>UKLC, Queen Anne's School, Reading, Regno Unito, Luglio - Agosto 2018;</li>
-            <li><Strong>Safeguarding & Welfare Coordinator: </Strong>King's College, Londra, Regno Unito, Luglio - Agosto 2019;</li>
-            <li><Strong>Consegnatario, Coordinatore delle Operazioni & Aiuto Pizzaiolo: </Strong>Pizzeria Porgi L'Altra Pancia, Verona, Italia, Luglio 2020, Settembre 2022;</li>
-            <li><Strong>Pizzaiolo: </Strong>Pizzeria Porgi L'Altra Pancia, Verona, Italia, Settembre 2022, Marzo 2023;</li>
-            <li><Strong>Magazziniere: </Strong>Cartiere Fedrigoni, Verona, Italia, Maggio 2023 - Giugno 2024.</li>
+    <div class="container_info">
+        <div class="info">
+            <h2><strong>Informazioni di contatto</strong></h2>
+                <p><strong>Email:</strong> rikyrossi1999.lav@gmail.com</p>
+                <p><strong>Telefono:</strong> +39 348 41 39 435</p>
+                <p><Strong>Indirizzo:</Strong> Via Brigata Casale 9, 37137<br>Verona, Italia</p>
         </div>
-        <div id="istruzione">
+        <div class="info">
+            <h2>Informazioni personali</h2>
+            <p><Strong>Sesso: </Strong>Uomo</p>
+            <p><Strong>Data di nascita:</Strong> 08/08/1999</p>
+            <p><Strong>Nazionalita': </Strong>Italiana</p>
+        </div>
+        <div class="info">
+            <h2>Lingue</h2>
+            <p><Strong>Italiano:</Strong> madrelingua</p>
+            <p><Strong>Inglese:</Strong> livello C1</p>
+            <p><Strong>Giapponese: </Strong>N4/N3</p>
+        </div>
+    </div>
+    <div class="esp">
+        <h2>Esperienze lavorative</h2>
+        <div class="esp_container">
+            <div class="esp_lav">
+                <h3>Presso UKLC: UK Language Courses</h3>
+                <p><Strong>Sports & Activity Instructor: </Strong>Queen Anne's School, Reading, Regno Unito, Luglio - Agosto 2018</p>
+                <p><Strong>Safeguarding & Welfare Coordinator: </Strong>King's College, Londra, Regno Unito, Luglio - Agosto 2019</p>
+            </div>
+            <div class="esp_lav">
+                <h3>Presso Pizzeria Porgi L'Altra Pancia, Verona, Italia</h3>
+                <p><Strong>Consegnatario, Coordinatore delle Operazioni & Aiuto Pizzaiolo  </Strong>- Luglio 2020, Settembre 2022</p>
+                <p><Strong>Pizzaiolo </Strong>- Settembre 2022, Marzo 2023</p>
+            </div>
+            <div class="esp_lav">
+                <h3>Presso Cartiere Fedrigoni, Verona, Italia</h3>
+                <p><Strong>Magazziniere: </Strong>Maggio 2023 - Giugno 2024.</p>
+            </div>
+        </div>
+    </div>
+    <div class="istr_container">
+        <div class="istr">
             <h3>Istruzione</h3>
-            <p>Diploma Aeronautico, Lindbergh Flying School - Istituto Aeronautico San Carlo. <br>
-            Voto di maturita': 100/100;</p>
+            <p>Diploma Aeronautico, Lindbergh Flying School - Istituto Aeronautico San Carlo.</p>
+            <p style="font-weight: 600;">Voto di maturita': 100/100</p>
         </div>
-        <div id="certificazioni">
+        <div class="istr">
             <h3>Certificazioni e Corsi</h3>
             <ul>
                 <li>Accademia Pizzaioli: certificato di qualifica professionale con merito "Pizzaiolo" (2022);</li>
                 <li>Patentino per carrello elevatore (2023);</li>
             </ul>
         </div>
-        <div id="lingue">
-            <h3>Lingue</h3>
-            <ul>
-                <li><Strong>Italiano:</Strong> madrelingua</li>
-                <li><Strong>Inglese:</Strong> livello C1;</li>
-                <li><Strong>Giapponese: </Strong>N4/N3;</li>
-            </ul>
-        </div>
-    </section>
+    </div>
 </body>
 </html>
