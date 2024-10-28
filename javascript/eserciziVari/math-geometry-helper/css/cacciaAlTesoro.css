@@ -1,0 +1,29 @@
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+#posizione_1 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 95%;
+    left: 51%;
+    background-image: url(../img/smilingFace.jpg);
+    background-size: cover;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 450px) {
+    
+    #posizione_1 {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--META TAG-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Scopri Math & Geometry Helper! Uno strumento utile, interattivo e divertente per il tuo
+                                            studio di Matematica e Geometria con esercizi giochi interattivi e spiegazione dei concetti
+                                            fondamentali.">
+        <meta name="keywords" content="matematica, geometria, calcolatrice, gioco, caccia al tesoro, interattivo, bambini, scuola, studio
+                                        algebra, aritmetica, operazioni matematiche">
+        <meta name="author" content="NDBR Devs">
+        <!--TITOLO PAGINA-->
+        <title>Caccia Al Tesoro - Math & Geometry Helper</title>
+        <!--IMPLEMENTAZIONE BOOTSTRAP-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!--IMPLEMENTAZIONE FONT-FAMILY-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <script src="js/cacciaAlTesoro.js" defer></script>
+        <link rel="stylesheet" href="css/cacciaAlTesoro.css">
+
+        <!--script per celebrazione vittoria fine gioco-->
+        <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    </head>
+<body>
+
+    <!--Navbar-->
+    <!--NAVBAR (BS #NAV + LOGO)-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="logo-wrapper" >
+                    <a class="navbar-brand" href="index.html" style="display: flex; align-items:center; color: #E8C586; justify-content: center">
+                        <img src="img/logo.png" alt="Logo" width="135" height="auto" class="d-inline-block align-text-top">
+                        <h1 style="margin-left: 20px; font-size: 2rem;">MATH & GEOMETRY HELPER</h1>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">  <!--style="background-color: #E689B7; margin: 0 10px; border: 2px solid black; border-radius: 10px; box-shadow: 5px 5px 10px gray;"-->
+                            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calculator.html">CALCOLATRICE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="geometry.html">GEOMETRIA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="exercises.html">ESERCIZI</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="biblioteca.html">BIBLIOTECA DIGITALE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cacciaAlTesoro.html">CACCIA AL TESORO MATEMATICA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="chiSiamo.html">CHI SIAMO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Sezione titolo pagina-->
+    <div class="container"> 
+
+        <div class="titoloPagina">
+            <h1>Math & Geometry Helper</h1>
+            <h3>Caccia Al Tesoro</h3>
+        </div>
+
+    </div>
+
+
+    <!--Sezione mappa del tesoro-->
+    <div class="container">
+        <canvas id="coriandoli"></canvas>
+
+        <!--Container mappa-->
+        <div id="cacciaAlTesoro" style="position: relative; text-align: center;">
+            <img src="img/mappa.jpg" alt="mappa" class="responsive">
+            <div class="playerPosition" id="posizione_1"></div>
+        </div>
+
+        <!--Div per domande e risposte-->
+        <div id="domandaRisposta">
+        </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="vittoria" onclick="celebration()" style="display: none;">
+            Cliccami!
+        </button>
+                
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Complimenti! Hai vinto!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Sei riuscit* a superare tutti i livelli e sei stat* promoss*! <br>
+                        Gioca un'altra partita, oppure
+                        vai nella pagina esercizi per poterti esercitare ulteriormente in Algebra e Geometria.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                        <a href="exercises.html" target="_blank"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Esercizi</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--FOOTER-->
+    <div class="footer">
+        <div class="container">
+            <div class="contattiMenu">
+                <div id="contatti">
+                    <address>
+                        Via delle Magnolie, 12 - Firenze (FI) 50125 <br />
+                        Tel: 0551234567 <br />
+                        E-mail: info@mghelper.it
+                    </address>
+                </div>
+                <div id="menuSecondario">
+                    <h5>Gioca e impara!</h5>
+                    <ul>
+                        <li>
+                            <a href="geometry.html">Geometria</a>
+                        </li>
+                        <li>
+                            <a href="exercises.html">Esercizi</a>
+                        </li>
+                        <li>
+                            <a href="biblioteca.html">Biblioteca Digitale</a>
+                        </li>
+                        <li>
+                            <a href="cacciaAlTesoro.html">Caccia al Tesoro Matematica</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <div id="crediti">
+                <p>Copyright &copy 2024 Math & Geometry Helper - <a href="chiSiamo.html"><em>NDRB Devs</em></a>. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

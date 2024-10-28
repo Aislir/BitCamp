@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="menu">Seleziona una voce</label>
+    <select name="menu" id="menu">
+        <option value="home">Home</option>
+        <option value="prodotti">Prodotti</option>
+        <option value="servizi">Servizi</option>
+        <option value="contatti">Contatti</option>
+    </select>
+    <br>
+    <button onclick="seleziona()">Seleziona</button>
+
+    <h1>Verifica Accesso</h1>
+    <p>Inserisci un numero da 1 a 5</p>
+    <input type="number" name="numero" id="numero">
+    <br>
+    <p>Sei maggiorenne?</p>
+    <input type="checkbox" name="check" id="check">
+    <br>
+    <button onclick="verifica()">Verifica</button>
+    <p id="risultato"></p>
+
+    <script>
+        function seleziona() {
+            var menu = document.getElementById("menu");
+            var scelta = menu.value;
+
+            switch (scelta) {
+                case "home": 
+                        alert("Hai selezionato la voce Home");
+                        break;
+                case "prodotti":
+                        alert("Hai selezionato la voce Prodotti");
+                        break;
+                case "servizi":
+                        alert("Hai selezionato la voce Servizi");
+                        break;
+                case "contatti":
+                        alert("Hai selezionato la voce Contatti");
+                        break;
+                default:
+                        alert("Selezione non valida.");
+            }
+        }
+
+        function verifica() {
+            var numeroInserito = document.getElementById("numero").value;
+            var maggiorenne = document.getElementById("check").checked; //ritorna vero o falso
+            var risultato = document.getElementById("risultato");
+
+            switch (numeroInserito) {
+                case "1":
+                    if(maggiorenne) {
+                        risultato.textContent = "Hai inserito il numero 1 e sei maggiorenne";
+                    } else {
+                        risultato.textContent = "Hai inserito il numero 1 e ma non sei maggiorenne";
+                    }
+                    break;
+                case "2":
+                case "3":
+                    if(maggiorenne) {
+                        risultato.textContent = "Hai inserito il numero 2 o 3 e sei maggiorenne";
+                    } else {
+                        risultato.textContent = "Hai inserito il numero 2 o 3 e ma non sei maggiorenne";
+                    }
+                    break;
+                case "4": //un case con argomento vuoto porta ad utilizzare l'argomento del case successivo
+                case "5":
+                if(maggiorenne) {
+                        risultato.textContent = "Hai inserito il numero 4 o 5 e sei maggiorenne";
+                    } else {
+                        risultato.textContent = "Hai inserito il numero 4 o 5 e ma non sei maggiorenne";
+                    }
+                    break;
+                default: 
+                    risultato.textContent = "Devi inserire un numero tra 1 e 5";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Studio Medico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Homepage Studio Medico" />
+    <meta name="keywords" content="studio medico, prenotazione appuntamenti, servizi medici" />
+    <meta name="author" content="Classe BitCamp" />
+
+    <style>
+        /*Impostiamo lo stile del tag body*/
+        body {
+            margin: 0;/*Nessun margine sul body*/
+            padding: 0;
+            font-family:Arial, Helvetica, sans-serif;
+            background: url('img/sfondo.jpg') fixed;
+            background-size: cover;
+            color: darkgrey;
+        }
+
+        /*Stile per l'intestazione*/
+        header {
+            text-align: center;
+            padding: 50px;
+            color: white;
+            background: rgba(0,0,0,0.7);
+        }
+
+        /*Stile per la Navigation Bar*/
+        nav {
+            text-align: center;
+            background:black;
+            padding: 10px;
+        }
+
+        /*Applicare lo stile su un tag interno ad un contenitore*/
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        /*Stile per il form di prenotazione*/
+        form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 10px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding:10px;
+            margin-bottom:20px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+        }
+
+        /*Stile per il button*/
+        form button {
+            background: dodgerblue;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /*Stile per le sezioni*/
+        section {
+            text-align: center;
+            padding: 50px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        section h2 {
+            color: darkgray;
+        }
+
+        section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        section li {
+            margin-bottom: 10px;
+        }
+
+        /*Stile per il footer*/
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: black;
+            color: white;
+        }
+    </style>
+    <script src="studiomedico.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Studio Medico BitCamp</h1>
+        <p>La tua salute è la nostra priorità</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#chiSiamo">Chi Siamo</a>
+        <a href="#servizi">Servizi</a>
+        <a href="informazioniAggiuntive.html">Informazioni Aggiuntive</a>
+        <a href="#contatti">Contatti</a>
+    </nav>
+
+    <form>
+        <label for="data">Data dell'appuntamento:</label>
+        <input type="date" id="data" name="data" required />
+
+        <label for="ora">Ora dell'appuntamento:</label>
+        <input type="time" id="ora" name="ora" required />
+
+        <button type="submit">Prenota Appuntamento</button>
+    </form>
+
+    <section>
+        <table>
+            <thead>
+                <th>Data</th>
+                <th>Ora</th>
+            </thead>
+            <tbody id="table">
+    
+            </tbody>
+        </table>
+    </section>
+
+    <section id="servizi">
+        <h2>Servizi Offerti</h2>
+        <ul>
+            <li>Medicina Generale</li>
+            <li>Pediatria</li>
+            <li>Cardiologia</li>
+            <li>Dermatologia</li>
+            <li>Ortopedia</li>
+        </ul>
+    </section>
+
+    <section id="chiSiamo">
+        <h2>Chi Siamo</h2>
+        <p>Lo Studio Medico BitCamp si impegna a fornire servizi medici di alta qualità per migliorare la salute e il benessere dei nostri pazienti.</p>
+    </section>
+
+    <section id="contatti">
+        <h2>Contatti</h2>
+        <p>Indirizzo: Via delle Cure, 123 - 00123 Roma</p>
+        <p>Email: info@studiomedicobitcamp.it</p>
+        <p>Telefono: 0123-456789</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Studio Medico Bitcamp. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>
