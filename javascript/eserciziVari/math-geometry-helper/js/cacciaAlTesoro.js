@@ -1,7 +1,7 @@
 const inizioPartita = document.createElement("button"); //bottone inizio partita
 const invioRisposta = document.createElement("button"); //bottone di invio risposta
 const domanda = document.createElement("p");            //paragrafo domanda
-const risultato = document.createElement("p");          //paragrafo risultato
+const risultato = document.createElement("p");         //paragrafo risposta 
 const playerName = document.createElement('p');         //identificativo giocatore
 
 //coriandoli per festeggiamento vittoria giocatore
@@ -93,6 +93,7 @@ function domande(counterDomande) {
         case 9:
 
             domanda.textContent = "Data l'equazione '3(x - 2) + 4 = 2(x + 5) - 3', calcola il valore di x";
+            break;
     }
 }
 
@@ -110,7 +111,7 @@ invioRisposta.addEventListener("click", checkRisposta = () => {
                 risultato.textContent = "Complimenti! Risposta esatta! Vai alla classe numero 4";
                 risultato.style.color = "green";
                 document.getElementById("risposta").value = "";
-                div.appendChild(risultato);
+                div.appendChild(risultato);-
                 playerPosition();
                 counterDomande++;
                 domande(counterDomande);
