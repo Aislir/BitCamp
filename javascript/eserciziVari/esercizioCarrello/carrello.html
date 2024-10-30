@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="carrello.js" defer></script>
+</head>
+<body>
+    <h1>Spesa</h1>
+    <div>
+        <label for="maglietta-rossa">Maglietta Rossa: 10 euro</label>
+        <input type="checkbox" id="maglietta-rossa" value="10">
+    </div>
+    <div>
+        <label for="maglietta-verde">Maglietta Verde: 15 euro</label>
+        <input type="checkbox" id="maglietta-verde" value="15">
+    </div>
+    <div>
+        <label for="maglietta-blu">maglietta Blu: 12 euro</label>
+        <input type="checkbox" id="maglietta-blu" value="12">
+    </div>
+    <button onclick="calcolaTotale()">Aggiungi al Carrello</button> 
+    <br>
+    <hr>
+    <p>Il tuo carrello</p>
+    <ul id="carrello">
+        
+    </ul>
+    <p>Totale: <span id="totale"></span> euro.</p>
+</body>
+</html>

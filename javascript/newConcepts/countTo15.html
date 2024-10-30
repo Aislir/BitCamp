@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conteggio fino a 15</h1>
+
+    <div id="contatore">
+
+    </div>
+
+
+
+    <script>
+
+        //FUNZIONE CONTEGGIO
+        function countTo15() {
+            var counter = 1;
+            var output = document.getElementById("contatore");
+
+        
+
+            //FUNZIONE DI AGGIORNAMENTO
+            function updateCounter() {
+                output.textContent = counter; //valore counter corrente
+                counter++;
+
+                if(counter <= 15) {
+                    setTimeout(updateCounter, 10000);   //il secondo paramentro di setTimeout e' il tempo da aspettare in millisecondi prima di richiamare nuovamente la funzione
+                }
+            }
+
+            updateCounter();
+        }
+
+        countTo15();
+    </script>
+</body>
+</html>
