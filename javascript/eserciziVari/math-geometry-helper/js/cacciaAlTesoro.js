@@ -1,7 +1,7 @@
 const inizioPartita = document.createElement("button"); //bottone inizio partita
 const invioRisposta = document.createElement("button"); //bottone di invio risposta
 const domanda = document.createElement("p");            //paragrafo domanda
-const risultato = document.createElement("p");         //paragrafo risposta 
+const risultato = document.createElement("p");          //paragrafo risultato
 const playerName = document.createElement('p');         //identificativo giocatore
 
 //coriandoli per festeggiamento vittoria giocatore
@@ -39,8 +39,8 @@ inizioPartita.addEventListener("click", nuovaPartita = () => {
     div.appendChild(invioRisposta);
 
     //posizionamento giocatore per nuova partita
-    player.style.left = "51%";
-    player.style.top = "95%";
+    player.style.left = "49%";
+    player.style.top = "90%";
 
 })  
 
@@ -93,7 +93,6 @@ function domande(counterDomande) {
         case 9:
 
             domanda.textContent = "Data l'equazione '3(x - 2) + 4 = 2(x + 5) - 3', calcola il valore di x";
-            break;
     }
 }
 
@@ -111,7 +110,7 @@ invioRisposta.addEventListener("click", checkRisposta = () => {
                 risultato.textContent = "Complimenti! Risposta esatta! Vai alla classe numero 4";
                 risultato.style.color = "green";
                 document.getElementById("risposta").value = "";
-                div.appendChild(risultato);-
+                div.appendChild(risultato);
                 playerPosition();
                 counterDomande++;
                 domande(counterDomande);
@@ -285,49 +284,50 @@ function playerPosition() {
     
     switch(counterDomande) {
 
-        case 1:
-            player.style.left = "78%";
+        case 1: //room 4
+            player.style.left = "68%";
             player.style.top = "62%";
             break;
 
-        case 2: 
+        case 2: //room 8
+            player.style.left = "68%";
             player.style.top = "22%";
             
             break;
 
-        case 3: 
-            player.style.left = "23.5%";
+        case 3: //room 5
+            player.style.left = "30%";
             player.style.top = "42%";
             break;
 
-        case 4: 
-            player.style.left = "23.5%";
+        case 4: //room 3
+            player.style.left = "30%";
             player.style.top = "62%";
             break;
 
-        case 5: 
-            player.style.left = "23.5%";
+        case 5: //room 7
+            player.style.left = "30%";
             player.style.top = "22%";
             break;
         
-        case 6: 
-            player.style.left = "78%";
-            player.style.top = "82%";
+        case 6: //room 2
+            player.style.left = "68%";
+            player.style.top = "80%";
             break;
         
-        case 7: 
-            player.style.left = "78%";
+        case 7: //room 6
+            player.style.left = "68%";
             player.style.top = "42%";
             break;
 
-        case 8: 
-            player.style.left = "23.5%";
-            player.style.top = "82%";
+        case 8: //room 1
+            player.style.left = "30%";
+            player.style.top = "80%";
             break;
 
-        case 9:
-            player.style.left = "50%";
-            player.style.top = "20%";
+        case 9: //victory
+            player.style.left = "48%";
+            player.style.top = "15%";
             break;
     }
 

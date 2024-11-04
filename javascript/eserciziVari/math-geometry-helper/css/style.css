@@ -1,0 +1,237 @@
+﻿/*
+#616FD2 Viola
+#6FC7DD Azzurro
+#B8CBFE Viola chiaro
+#E689B7 Rosa
+#FFCC00 Giallo acceso
+#E8C586 Giallo
+*/
+
+/*--------------CSS GENERALE PER IL BODY---------------*/
+body {
+	background: url('../img/sfondo.png');
+	font-family: "Walter Turncoat", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/*--------------CSS NAVBAR--------------*/
+.navbar-brand-wrapper {
+	background-color: #616FD2;
+	text-align: center;
+	padding: 30px;
+}
+	.navbar-brand-wrapper h1 {
+		color: #E8C586;
+		font-family: "Schoolbell", cursive;
+		font-weight: 400;
+		font-style: normal;
+	}
+
+.navbar-brand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+	.navbar-brand h1 {
+		margin-left: 20px;
+		color: #FFCC00;
+	}
+	@media (max-width: 768px) {
+		.navbar-brand h1 {
+			font-size: 24px;
+		}
+
+		.navbar-brand img {
+			width: 80px;
+			height: 95px;
+		}
+	}
+
+.navbar-nav {
+	color: black;
+	text-align: center;
+	background-color: #FFCC00;
+	border-radius: 10px;
+	padding: 13px;
+	font-family: "Titillium Web", serif;
+	font-weight: 300;
+	font-style: normal;
+	box-shadow: rgba(0,0,0,0.3) 7px 7px;
+	margin-top: -17px;
+	border: 2px solid black;
+}
+	.navbar-nav .nav-link {
+		color: black;
+		font-size: 18px;
+		font-weight: bold;
+		margin: 0 5px;
+		border-radius: 10px;
+		border: 2px solid rgba(255, 255, 255, 0);
+	}
+	.navbar-nav .nav-link:hover {
+		background-color: #E689B7;
+		border-radius: 10px;
+		border: 2px solid black;
+		color:white;
+	}
+	@media (max-width: 576px) {
+		.navbar-nav {
+			margin-top: 1px;
+		}
+	}
+
+.navbar-toggler {
+	color: rgba(0, 0, 0, 0.1);
+	background-color: #E689B7;
+	box-shadow: rgba(0,0,0,0.4) 3px 3px;
+}
+	.navbar-toggler:focus {
+		outline: none;
+		box-shadow: none;
+	}
+@media (max-width: 576px) {
+	.navbar-toggler {
+		width: 35px;
+		height: 35px;
+		padding: 3px;
+		margin-bottom: 10px;
+		font-size: 0.75rem;
+	}
+}
+
+/*--------------CSS FOOTER--------------*/
+.footer {
+	color: #FFCC00;
+	background-color: #616FD2;
+	padding-bottom: 10px;
+	font-family: "Titillium Web", serif;
+	font-weight: 500;
+	font-style: normal;
+	max-height: 300px;
+}
+
+.contattiMenu {
+	text-align:center;
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
+	
+}
+	.contattiMenu a {
+		color: #FFCC00;
+		text-decoration: none;
+	}
+	.contattiMenu a:hover {
+		color:white;
+	}
+
+#contatti {
+	padding: 10px;
+	font-size: 18px;
+}
+	
+
+#menuSecondario {
+	font-size: 18px;
+	text-align: center;
+	padding: 10px;
+}
+	#menuSecondario li {
+		list-style: none;
+	}
+
+#crediti {
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+}
+	#crediti a {
+		color: #FFCC00;
+	}
+	#crediti a:hover {
+		color: white;
+	}
+
+@media (max-width: 576px) {
+	.contattiMenu {
+		padding: 10px 0 0 0;
+	}
+	.footer #contatti, #menuSecondario {
+		width: 50%;
+	}
+	#contatti {
+		font-size: 12px;
+	}
+	#menuSecondario {
+		font-size: 12px;
+	}
+		#menuSecondario a {
+			text-decoration: underline;
+		}
+}
+
+/*--------------CSS TITOLO PAGINA--------------*/
+.titoloPagina {
+	margin: 40px 0 90px 0;
+	color: black;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+/*--------------CSS GENERALE ACCORDION--------------*/
+#accordionTools {
+	margin-top: -40px;
+	width: 49.5%;
+	border-radius: 5px;
+	box-shadow: rgba(0,0,0,0.3) 7px 7px;
+}
+
+@media (max-width: 576px) {
+	#accordionTools {
+		width: 100%
+	}
+}
+
+.accordion-item {
+	background-color: rgba(111, 199, 221, 0.3);
+	border: none;
+}
+
+.accordion-button {
+	background-color: rgba(111, 199, 221, 0.8);
+	border: 2px solid black;
+	color: black;
+	box-shadow: none;
+}
+
+	.accordion-button:not(.collapsed) {
+		background-color: rgba(111, 199, 221, 0.8);
+		border: 2px solid black;
+		color: black;
+		box-shadow: none;
+	}
+
+	.accordion-button:focus {
+		box-shadow: none;
+	}
+
+.accordion-body {
+	background-color: rgba(111, 199, 221, 0.3);
+	color: black;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+/*--------------CSS GENERALE CARD--------------*/
+.card {
+	box-shadow: rgba(0,0,0,0.3) 7px 7px;
+	background-color: #E8C586;
+	font-family: "Titillium Web", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-weight: bold;
+}
+

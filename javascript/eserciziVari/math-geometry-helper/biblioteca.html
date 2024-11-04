@@ -11,57 +11,75 @@
     <meta name="keywords" content="matematica, geometria, calcolatrice, gioco, caccia al tesoro, interattivo, bambini, scuola, studio
                                     algebra, aritmetica, operazioni matematiche">
     <meta name="author" content="NDBR Devs">
+    
     <!--TITOLO PAGINA-->
     <title>Biblioteca Digitale - Math & Geometry Helper</title>
+    
     <!--IMPLEMENTAZIONE BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
     <!--IMPLEMENTAZIONE FONT-FAMILY-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     
+    <!--IMPLEMENTAZIONE FONT SCHOOLBELL-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Moderustic:wght@300..800&family=Paytone+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Schoolbell&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"><!--IMPLEMENTAZIONE CSS GENERALE-->
+    
+    <!--IMPLEMENTAZIONE FONT WALTER TURNCOAT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Moderustic:wght@300..800&family=Paytone+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Schoolbell&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Walter+Turncoat&display=swap" rel="stylesheet">
+
+    <!--IMPLEMENTAZIONE CSS GENERALE-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--IMPLEMENTAZIONE CSS BIBLIOTECA-->
+    <link rel="stylesheet" href="css/biblioteca.css">
+
 </head>
 <body>
     <!--NAVBAR (BS #NAV + LOGO)-->
+    <div class="navbar-brand-wrapper">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo" width="135" height="150" class="d-inline-block align-text-top">
+            <h1>MATH & GEOMETRY HELPER</h1>
+        </a>
+    </div>
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <div class="container">
-                <div class="logo-wrapper">
-                    <a class="navbar-brand" href="index.html" style="display: flex; align-items:center; color: #E8C586; justify-content: center">
-                        <img src="img/logo.png" alt="Logo" width="135" height="150" class="d-inline-block align-text-top">
-                        <h1 style="margin-left: 20px; font-size: 2rem;">MATH & GEOMETRY HELPER</h1>
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <!--style="background-color: #E689B7; margin: 0 10px; border: 2px solid black; border-radius: 10px; box-shadow: 5px 5px 10px gray;"-->
-                            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="calculator.html">CALCOLATRICE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="geometry.html">GEOMETRIA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="exercises.html">ESERCIZI</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="biblioteca.html">BIBLIOTECA DIGITALE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cacciaAlTesoro.html">CACCIA AL TESORO MATEMATICA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="chiSiamo.html">CHI SIAMO</a>
-                        </li>
-                    </ul>
-                </div>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" style="text-align:center;">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculator.html">CALCOLATRICE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="geometry.html">GEOMETRIA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="exercises.html">ESERCIZI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="biblioteca.html">BIBLIOTECA DIGITALE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cacciaAlTesoro.html">CACCIA AL TESORO MATEMATICA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chiSiamo.html">CHI SIAMO</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -86,11 +104,11 @@
                         <div class="card-body">
                             <h5 class="card-title">I Numeri Primi e la Scomposizione</h5>
                             <p class="card-text">
-                                In questo video parliamo di <b>numeri primi</b> e della <b>scomposizione</b> in numeri primi! <b>Definizioni ed esempi</b>
-                                raccontati dal Prof. Eddie con un linguaggio adatto alla <b>Scuola Secondaria di Primo Grado</b> (Scuola Media).
-                                A presto!
+                                In questo video scopriamo i numeri primi e la scomposizione in fattori primi! Il Prof. Eddie, con un linguaggio
+                                chiaro e semplice, illustra definizioni ed esempi adatti agli studenti della Scuola Secondaria di Primo Grado 
+                                (Scuola Media). Buona visione e buon apprendimento!
                             </p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal1">Guarda Video</button>
+                            <button data-bs-toggle="modal" data-bs-target="#videoModal1">Guarda Video</button>
                         </div>
                     </div>
                 </div>
@@ -103,7 +121,7 @@
                                 Vedremo inoltre cos'è il <b>grado di un polinomio</b>, come si comporta il grado rispetto alla somma e alla moltiplicazione.
                                 Inoltre vedremo come interpretare geometricamente il <b>prodotto tra due polinomi.</b>
                             </p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal2">Guarda Video</button>
+                            <button data-bs-toggle="modal" data-bs-target="#videoModal2">Guarda Video</button>
                         </div>
                     </div>
                 </div>
@@ -116,10 +134,10 @@
                         <div class="card-body">
                             <h5 class="card-title">Le Principali Figure Geometriche Piane</h5>
                             <p class="card-text">
-                                Presentazione delle principali <b>figure geometriche piane</b> (Quadrato, Rettangolo, Triangolo, Cerchio), per le classi
-                                delle scuole medie.
+                                Presentazione delle principali figure geometriche piane, tra cui Quadrato, Rettangolo, Triangolo e Cerchio, pensata 
+                                per gli studenti delle scuole medie. Definizioni, proprietà e caratteristiche illustrate in modo semplice e coinvolgente!
                             </p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal3">Guarda Video</button>
+                            <button data-bs-toggle="modal" data-bs-target="#videoModal3">Guarda Video</button>
                         </div>
                     </div>
                 </div>
@@ -131,7 +149,7 @@
                                 Scopri come calcolare <b>l'area e il perimetro</b> delle principali figure geometriche piane! Questo video fornisce una guida
                                 semplice e intuitiva per applicare le <b>formule di base</b>, aiutandoti a comprendere meglio il mondo della geometria.
                             </p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal4">Guarda Video</button>
+                            <button data-bs-toggle="modal" data-bs-target="#videoModal4">Guarda Video</button>
                         </div>
                     </div>
                 </div>
@@ -229,7 +247,7 @@
                             <a class="nav-link active" id="libro1-tab" data-bs-toggle="tab" href="#libro1" role="tab" aria-controls="libro1" aria-selected="true">Imparo la matematica</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="libro2-tab" data-bs-toggle="tab" href="#libro2" role="tab" aria-controls="libro2" aria-selected="false">Il mio quaderno di approfondimento delle competenze</a>
+                            <a class="nav-link" id="libro2-tab" data-bs-toggle="tab" href="#libro2" role="tab" aria-controls="libro2" aria-selected="false">Il mio quaderno di approfondimento...</a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" id="libro3-tab" data-bs-toggle="tab" href="#libro3" role="tab" aria-controls="libro3" aria-selected="false">Eserciziario di Matematica a Colori</a>
@@ -241,7 +259,7 @@
                             <a class="nav-link" id="libro5-tab" data-bs-toggle="tab" href="#libro5" role="tab" aria-controls="libro5" aria-selected="false">No problem! Aritmetica e geometria</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="libro6-tab" data-bs-toggle="tab" href="#libro6" role="tab" aria-controls="libro6" aria-selected="false">Matelogica. Per piccoli geni in matematica</a>
+                            <a class="nav-link" id="libro6-tab" data-bs-toggle="tab" href="#libro6" role="tab" aria-controls="libro6" aria-selected="false">Matelogica. Per piccoli geni...</a>
                         </li>
                     </ul>
                 </div>
@@ -249,43 +267,54 @@
                 <div class="tab-content mt-3" style="padding: 20px; text-align: center;">
                     <!-- Libro 1 -->
                     <div class="tab-pane fade show active" id="libro1">
-                        <h5>Imparo la matematica</h5>
-                        <p>Un libro con spiegazioni base di algebra e geometria, completo di esercizi pratici.</p>
+                        <h5>Imparo la matematica. Vol. A. Per la Scuola elementare</h5>
+                        <p>Questo libro trova un degno posto all'interno del panorama della letteratura e dell'insegnamento grazie alle parole e alle espressioni che gli donano un carattere distintivo.</p>
                         <a href="https://www.amazon.it/Imparo-matematica-Vol-Scuola-elementare/dp/8873341071/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3GB81L8OWKA3R&dib=eyJ2IjoiMSJ9.unNMcr2wR4htxZjSTyyAbP_Vll4R8jbUjX1kosqeCCHarPbHXPh7e0ObMH7pm9A9DjWW7gauxMjarsQIhaTPVfjS0_EI_3RbmyXF1fvy8qBhSzI_xui51Oc97s90dwodjVu52Wk1muzZS5ewV7O5bzFz5BcyrzuMq1by6wPj0CNzlUENorHc8HghTP_ZumWu0AUG86grk1Ey73aUznl7xcnj4ejNwSgiSNIiLjeomBqittuErWZrqJUB49l3Nti20gAbjTxxfXd2QYMI7i2voHyIZa0XLiM7AT139DDmHKc.6F14i9DkaQ-dYoZlq0FJ37BShT0k6u6CdhJp6IPR1Ag&dib_tag=se&keywords=Imparo+la+matematica&qid=1729872438&sprefix=imparo+la+matematica%2Caps%2C96&sr=8-1"
                            class="btn btn-primary" target="_blank">Acquista</a>
                     </div>
                     <!-- Libro 2 -->
                     <div class="tab-pane fade" id="libro2">
-                        <h5>Il mio quaderno di matematica</h5>
-                        <p>Una raccolta di esercizi di geometria e algebra progettata per aiutare i giovani a comprendere concetti base.</p>
+                        <h5>Il mio quaderno di approfondimento delle competenze. Matematica. Per la Scuola elementare (Vol. 1)</h5>
+                        <p>
+                            Il mio quaderno per approfondimenti competente una nuova collana di eserciziari per la scuola primaria. Il percorso di ripasso e consolidamento degli apprendimenti, completo
+                            e graduale, è arricchito con compiti di realtà per sviluppare e valutare le competenze previste dai traguardi disciplinari delle indicazioni nazionali. I quaderni propongono
+                            anche prove di ingresso, verifiche degli apprendimenti e attività ludiche.
+                        </p>
                         <a href="https://www.amazon.it/quaderno-approfondimento-competenze-Matematica-elementare/dp/8876274537/ref=sr_1_1_sspa?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3A0LBPDTODOSI&dib=eyJ2IjoiMSJ9.y_ZzbweMoDbS8ipl5-FrDPG5VIMEIuNcvGiSMcAGSGV1Xnqh9DU7KI7fh6A-_ieH0x8sjzFuAqe3MKEr3GLEt0-Ck13HiIdT5slU9PFLPSUGqTaknWPQ9TSmlQJFzCWjN7_pxGrbm1q8SKceAEJMBYRtLOSaBHcuxq4COWMU7Yh8yvfMSE8FFtwb5RAJCwPwwqKhZ_OOX2aWLaz1hDfKD4Nd4AWH4UXjMYtXjv-k6KuoYcs4e2utVrPNrPSXxsAwbQjlpIBkBGegfXbvOnKuxSTwYLNslmcnvX-PYLdzWXI.lCnXslKhT6LYOazSgCxHxdkpE_VGklOL5TmsC6JP1i0&dib_tag=se&keywords=Il+mio+quaderno+di+matematica&qid=1729872463&sprefix=il+mio+quaderno+di+matematica%2Caps%2C95&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
                            class="btn btn-primary" target="_blank">Acquista</a>
                     </div>
                     <!-- Libro 3 -->
                     <div class="tab-pane fade" id="libro3">
-                        <h5>Matematica Facile per Tutti</h5>
-                        <p>Copre vari aspetti della matematica, inclusi algebra e geometria, con attività mirate.</p>
+                        <h5>IL MIO QUADERNO DI MATEMATICA CLASSE QUINTA: Eserciziario di Matematica a Colori per Bambini della Scuola Primaria con Soluzioni e Svolgimenti.</h5>
+                        <p>
+                            "Il Mio Quaderno di Matematica - Classe Quinta": il tuo miglior alleato per il ripasso e il consolidamento degli argomenti di matematica della scuola primaria!
+                            Con svolgimenti e soluzioni nella seconda parte del libro. Questo testo, completamente a colori, è stato appositamente progettato per aiutare i bambini della quinta elementare
+                            a rafforzare le loro competenze matematiche e a migliorare la relativa comprensione degli argomenti affrontati durante l'anno scolastico.
+                        </p>
                         <a href="https://www.amazon.it/MIO-QUADERNO-MATEMATICA-CLASSE-QUINTA/dp/B0CXDVKMM4/ref=sr_1_1_sspa?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1B7GQXCUF9FPR&keywords=Matematica+Facile+per+Tutti&qid=1729872481&sprefix=matematica+facile+per+tutti%2Caps%2C91&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
                            class="btn btn-primary" target="_blank">Acquista</a>
                     </div>
                     <!-- Libro 4 -->
                     <div class="tab-pane fade" id="libro4">
-                        <h5>Algebra e Geometria in gioco</h5>
+                        <h5>Fai matematica plus. Per la Scuola media. Con e-book. Con espansione online. Algebra-Geometria-Preparati all'esame-Matematica in gioco (Vol. 3)</h5>
                         <p>Un testo che introduce i bambini alle basi dell’algebra e della geometria in modo interattivo.</p>
                         <a href="https://www.amazon.it/matematica-Scuola-media-book-espansione/dp/8805076902/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2WAUBHCC0UBCX&dib=eyJ2IjoiMSJ9.rf-KxY_oKNh5SYbQC-tYeA.RN3zKngLKbYNPPVIPtQCgM5_T1rX7t13tL-awVDVKuk&dib_tag=se&keywords=Algebra+e+Geometria+in+gioco&qid=1729872500&sprefix=algebra+e+geometria+in+gioco%2Caps%2C93&sr=8-1"
                            class="btn btn-primary" target="_blank">Acquista</a>
                     </div>
                     <!-- Libro 5 -->
                     <div class="tab-pane fade" id="libro5">
-                        <h5>Matematica per piccoli geni</h5>
+                        <h5>No problem! Aritmetica e geometria. Per la Scuola media. Con e-book. Con espansione online (Vol. 1)</h5>
                         <p>Un libro che stimola la curiosità dei bambini verso l'algebra e la geometria, con esercizi e giochi matematici adatti alla loro età.</p>
                         <a href="https://www.amazon.it/problem-Aritmetica-geometria-Scuola-espansione/dp/8829213330/ref=sr_1_3?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3DJPKS5FRO7NH&dib=eyJ2IjoiMSJ9.GEcLMYpVlvR1ho59CZBlzJZg7I-N3yIngG27_LLEM0A9ed4f-MFQMSRHhadgGheQ_izs4uRdmh_9kfQQkk6oIl-svMqugsZqM85zAvandUPKS3SsDmyO_Cky2E4G3Pd9zfc6AcXE3N8HTVO0v2XCN-HC7qMv8ofhA1SZFG0N4Qk.7rJCFFHEcpwEZQjB4QqlEtFWrs7OGyJfVdsen6M3hQA&dib_tag=se&keywords=Problemi+di+Geometria+per+la+Scuola+Media&qid=1729872539&sprefix=problemi+di+geometria+per+la+scuola+media%2Caps%2C101&sr=8-3"
                            class="btn btn-primary" target="_blank">Acquista</a>
                     </div>
                     <!-- Libro 6 -->
                     <div class="tab-pane fade" id="libro6">
-                        <h5>Problemi di Geometria per la Scuola Media</h5>
-                        <p>Con esercizi pratici su calcoli e figure geometriche.</p>
+                        <h5>Matelogica. Per piccoli geni in matematica. Numeri fino a 100 (Vol. 2)</h5>
+                        <p>
+                            Questo è il secondo volume della collana, articolata in cinque libri e dedicata ai "piccoli geni in matematica", pensata per avvicinare i bambini alla materia in modo 
+                            innovativo e divertente. Il libro propone più di 40 schede operative con giochi e attività sui concetti di logica matematica.
+                        </p>
                         <a href="https://www.amazon.it/Matelogica-piccoli-geni-matematica-2/dp/8861379990/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=QD10VYMWJNAP&dib=eyJ2IjoiMSJ9.045Z4B7EBMErGEoj6FKj7A.xN4FdfLlnHoV3A5DcXhCSavZPpEVGHVzB8id73vf8Os&dib_tag=se&keywords=Matematica+per+piccoli+geni&qid=1729872582&sprefix=matematica+per+piccoli+geni%2Caps%2C88&sr=8-1"
                            class="btn btn-primary" target="_blank">Acquista</a>
                     </div>
@@ -299,6 +328,7 @@
         <div class="container">
             <div class="contattiMenu">
                 <div id="contatti">
+                    <h4>Contatti</h4>
                     <address>
                         Via delle Magnolie, 12 - Firenze (FI) 50125 <br />
                         Tel: 0551234567 <br />
@@ -306,21 +336,11 @@
                     </address>
                 </div>
                 <div id="menuSecondario">
-                    <h5>Gioca e impara!</h5>
-                    <ul>
-                        <li>
-                            <a href="geometry.html">Geometria</a>
-                        </li>
-                        <li>
-                            <a href="exercises.html">Esercizi</a>
-                        </li>
-                        <li>
-                            <a href="biblioteca.html">Biblioteca Digitale</a>
-                        </li>
-                        <li>
-                            <a href="cacciaAlTesoro.html">Caccia al Tesoro Matematica</a>
-                        </li>
-                    </ul>
+                    <h4>Gioca e impara!</h4>
+                    <a href="geometry.html">Geometria</a><br>
+                    <a href="exercises.html">Esercizi</a><br>
+                    <a href="biblioteca.html">Biblioteca Digitale</a><br>
+                    <a href="cacciaAlTesoro.html">Caccia al Tesoro Matematica</a>
                 </div>
             </div>
             <hr />

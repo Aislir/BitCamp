@@ -11,59 +11,77 @@
     <meta name="keywords" content="matematica, geometria, calcolatrice, gioco, caccia al tesoro, interattivo, bambini, scuola, studio
                                     algebra, aritmetica, operazioni matematiche">
     <meta name="author" content="NDBR Devs">
+    
     <!--TITOLO PAGINA-->
     <title>Chi siamo - Math & Geometry Helper</title>
+    
     <!--IMPLEMENTAZIONE BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
     <!--IMPLEMENTAZIONE FONT-FAMILY-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!--IMPLEMENTAZIONE FONT SCHOOLBELL-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Moderustic:wght@300..800&family=Paytone+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Schoolbell&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"><!--IMPLEMENTAZIONE CSS GENERALE-->
+    
+    <!--IMPLEMENTAZIONE FONT WALTER TURNCOAT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Moderustic:wght@300..800&family=Paytone+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Schoolbell&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Walter+Turncoat&display=swap" rel="stylesheet">
+    
+    <!--IMPLEMENTAZIONE CSS GENERALE-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--IMPLEMENTAZIONE CSS CHI SIAMO-->
+    <link rel="stylesheet" href="css/chiSiamo.css">
 
 </head>
 
 <body>
 
     <!--NAVBAR (BS #NAV + LOGO)-->
+    <div class="navbar-brand-wrapper">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo" width="135" height="150" class="d-inline-block align-text-top">
+            <h1>MATH & GEOMETRY HELPER</h1>
+        </a>
+    </div>
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <div class="container">
-                <div class="logo-wrapper">
-                    <a class="navbar-brand" href="index.html" style="display: flex; align-items:center; color: #E8C586; justify-content: center">
-                        <img src="img/logo.png" alt="Logo" width="135" height="150" class="d-inline-block align-text-top">
-                        <h1 style="margin-left: 20px; font-size: 2rem;">MATH & GEOMETRY HELPER</h1>
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <!--style="background-color: #E689B7; margin: 0 10px; border: 2px solid black; border-radius: 10px; box-shadow: 5px 5px 10px gray;"-->
-                            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="calculator.html">CALCOLATRICE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="geometry.html">GEOMETRIA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="exercises.html">ESERCIZI</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="biblioteca.html">BIBLIOTECA DIGITALE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cacciaAlTesoro.html">CACCIA AL TESORO MATEMATICA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="chiSiamo.html">CHI SIAMO</a>
-                        </li>
-                    </ul>
-                </div>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" style="text-align:center;">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculator.html">CALCOLATRICE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="geometry.html">GEOMETRIA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="exercises.html">ESERCIZI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="biblioteca.html">BIBLIOTECA DIGITALE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cacciaAlTesoro.html">CACCIA AL TESORO MATEMATICA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chiSiamo.html">CHI SIAMO</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -72,91 +90,121 @@
     <div class="container text-center">
         <div class="titoloPagina">
             <h1>Chi siamo</h1>
-            <p>Ecco una panoramica del nostro Team e del suo prezioso contributo per questo progetto</p>
+            <p>
+                Scopri il nostro team e i ruoli chiave che ognuno di noi ha svolto nello sviluppo di Math & Geometry Helper.
+                Ogni card offre una panoramica sul contributo dei singoli membri e include i collegamenti ai profili LinkedIn
+                e GitHub per maggiori dettagli.
+            </p>
         </div>
     </div>
 
     <!--CARD HORIZONTAL DI BOOTSTRAP-->
+
     <div class="container">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="img/fotoProfilo.png" class="img-fluid rounded-start" alt="fotoProfilo" width="150" height="180">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Babbo Francesco</h5>
-                        <p class="card-text">Il nostro Francesco si é occupato della pagina Esercizi e di quella della descrizione del team, con forte impegno e dedizione in modo tale che sia leggibile a tutti i tipi di visitatori del nostro sito.</p>
-                        <p class="card-text"><small class="text-body-secondary"></small></p>
+        <div class="cardChiSiamo mx-auto">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/fotoAlfonso.png" class="img-fluid rounded-start" alt="fotoProfilo" width="200" height="200">
                     </div>
-                </div>
-                <div id="buttonLinkedInGithub">
-                    <a href="https://www.linkedin.com/in/francesco-babbo-a17516326/" target="_blank"><button>LinkedIn</button></a>
-                    <a href="https://github.com/" target="_blank"><button>Github</button></a>
+                    <div class="col-md-8">
+                        <div class="titoloCard">
+                            <h5 style="margin-left: 20px;"><strong>ALFONSO NAPPI</strong></h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Alfonso, Team Leader dei <em>N.D.R.B. Devs</em> per questo progetto, ha coordinato task e organizzazione del team e lo ha supportato nelle fasi dello sviluppo,
+                                offrendo soluzioni rapide e ad hoc. Ha sviluppato personalmente la pagina "Geometria" e "Biblioteca Digitale", ma ha anche fornito idee e contributi per le altre pagine.
+                            </p>
+                            <p class="card-text"><small class="text-body-secondary"></small></p>
+                        </div>
+                    </div>
+                    <div class="buttonLinkedInGithub">
+                        <a href="https://www.linkedin.com/in/alfonso-nappi-097559250/" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/alfonsoNappi" target="_blank">Github</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
     <div class="container">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="img/" class="img-fluid rounded-start" alt="fotoProfilo" width="150" height="180">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Nappi Alfonso</h5>
-                        <p class="card-text">Alfonso, il team leader della squadra N.D.R.B. Devs, ha organizzato, aiutato e stimolato tutti i suoi compagni con la sua presenza e la sua professionalitá.</p>
-                        <p class="card-text"><small class="text-body-secondary"></small></p>
+        <div class="cardChiSiamo mx-auto">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="titoloCard">
+                            <h5 style="text-align: right; margin-right: 20px;"><strong>RAFFAELE DE MICCO</strong></h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Raffaele ha contribuito al progetto con la realizzazione delle pagine "Home" e "Calcolatrice". Ha lavorato in maniera simbiotica ed incisiva col Team Leader,
+                                per monitorare la gestione dei file e dei dettagli, e offrire supporto principalmente nello sviluppo dei file HTML e CSS e della maggior parte dei contenuti testuali della web application.
+                            </p>
+                            <p class="card-text"><small class="text-body-secondary"></small></p>
+                        </div>
                     </div>
-                </div>
-                <div id="buttonLinkedInGithub">
-                    <a href="https://www.linkedin.com/in/alfonso-nappi-097559250/" target="_blank"><button>LinkedIn</button></a>
-                    <a href="https://github.com/alfonsoNappi" target="_blank"><button>Github</button></a>
+                    <div class="col-md-4">
+                        <img src="img/fotoRaffaele.png" class="img-fluid rounded-start" alt="fotoProfilo" width="200" height="200">
+                    </div>
+                    <div class="buttonLinkedInGithub">
+                        <a href="https://www.linkedin.com/in/raffaeledemicco/" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/raph-1993" target="_blank">Github</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="container">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="img/" class="img-fluid rounded-start" alt="fotoProfilo" width="150" height="180">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Rossi Riccardo</h5>
-                        <p class="card-text">Riccardo ha organizzato tutta l'interattivitá necessaria a portare a termine il progetto in modo tale che i nostri clienti possano farne bun uso. </p>
-                        <p class="card-text"><small class="text-body-secondary"></small></p>
+        <div class="cardChiSiamo mx-auto">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/fotoRiccardo.png" class="img-fluid rounded-start" alt="fotoProfilo" width="200" height="200">
                     </div>
-                </div>
-                <div id="buttonLinkedInGithub">
-                    <a href="https://www.linkedin.com/in/riccardo-rossi-198b2b269/" target="_blank"><button>LinkedIn</button></a>
-                    <a href="https://github.com/Aislir" target="_blank"><button>Github</button></a>
+                    <div class="col-md-8">
+                        <div class="titoloCard">
+                            <h5 style="margin-left: 20px;"><strong>RICCARDO ROSSI</strong></h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Riccardo si è fatto carico della pagina forse più articolata del progetto, ovvero quella del gioco-quiz "Caccia al Tesoro Matematica". Egli è stato fondamentale per lo sviluppo
+                                del file JavaScript per questa pagina, per gestirne l'intera logica. Ma non solo. La sua passione per il risolvere sfide in ambito backend ha permesso di risolvere alcune criticità nei file JavaScript anche delle altre pagine.
+                            </p>
+                            <p class="card-text"><small class="text-body-secondary"></small></p>
+                        </div>
+                    </div>
+                    <div class="buttonLinkedInGithub">
+                        <a href="https://www.linkedin.com/in/riccardo-rossi-198b2b269/" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/Aislir" target="_blank">Github</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="container">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="img/" class="img-fluid rounded-start" alt="fotoProfilo" width="150" height="180">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">De Micco Raffaele</h5>
-                        <p class="card-text">Il nostro Raffaele é stato una colonna portante grazie al suo aiuto e la sua concentrazione.</p>
-                        <p class="card-text"><small class="text-body-secondary"></small></p>
+        <div class="cardChiSiamo mx-auto">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="titoloCard">
+                            <h5 style="text-align: right; margin-right: 20px;"><strong>FRANCESCO BABBO</strong></h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Francesco ha sviluppato le pagine "Esercizi" e "Chi siamo" di questo progetto. In particolar modo, quindi, ha contribuito al progetto creando i quiz di Algebra e Geometria
+                                sia a livello di contenuto sia a livello di gestione della logica, per la valutazione delle risposte tramite punteggio e feedback. Anch'egli ha fornito idee preziose per la strutturazione di questo progetto.
+                            </p>
+                            <p class="card-text"><small class="text-body-secondary"></small></p>
+                        </div>
                     </div>
-                </div>
-                <div id="buttonLinkedInGithub">
-                    <a href="https://www.linkedin.com/in/raffaeledemicco/" target="_blank"><button>LinkedIn</button></a>
-                    <a href="https://github.com/raph-1993" target="_blank"><button>Github</button></a>
+                    <div class="col-md-4">
+                        <img src="img/fotoFrancesco.png" class="img-fluid rounded-start" alt="fotoProfilo" width="200" height="200">
+                    </div>
+
+                    <div class="buttonLinkedInGithub">
+                        <a href="https://www.linkedin.com/in/francesco-babbo-a17516326/" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/333trecchi" target="_blank">Github</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -167,6 +215,7 @@
         <div class="container">
             <div class="contattiMenu">
                 <div id="contatti">
+                    <h4>Contatti</h4>
                     <address>
                         Via delle Magnolie, 12 - Firenze (FI) 50125 <br />
                         Tel: 0551234567 <br />
@@ -174,21 +223,11 @@
                     </address>
                 </div>
                 <div id="menuSecondario">
-                    <h5>Gioca e impara!</h5>
-                    <ul>
-                        <li>
-                            <a href="geometry.html">Geometria</a>
-                        </li>
-                        <li>
-                            <a href="exercises.html">Esercizi</a>
-                        </li>
-                        <li>
-                            <a href="biblioteca.html">Biblioteca Digitale</a>
-                        </li>
-                        <li>
-                            <a href="cacciaAlTesoro.html">Caccia al Tesoro Matematica</a>
-                        </li>
-                    </ul>
+                    <h4>Gioca e impara!</h4>
+                    <a href="geometry.html">Geometria</a><br>
+                    <a href="exercises.html">Esercizi</a><br>
+                    <a href="biblioteca.html">Biblioteca Digitale</a><br>
+                    <a href="cacciaAlTesoro.html">Caccia al Tesoro Matematica</a>
                 </div>
             </div>
             <hr />

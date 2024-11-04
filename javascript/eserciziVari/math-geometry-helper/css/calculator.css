@@ -1,0 +1,70 @@
+﻿.calcolatrice {
+	margin: 40px 0 60px 0;
+	background-color: #616FD2;
+	max-width: 550px;
+	font-family: "Titillium Web", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-weight: bold;
+	box-shadow: rgba(0,0,0,0.3) 7px 7px;
+	border: 2px solid black;
+}
+
+#display {
+	background-color: rgba(255,255,255,0.6);
+	color: black;
+	border: 2px solid black;
+	box-shadow: rgba(0,0,0,0.3) -3px -3px;
+}
+
+.btn-danger {
+	color: black;
+	background-color: #E689B7;
+	border: 2px solid black;
+	box-shadow: rgba(0,0,0,0.3) 3px 3px;
+}
+	.btn-danger:hover {
+		color: white;
+		background-color: #DB5799;
+		border: 2px solid black;
+		box-shadow: none;
+	}
+
+.btn-light {
+	color: black;
+	background-color: #6FC7DD;
+	border: 2px solid black;
+	box-shadow: rgba(0,0,0,0.3) 3px 3px;
+}
+	.btn-light:hover {
+		color: white;
+		background-color: #30AFCF;
+		border: 2px solid black;
+		box-shadow: none;
+	}
+
+.btn-secondary {
+	color: black;
+	background-color: #FFCC00;
+	border: 2px solid black;
+	box-shadow: rgba(0,0,0,0.3) 3px 3px;
+}
+	.btn-secondary:hover {
+		color: white;
+		background-color: #E6B800;
+		border: 2px solid black;
+		box-shadow: none;
+	}
+
+.btn-primary {
+	color: white;
+	background-color: #3385FF;
+	border: 2px solid black;
+	box-shadow: rgba(0,0,0,0.3) 3px 3px;
+}
+	.btn-primary:hover {
+		color: white;
+		background-color: #0066FF;
+		border: 2px solid black;
+		box-shadow: none;
+	}

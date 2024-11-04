@@ -1,0 +1,124 @@
+﻿#eserciziAlgebra {
+	margin-top: -40px;
+	margin-bottom: 80px
+}
+#eserciziAlgebra h2, #eserciziGeometria h2 {
+	text-align:center;
+	margin-bottom: 30px;
+}
+@media (max-width: 576px) {
+	#eserciziAlgebra h2, #eserciziGeometria h2 {
+		font-size: 16px;
+	}
+	#eserciziAlgebra h5, #eserciziGeometria h5 {
+		font-size: 14px;
+	}
+}
+
+#eserciziAlgebra .card, #eserciziGeometria .card {
+	background-color: #FFCC00;
+	border: 2px solid black;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+
+#eserciziAlgebra .card .card-header h3, #eserciziGeometria .card .card-header h3 {
+	font-weight: bold;
+}
+
+#eserciziAlgebra .card .card-body input, #eserciziGeometria .card .card-body input {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.buttonCalcolo {
+	background-color: #6FC7DD;
+	font-size: 22px;
+	margin: 0 auto 20px auto;
+	border: 2px solid black;
+	border-radius: 5px;
+	color: black;
+	box-shadow: rgba(0,0,0,0.3) 3px 3px;
+	width: 30%;
+}
+	.buttonCalcolo:hover {
+		background-color: #616FD2;
+		font-size: 22px;
+		margin: 0 auto 20px auto;
+		border: 2px solid white;
+		border-radius: 5px;
+		color: white;
+		box-shadow: none;
+	}
+@media (max-width: 576px) {
+	.buttonCalcolo {
+		width:fit-content;
+	}
+}
+
+/*--------------CSS SIDEBAR--------------*/
+.sidebar {
+	text-align: center;
+	position: fixed;
+	bottom: 300px;
+	width: 175px;
+	height: auto;
+	background-color: #6FC7DD;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: rgba(0,0,0,0.3) 7px 7px;
+}
+	.sidebar a {
+		background-color: rgba(255, 255, 255, 0.3);
+		border: 2px solid black;
+		border-radius: 5px;
+		color: black;
+		display: block;
+		text-decoration: none;
+		margin-bottom: 5px;
+		padding: 5px;
+		width:100%;
+	}
+	.sidebar a:hover {
+		color: white;
+	}
+
+#colonnaSidebar {
+	padding-top: 400px;
+}
+
+.content {
+	margin-left: 250px;
+	padding: 20px;
+}
+
+@media (max-width: 728px) {
+	.sidebar {
+		width: 30%;
+		height: 230px;
+		position: fixed;
+		font-size: 12px;
+		top: 566px;
+		
+	}
+
+	.sidebar h5 {
+		font-size: 12px;
+	}
+
+	.content {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 576px) {
+	.col-2 {
+		width: 35%;
+	}
+
+	.col-10 {
+		width: 65%;
+	}
+}

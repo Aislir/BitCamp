@@ -1,0 +1,92 @@
+﻿#imgBenvenuto {
+	border: 2px solid black;
+	border-radius: 5px;
+	margin-bottom: 40px;
+	box-shadow: rgba(0,0,0,0.3) 7px 7px;
+}
+
+#titoloAnteprima {
+	margin: 40px 0 15px 0;
+	text-align: center;
+}
+
+.cardAntRiga1 {
+	margin-bottom: 15px;
+}
+	.cardAntRiga1 img {
+		border: 2px solid black;
+	}
+	.cardAntRiga1 .card-body {
+		margin-top: -5px;
+		background-color: #FFCC00;
+		border: 2px solid black;
+		border-radius: 5px;
+	}
+
+.cardAntRiga2 {
+	margin-bottom: 40px;
+}
+	.cardAntRiga2 img {
+		border: 2px solid black;
+		border-radius: 5px;
+	}
+	.cardAntRiga2 .card-body {
+		margin-left: -5px;
+		background-color: #FFCC00;
+		border: 2px solid black;
+		border-radius: 5px;
+		height: 100%;
+		padding-top: 60px;
+	}
+@media (max-width: 576px) {
+	#fotoAntBiblioteca {
+		width: 100%;
+	}
+	#fotoAntMappa {
+		width: 100%;
+	}
+	.cardAntRiga2 {
+		margin: 10px 0 10px 0;
+	}
+	.cardAntRiga2 .card-body {
+		padding-top: 0;
+		padding: 5px;
+	}
+}
+
+#formContatto {
+	width: 50%;
+	padding: 20px;
+	font-weight: 600;
+}
+	#formContatto h2 {
+		text-align: center;
+	}
+	#formContatto input {
+		border: 1px solid black;
+	}
+	#formContatto textarea {
+		border: 1px solid black;
+	}
+	#formContatto button {
+		font-size: 20px;
+		border: 2px solid black;
+		border-radius: 5px;
+		background-color: #FFCC00;
+		box-shadow: rgba(0,0,0,0.4) 3px 3px;
+	}
+	#formContatto button:hover {
+		background-color: #E689B7;
+		border-radius: 5px;
+		box-shadow: none;
+		color: white;
+	}
+#buttonContatto {
+	text-align: center;
+}
+@media (max-width: 576px) {
+	#formContatto {
+		width: 100%
+	}
+
+}

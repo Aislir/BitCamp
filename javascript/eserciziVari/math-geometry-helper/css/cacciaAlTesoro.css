@@ -1,29 +1,128 @@
 .responsive {
-    max-width: 100%;
+    width: 50%;
     height: auto;
 }
 
 #posizione_1 {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    width: 60px; /* aumenta il valore */
+    height: 60px; /* aumenta il valore */
     position: absolute;
-    top: 95%;
-    left: 51%;
+    top: 88%;
+    left: 48.5%;
+    background-color: #FFCC00;
+    border-radius: 50%;
+    border: 2px solid black;
     background-image: url(../img/smilingFace.jpg);
     background-size: cover;
     display: inline-block;
-    cursor: pointer;
 }
 
-
-
-@media (max-width: 450px) {
+@media (max-width: 640px) {
     
     #posizione_1 {
         width: 25px;
         height: 25px;
     }
 }
+@media (max-width: 990px) {
 
+    #posizione_1 {
+        width: 25px;
+        height: 25px;
+    }
+    #cacciaAlTesoro img {
+        width: 300px;
+        height: 300px;
+    }
+}
 
+#cacciaAlTesoro {
+    margin-top: -200px;
+}
+    #cacciaAlTesoro img {
+        border: 3px solid black;
+        border-radius: 10px;
+        box-shadow: 7px 7px rgba(0, 0, 0, 0.3);
+        margin-bottom: 10px
+    }
+
+#domandaRisposta {
+    text-align: center;
+    margin: 30px 0 60px 0;
+}
+    #domandaRisposta p{
+        font-weight: bold;
+    }
+    #domandaRisposta input {
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+    #domandaRisposta button {
+        background-color: #E689B7;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        color: black;
+        box-shadow: rgba(0,0,0,0.4) 3px 3px;
+    }
+        #domandaRisposta button:hover {
+            background-color: #616FD2;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            color: white;
+            box-shadow: none;
+        }
+#contButtonVittoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#vittoria {
+    margin-bottom: 40px;
+    background-color: #E689B7;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    color: black;
+    box-shadow: rgba(0,0,0,0.4) 3px 3px;
+}
+    #vittoria:hover {
+        background-color: #616FD2;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        color: white;
+        box-shadow: none;
+    }
+
+#modaleVittoria .modal-content {
+    background-color: #FFCC00;
+    border: 3px solid black !important;
+}
+
+#modaleVittoria .modal-header {
+    border-bottom: 3px solid black;
+}
+
+#modaleVittoria .modal-footer {
+    border-top: 3px solid black;  
+}
+
+#modaleVittoria .btn-primary {
+    background-color: #E689B7;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    color: black;
+    box-shadow: rgba(0,0,0,0.4) 3px 3px;
+}
+    #modaleVittoria .btn-primary:hover {
+        background-color: #616FD2;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        color: white;
+        box-shadow: none;
+    }

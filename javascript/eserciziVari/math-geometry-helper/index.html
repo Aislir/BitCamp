@@ -13,51 +13,75 @@
     <meta name="keywords" content="matematica, geometria, calcolatrice, gioco, caccia al tesoro, interattivo, bambini, scuola, studio
                                     algebra, aritmetica, operazioni matematiche">
     <meta name="author" content="NDBR Devs">
+    
     <!--TITOLO PAGINA-->
     <title>Home - Math & Geometry Helper</title>
+    
     <!--IMPLEMENTAZIONE BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
     <!--IMPLEMENTAZIONE FONT-FAMILY-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!--IMPLEMENTAZIONE FONT SCHOOLBELL-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Moderustic:wght@300..800&family=Paytone+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Schoolbell&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"><!--IMPLEMENTAZIONE CSS GENERALE-->
+    
+    <!--IMPLEMENTAZIONE FONT WALTER TURNCOAT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Moderustic:wght@300..800&family=Paytone+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Schoolbell&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Walter+Turncoat&display=swap" rel="stylesheet">
+    
+    <!--IMPLEMENTAZIONE CSS GENERALE-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--IMPLEMENTAZIONE CSS HOMEPAGE-->
+    <link rel="stylesheet" href="css/homepage.css">
 
 </head>
 
 <body>
 
     <!--NAVBAR (BS #NAV + LOGO)-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.png" alt="Logo" width="130" height="130" class="d-inline-block align-text-top">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="navbar-brand-wrapper">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo" width="135" height="150" class="d-inline-block align-text-top">
+            <h1>MATH & GEOMETRY HELPER</h1>
+        </a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav" style="text-align:center;">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="calculator.html">Calcolatrice</a>
+                        <a class="nav-link" href="calculator.html">CALCOLATRICE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="geometry.html">Geometria</a>
+                        <a class="nav-link" href="geometry.html">GEOMETRIA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="exercises.html">Esercizi</a>
+                        <a class="nav-link" href="exercises.html">ESERCIZI</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="biblioteca.html">Biblioteca Digitale</a>
+                        <a class="nav-link" href="biblioteca.html">BIBLIOTECA DIGITALE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cacciaAlTesoro.html">Caccia al Tesoro Matematica</a>
+                        <a class="nav-link" href="cacciaAlTesoro.html">CACCIA AL TESORO MATEMATICA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="chiSiamo.html">Chi siamo</a>
+                        <a class="nav-link" href="chiSiamo.html">CHI SIAMO</a>
                     </li>
                 </ul>
             </div>
@@ -78,46 +102,49 @@
 
     <!--IMMAGINE DI BENVENUTO-->
     <div class="container">
-        <img src="img/welcome.jpg" class="d-block w-100" alt="Immagine di benvenuto" />
+        <img src="img/welcome.jpg" id="imgBenvenuto" class="d-block w-100" alt="Immagine di benvenuto" />
     </div>
 
     <!--CARD DI ANTEPRIMA DELLE PAGINE-->
     <div class="container">
+        <div id="titoloAnteprima">
+            <h2>GIOCA E IMPARA!</h2>
+        </div>
         <div class="row" id="rigaAnteprima1">
             <div class="col-sm-4 mb-3 mb-sm-0">
-                <div class="card">
+                <div class="cardAntRiga1">
                     <div class="card">
                         <a href="calculator.html">
-                            <img src="img/AntCalcolatrice.jpeg" class="card-img-top" alt="calcolatrice">
+                            <img src="img/cardCalcolatrice.png" class="card-img-top" alt="calcolatrice">
                         </a>
                         <div class="card-body">
-                            <h4>Calcolatrice</h4>
+                            <h4><strong>Calcolatrice</strong></h4>
                             <p class="card-text">Risolvi rapidamente operazioni base con la nostra calcolatrice semplice e intuitiva.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="card">
+                <div class="cardAntRiga1">
                     <div class="card">
                         <a href="geometry.html">
-                            <img src="img/AntForme.jpeg" class="card-img-top" alt="forme geometriche">
+                            <img src="img/cardGeometria.png" class="card-img-top" alt="forme geometriche">
                         </a>
                         <div class="card-body">
-                            <h4>Geometria</h4>
+                            <h4><strong>Geometria</strong></h4>
                             <p class="card-text">Esplora e calcola le proprietà delle forme geometriche più comuni.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="card">
+                <div class="cardAntRiga1">
                     <div class="card">
                         <a href="exercises.html">
-                            <img src="img/AntEsercizi.jpeg" class="card-img-top" alt="esercizi">
+                            <img src="img/cardEsercizi.png" class="card-img-top" alt="esercizi">
                         </a>
                         <div class="card-body">
-                            <h4>Esercizi</h4>
+                            <h4><strong>Esercizi</strong></h4>
                             <p class="card-text">Metti alla prova le tue abilità con esercizi interattivi e feedback immediato.</p>
                         </div>
                     </div>
@@ -126,27 +153,31 @@
         </div>
         <div class="row" id="rigaAnteprima2">
             <div class="col-md-6">
-                <div class="card h-100 flex-row">
-                    <a href="biblioteca.html" style="width:40%;">
-                        <img src="https://placehold.co/200x200/pink/blue" class="card-img-left img-fluid" alt="biblioteca">
-                    </a>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Biblioteca Digitale</h5>
-                            <p class="card-text">Scopri video, articoli ed e-book per approfondire la matematica e la geometria.</p>
+                <div class="cardAntRiga2">
+                    <div class="card h-100 flex-row">
+                        <a href="biblioteca.html" id="fotoAntBiblioteca">
+                            <img src="img/cardBiblioteca.png" class="card-img-left img-fluid" alt="biblioteca">
+                        </a>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Biblioteca Digitale</strong></h5>
+                                <p class="card-text">Scopri video, articoli ed e-book per approfondire la matematica e la geometria.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card h-100 flex-row">
-                    <a href="cacciaAlTesoro.html" style="width:40%;">
-                        <img src="https://placehold.co/200x200/pink/blue" class="card-img-left img-fluid" alt="caccia al tesoro">
-                    </a>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Caccia al Tesoro Matematica</h5>
-                            <p class="card-text">Divertiti a risolvere enigmi matematici in un’avventura interattiva!</p>
+                <div class="cardAntRiga2">
+                    <div class="card h-100 flex-row">
+                        <a href="cacciaAlTesoro.html" id="fotoAntMappa">
+                            <img src="img/mappa.png" class="card-img-left img-fluid" alt="caccia al tesoro">
+                        </a>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Caccia al Tesoro Matematica</strong></h5>
+                                <p class="card-text">Divertiti a risolvere enigmi matematici in un’avventura interattiva!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -156,7 +187,7 @@
 
     <!--FORM DI CONTATTO-->
     <div class="container">
-        <div id="formContatto">
+        <div id="formContatto" class="mx-auto">
             <h2>Contattaci</h2>
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
@@ -168,7 +199,9 @@
                 <label for="exampleFormControlTextarea1" class="form-label">Inserisci qui il tuo messaggio:</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Messaggio"></textarea>
                 <br />
-                <a href="#" type="submit" class="btn btn-primary">Invia</a>
+                <div id="buttonContatto">
+                    <a href="" type="submit"><button>Invia</button></a>
+                </div>
             </div>
         </div>
     </div>
@@ -178,6 +211,7 @@
         <div class="container">
             <div class="contattiMenu">
                 <div id="contatti">
+                    <h4>Contatti</h4>
                     <address>
                         Via delle Magnolie, 12 - Firenze (FI) 50125 <br />
                         Tel: 0551234567 <br />
@@ -185,21 +219,11 @@
                     </address>
                 </div>
                 <div id="menuSecondario">
-                    <h5>Gioca e impara!</h5>
-                    <ul>
-                        <li>
-                            <a href="geometry.html">Geometria</a>
-                        </li>
-                        <li>
-                            <a href="exercises.html">Esercizi</a>
-                        </li>
-                        <li>
-                            <a href="biblioteca.html">Biblioteca Digitale</a>
-                        </li>
-                        <li>
-                            <a href="cacciaAlTesoro.html">Caccia al Tesoro Matematica</a>
-                        </li>
-                    </ul>
+                    <h4>Gioca e impara!</h4>
+                    <a href="geometry.html" type="button">Geometria</a><br>
+                    <a href="exercises.html" type="button" >Esercizi</a><br>
+                    <a href="biblioteca.html" type="button">Biblioteca Digitale</a><br>
+                    <a href="cacciaAlTesoro.html" type="button">Caccia al Tesoro Matematica</a>
                 </div>
             </div>
             <hr />
