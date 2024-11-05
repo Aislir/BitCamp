@@ -25,11 +25,11 @@
 
             //FUNZIONE DI AGGIORNAMENTO
             function updateCounter() {
-                output.textContent = counter; //valore counter corrente
+                output.textContent = counter; //aggiornamento contatore in pagina dopo aver richiamato la funzione
                 counter++;
 
                 if(counter <= 15) {
-                    setTimeout(updateCounter, 10000);   //il secondo paramentro di setTimeout e' il tempo da aspettare in millisecondi prima di richiamare nuovamente la funzione
+                    setTimeout(updateCounter, 1000);   //il secondo paramentro di setTimeout e' il tempo da aspettare in millisecondi prima di richiamare nuovamente la funzione
                 }
             }
 

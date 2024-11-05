@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubrica</title>
+
+    <link rel="stylesheet" href="../CSS/rubrica.css">
+    <script src="../js/rubrica.js"></script>
+</head>
+<body>
+    <h1>Gestione Rubrica</h1>
+
+    <section id="input-contatto">
+        <h2>Aggiungi Contatto</h2>
+        <input type="text" id="nome-contatto" placeholder="Nome contatto">
+        <input type="text" id="cognome-contatto" placeholder="Cognome contatto">
+        <input type="number" id="numero-contatto" placeholder="Numero contatto">
+        <button onclick="aggiungiContatto()">Aggiungi</button>
+        <button onclick="modificaContatto2()" id="tasto-modifica" style="display: none;">Conferma modifiche</button>
+    </section>
+
+    <section id="rubrica">
+        <h2>I tuoi contatti</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Numero</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody id="contatti">
+
+            </tbody>
+        </table>
+    </section>
+
+    <div id="modifica">
+
+    </div>
+</body>
+</html>

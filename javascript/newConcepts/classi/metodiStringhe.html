@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Stringhe e metodi</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Metodo length()</h2>
+                <p>La lunghezza della stringa "Hello, World!" e': <span id="length"></span></p> <!--span serve per poter inserire il risultato calcolato tramite js-->
+            </div>
+
+            <div class="col-sm-6">
+                <h2>Metodo indexOf()</h2> <!--Indica sempre la prima occorrenza, in questo caso posizione 2 per hello world-->
+                <p>La posizione della lettera 'l' nella stringa "Hello, World!" e': <span id="index"></span></p>
+            </div>
+
+            <div class="col-sm-6">
+                <h2>Metodo slice()</h2>  <!--Prende sempre 2 parametri: uno per l'inizio e uno per la fine della sottostringa da creare-->
+                <p>La sottostringa della stringa "Hello, World!" dal terzo al sesto carattere e': <span id="slice"></span></p>
+            </div>
+
+            <div class="col-sm-6">
+                <h2>Metodo replace()</h2>  <!--2 parametri: il primo e' l'elemento da sostituire, il secondo e' l'elemento con cui sara' sostituito-->
+                <p>La stringa "Hello, World!" sostituendo la parola "World" con "Universe" e': <span id="replace"></span></p>
+            </div>
+
+            <div class="col-sm-6">
+                <h2>Metodo toUpperCase()</h2>  <!--Rende una stringa intera in maiuscolo-->
+                <p>La stringa "Hello, World!" in maiuscolo e': <span id="upperCase"></span></p>
+            </div>
+
+            <div class="col-sm-6">
+                <h2>Metodo toLowerCase()</h2>  <!--Rende una stringa intera in minuscolo-->
+                <p>La stringa "Hello, World!" in minuscolo e': <span id="lowerCase"></span></p>
+            </div>
+
+            <div class="col-sm-6">
+                <h2>Metodo trim()</h2>  <!--Elimina eventuali "spazi" prima e dopo una stringa data-->
+                <p>La stringa "    Hello, World!   " senza spazi iniziali e finali e': <span id="trim"></span></p>
+            </div>
+
+            <div class="col-sm-6">
+                <h2>Metodo split()</h2>  <!--In base al parametro inserito, va ad individuarlo all'interno della stringa e crea un array (con quindi ogni elemento separato da una virgola) con tanti elementi quanti ce ne sono del parametro inserito + 1-->
+                <p>La stringa "Hello World Java" divisa in un array separando le parole con la virgola e': <span id="split"></span></p>
+            </div>
+
+            <div class="col-sm-6">
+                <h2></h2>  <!---->
+                <p>: <span id=""></span></p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        //dichiarazione variabili per manipolazione DOM
+        var stringa = "Hello, World!"; 
+        var stringaTrim = "    Hello, World!   ";
+        var stringaSplit = "Hello World Java";
+
+        var lengthElement = document.querySelector("#length");
+        var indexElement = document.querySelector("#index");
+        var sliceElement = document.querySelector("#slice");
+        var replaceElement = document.querySelector("#replace");
+        var upperCase = document.querySelector("#upperCase");
+        var lowerCase = document.querySelector("#lowerCase");
+        var trim = document.querySelector('#trim');
+        var split = document.querySelector("#split");
+
+        
+        //utilizzo metodo length
+        lengthElement.innerHTML = stringa.length;  //no parentesi tonde col metodo length
+
+        //utilizzo metodo index
+        indexElement.innerHTML = stringa.indexOf('l');
+
+        //utilizzo metodo slice
+        sliceElement.innerHTML = stringa.slice(2, 6); //il secondo parametro deve essere SEMPRE il carattere successivo alla fine della sottostringa
+                                                      //nel nostro caso, dato che l'ultimo carattere che vogliamo e' il 5, inseriremo 6
+
+        //utilizzo metodo replace                                                 
+        replaceElement.innerHTML = stringa.replace("World", "Universe"); //sostituisce World con Universe in Hello World
+
+        //utilizzo metodo toUpperCase
+        upperCase.innerHTML = stringa.toUpperCase(); //applica il metodo alla stringa sulla quale viene chiamato, in questo caso 'stringa'
+
+        //utilizzo metodo toLowerCase
+        lowerCase.innerHTML = stringa.toLowerCase();
+
+        //utilizzo metodo trim
+        trim.innerHTML = stringaTrim.trim();
+
+        //utilizzo metodo split
+        split.innerHTML = stringaSplit.split(" "); //in questo caso, divide la stringa per ogni spazio presente, restituendo quindi un array costituito da 3 elementi
+
+        //"split" e' adesso un array
+    </script>
+</body>
+</html>
