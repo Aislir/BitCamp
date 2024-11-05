@@ -5,7 +5,7 @@ var menu = [
     {nome: "Patatine", prezzo: 3}
 ];
 
-//Array per gestione ordini
+//array globale per gestione di tutti gli ordini
 var ordini = [];
 
 //funzione aggiornamento menu
@@ -56,11 +56,61 @@ function aggiungiArticolo() {
 //funzione per aggiungere un nuovo ordine
 function aggiungiOrdine() {
 
+    //creazione di un nuovo array per gestione singolo ordine
+    var ordine = [];
+
+    //riempimento del nuovo array mettendo all'interno gli elementi del menu ordinabili nonche' la quantita ordinata
+    for(let i = 0; i < menu.length; i++){
+        ordine.push({
+            nome: menu[i].nome,
+            prezzo: menu[i].prezzo,
+            quantita: 0 //inizializzato a 0
+        });
+    }
+    ordini.push(ordine);
+    aggiornaOrdini();
+
 }
 
 //funzione per aggiornare lista ordini
 function aggiornaOrdini(){
 
+    var orderList = document.querySelector("#order-list");
+    orderList.innerHTML = "";
+
+    //loop all'interno dell'array ordini[] per riempimento in pagina
+    for(var indexOrder = 0; indexOrder < ordini.length; indexOrder++){
+
+        var ordine = ordini[indexOrder];
+
+        var ordineDiv = document.createElement('div');
+        ordineDiv.className = "ordine";
+
+        var totale = 0;
+
+        //questo for permette di stampare gli elementi contenuti in ogni singolo ordine, ovvero il nome dell'articolo, il suo prezzo, ed un input in cui inserire la quantita
+        for(var articoloIndex = 0; articoloIndex < ordine.length; articoloIndex++){
+            var articolo = ordine[articoloIndex];
+
+            var articoloDiv = document.createElement('div');
+            articoloDiv.innerHTML = `<strong>${articolo.nome}:</strong> ${articolo.prezzo} € x <input type="number" value="${articolo.quantita}" min="0" onchange="aggiornaQuantita(${indexOrder}, ${articoloIndex}, this.value)">`;
+            //onchange permette di aggiornare il prezzo ogni volta che viene modificata la quantita di ogni singolo articolo all'interno di un ordine
+            ordineDiv.appendChild(articoloDiv);
+
+            totale += articolo.prezzo * articolo.quantita;
+
+        }
+
+        //fuori dal for degli articoli ma dentro il for degli ordini
+        ordineDiv.innerHTML += `<p><strong>Totale:</strong> ${totale} €</p>`;
+        orderList.appendChild(ordineDiv);
+    }
+}
+
+function aggiornaQuantita(indexOrder, articoloIndex, nuovaQuantita){
+    ordini[indexOrder][articoloIndex].quantita = parseInt(nuovaQuantita);
+
+    aggiornaOrdini();
 }
 
 aggiornaMenu();
