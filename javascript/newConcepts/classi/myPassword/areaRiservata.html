@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Area Riservata</title>
-    <link rel="stylesheet" href="*" />
+    
+    <script src="js/areaRiservata.js" defer></script>
 
 </head>
 <body>
@@ -16,7 +17,8 @@
         <input type="text" id="nomeServizio" placeholder=" Inserisci Nome Servizio" />
         <input type="text" id="username" placeholder="Inserisci Username" />
         <input type="text" id="password" placeholder="Inserisci Password" />
-        <button id="salvaPassword" onclick="salvaPassword()">Salva</button>
+        <button id="salvaPassword" onclick="aggiungiPassword()">Salva</button>
+        <button id="tasto-modifica" style="display: none;">Conferma modifiche</button>
 
         <br />
         <br />
@@ -65,6 +67,6 @@
 
    
 
-    <script src="src/script.js"></script>
+    
 </body>
 </html>
