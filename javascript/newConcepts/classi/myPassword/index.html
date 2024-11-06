@@ -1,38 +1,82 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>myPassword</title>
-    <link rel="stylesheet" href="" />
-    <script src="js/index.js" defer></script>
+        <title>myPassword</title>
+        <script src="js/index.js" defer></script>
     
+        <style>
+            body {
+                background-image: url(img/sfondo_login.jpg);
+                background-size: cover;
+                font-family: Arial, Helvetica, sans-serif;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+        
+            .container{
+                text-align: center;
+                margin-top: 100px;
+            }
+        
+            h1 {
+                font-size: 50px;
+                background: linear-gradient(to top, #ffffff, #eedfd2); 
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        
+            h2 {
+                color: cornflowerblue;
+                font-size: 35px;
+            }
+        
+            input {
+                height: 50px;
+                width: 40%;
+                margin-top: 30px;
+                box-shadow: -3px 3px 3px;
+                border: none;
+            }
+        
+            button{
+                margin-top: 30px;
+                width: 25%;
+                height: 50px;
+        
+            }
+        
+        
+        
+        </style>
 
-</head>
-<body>
-    <h1>My Password</h1>
+    </head>
+    <body>
+        <h1>My Password</h1>
 
 
-    <!--Sezione form Accesso-->
+        <!--Sezione form Accesso-->
 
-    <div class="container" >
-        <h2>Login</h2>
         <div class="container" >
+            <h2>Sign In</h2>
             <input type="text" id="username" placeholder="Inserisci Nome">
+            <br>
             <input type="text" id="password" placeholder="Inserisci Password">
+            <br>
+            <button id="login" onclick="login()">Login</button> 
 
-           <button id="login" onclick="login()" >Login</button> 
         </div>
-    </div>
 
-    
-
+        
 
 
 
 
-    
-</body>
+
+        
+    </body>
 </html>

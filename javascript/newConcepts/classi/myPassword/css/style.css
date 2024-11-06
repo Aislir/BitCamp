@@ -1,0 +1,94 @@
+﻿body {
+    background-image: url(../img/sfondo-password2.jpg);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+}
+
+h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.container {
+    background-color: rgba(255,255,255,0.5);
+    align-items: center;
+    margin-top: 30px;
+    border: 1px solid;
+    padding: 30px;
+    box-shadow: -3px 3px 3px;
+    border-radius: 20px;
+}
+
+input{
+    height: 30px;
+    width: 300px;
+    margin: 20px 20px;
+    border: 1px solid;
+}
+
+label{
+    text-align: center
+}
+
+select {
+    width: 50px;
+    height: 30px;
+
+}
+
+button {
+    height: 40px;
+    width: 200px;
+    background-color: #0d6efd;
+    margin: 20px 20px;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    
+}
+
+button:hover {
+    background-color: #0056d4;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #0a00ff
+}
+
+.search {
+    width: 80%;
+    margin-top: 30px;    
+    background-color: rgba(255,255,255,0.5);
+}
+
+.search h2 {
+    margin-bottom: 5px;
+}
+
+.search input {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 30px;
+    font-size: 20px;
+}
+
+.search button {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+table {
+    width: 80%;
+
+}
