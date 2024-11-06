@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Area Riservata</title>
+    <link rel="stylesheet" href="*" />
+
+</head>
+<body>
+    <h1>Area Riservata</h1>
+    <!--SEZIONE PER AGGIUNGERE NUOVE PASSWORD -->
+    <div class="container">
+        <input type="text" id="nomeServizio" placeholder=" Inserisci Nome Servizio" />
+        <input type="text" id="username" placeholder="Inserisci Username" />
+        <input type="text" id="password" placeholder="Inserisci Password" />
+        <button id="salvaPassword" onclick="salvaPassword()">Salva</button>
+
+        <br />
+        <br />
+        <label for="passwordAutomatica">Scegli lunghezza Password</label>
+        <select name="passwordAutomatica" id="passwordAutomatica">
+
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+
+        </select>
+
+        <button id="generaPassword" onclick="generaPassword()">Genera Password</button>
+    </div>
+    <br />
+
+    <!--SEZIONE PER RICERCA DEL SERVIZIO-->
+    <div class="container">
+        <h2>Cerca il Servizio</h2>
+        <input type="text" id="filtraServizio" placeholder="Filtra servizio" />
+        <button id="cercaServizio" onclick="cercaServizio()">Cerca</button>
+
+    </div>
+
+
+    
+
+    <!--SEZIONE PER VISUALIZZARE IL MENU-->
+    <section id="table">
+        <h2>le Mie Password</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Servizio</th>
+                    <th>username</th>
+                    <th>Password</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody id="table-items">
+            </tbody>
+        </table>
+    </section>
+
+   
+
+    <script src="src/script.js"></script>
+</body>
+</html>
