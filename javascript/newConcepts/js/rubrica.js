@@ -2,7 +2,7 @@ var contatti = [];
 
 function aggiornaContatti(){
     var table = document.querySelector("#contatti");
-    table.innerHTML = "";
+    table.innerHTML = "";  
 
     //popoliamo la tabella con for each
     //le doppie parentesi tonde dentro al forEach sono un paio per i parametri del for, l'altro per la funzione (in questo caso senza nome) con suoi parametri

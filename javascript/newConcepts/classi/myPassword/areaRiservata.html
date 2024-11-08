@@ -18,6 +18,7 @@
     <div class="container">
         <h2>Crea Password</h2>
         <input type="text" id="nomeServizio" placeholder=" Inserisci Nome Servizio" />
+        <br>
         <input type="text" id="username" placeholder="Inserisci Username" />
         <input type="text" id="password" placeholder="Inserisci Password" />
         <button id="salvaPassword" onclick="aggiungiPassword()">Salva</button>
@@ -41,7 +42,7 @@
     <br />
 
     <!--SEZIONE PER RICERCA DEL SERVIZIO-->
-    <div class="container">
+    <div class="container" id="search">
         <h2>Cerca il Servizio</h2>
         <input type="text" id="filtraServizio" placeholder="Filtra servizio" />
         <button id="cercaServizio" onclick="cercaServizio()">Cerca</button>
@@ -53,7 +54,7 @@
     
 
     <!--SEZIONE PER VISUALIZZARE IL MENU-->
-    <section id="table">
+    <div class="container" id="table">
         <h2>Le Mie Password</h2>
         <table>
             <thead>
@@ -67,7 +68,7 @@
             <tbody id="table-items">
             </tbody>
         </table>
-    </section>
+    </div>
 
    
 
