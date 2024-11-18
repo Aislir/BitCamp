@@ -4,23 +4,22 @@ import java.util.ArrayList;
 
 public class Studenti {
 	//	ATTRIBUTI
-	private ArrayList<Studenti> studente;
 	private String nome;
 	private String cognome;
 	private String dataDiNascita;
 	private String codiceStudente;
-	private String corsiFrequentati;
+	public ArrayList<Corsi> corsiFrequentati;
 	
 	
 	//	COSTRUTTORE
 	
 	
 	public Studenti(String nome, String cognome, String dataDiNascita, String codiceStudente) {
-		this.studente = new ArrayList<>();
 		this.nome = nome;
 		this.cognome = cognome;
 		this.dataDiNascita = dataDiNascita;
 		this.codiceStudente = codiceStudente;
+		this.corsiFrequentati = new ArrayList<>();
 	}
 	
 	
@@ -41,10 +40,7 @@ public class Studenti {
 	public String getCodiceStudente () {
 		return codiceStudente;
 	}
-	
-	public String getCorsiFrequentati () {
-		return corsiFrequentati;
-	}
+
 	
 	
 	public void setNome(String nome) {
@@ -62,17 +58,15 @@ public class Studenti {
 	public void setCodiceStudente (String codiceStudente) {
 		this.codiceStudente = codiceStudente ;
 	}
-	
-	public void setCorsiFrequentati (String corsiFrequentati) {
-		this.corsiFrequentati = corsiFrequentati ;
-	}
+
 
 	
 	@Override
 	public String toString() {
 		return "Studente: " +nome +" " +cognome +" - "
-				+dataDiNascita +" - " 
-				+"Codice Studente: " +codiceStudente;
+				+dataDiNascita +" \n"
+				+"Codice Studente: " +codiceStudente+" - "
+				+"Corsi frequentati: "+corsiFrequentati;
 	}
 	
 	

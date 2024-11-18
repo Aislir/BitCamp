@@ -4,19 +4,18 @@ import java.util.ArrayList;
 
 public class Docenti {
 	//	ATTRIBUTI
-	private ArrayList<Docenti> docente;
 	private String nome;
 	private String cognome;
 	private String codiceDocente;
-	private String corsiInsegnati;
+	public ArrayList<Corsi> corsiInsegnati;
 	
 	
 	//	COSTRUTTORE
-	public Docenti(String nome, String cognome, String codiceDocente, String corsiInsegnati) {
+	public Docenti(String nome, String cognome, String codiceDocente) {
 		this.nome = nome;
 		this.cognome = cognome;
 		this.codiceDocente = codiceDocente;
-		this.corsiInsegnati = corsiInsegnati;
+		this.corsiInsegnati = new ArrayList<>();
 	}
 	
 	
@@ -34,9 +33,7 @@ public class Docenti {
 		return codiceDocente;
 	}
 	
-	public String getCorsiInsegnati() {
-		return corsiInsegnati;
-	}
+
 	
 	
 	public void setNome(String nome) {
@@ -50,17 +47,14 @@ public class Docenti {
 	public void setCodiceDocente(String codiceDocente) {
 		this.codiceDocente = codiceDocente;
 	}
-	
-	public void setCorsiInsegnati(String corsiInsegnati) {
-		this.corsiInsegnati = corsiInsegnati;
-	}
+
 	
 	
 	@Override
 	public String toString(){
-		return "Docente: " +nome +" " +cognome +" - "
+		return "Docente: " +nome +" " +cognome +" \n"
 				+"Codice docente: " +codiceDocente +" - "
-				+"Corsi insegnati: " +corsiInsegnati +" - ";
+				+"Corsi insegnati: " +corsiInsegnati;
 	}
 	
 	

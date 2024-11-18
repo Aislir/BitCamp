@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 public class Corsi {
 	//attributi
-	private ArrayList<Corsi> corso;
+
 	private String nomeCorso;
 	private String codiceCorso;
 	private Docenti docente;
-	private Studenti studentiIscritti;
+	public ArrayList<Studenti> studentiIscritti;
 	
 	//costruttori
 	public Corsi(String nomeCorso, String codiceCorso) {
-		this.corso = new ArrayList<>();
+		this.studentiIscritti = new ArrayList<>();
 		this.nomeCorso = nomeCorso;
 		this.codiceCorso = codiceCorso;
 	}
@@ -21,15 +21,6 @@ public class Corsi {
 	}
 	
 	//metodi Get e Set
-
-	public ArrayList<Corsi> getCorso() {
-		return corso;
-	}
-
-	public void setCorso(ArrayList<Corsi> corso) {
-		this.corso = corso;
-	}
-
 	public String getNomeCorso() {
 		return nomeCorso;
 	}
@@ -53,21 +44,12 @@ public class Corsi {
 	public void setDocente(Docenti docente) {
 		this.docente = docente;
 	}
-
-	public Studenti getStudentiIscritti() {
-		return studentiIscritti;
-	}
-
-	public void setStudentiIscritti(Studenti studentiIscritti) {
-		this.studentiIscritti = studentiIscritti;
-	}
 	
 	
 	//metodo toString()
 	@Override
 	public String toString() {
-		return "Corsi [corso=" + corso + ", nomeCorso=" + nomeCorso + ", codiceCorso=" + codiceCorso + ", docente="
-				+ docente + ", studentiIscritti=" + studentiIscritti + "]";
+		return "nomeCorso: " + nomeCorso + ", codiceCorso: " + codiceCorso + ", \n"+ docente;
 	}
 	
 

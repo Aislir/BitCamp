@@ -1,5 +1,6 @@
 package gestioneScuola;
 
+import java.util.Scanner;
 import java.util.ArrayList;
 
 public class GestoreSistema {
@@ -7,6 +8,8 @@ public class GestoreSistema {
 	private ArrayList<Studenti> elencoStudenti;
 	private ArrayList<Docenti> elencoDocenti;
 	private ArrayList<Corsi> elencoCorsi;
+
+	Scanner scanner = new Scanner(System.in);
 	
 	public GestoreSistema() {
 		
@@ -18,16 +21,22 @@ public class GestoreSistema {
 	public void aggiungiStudente(Studenti nuovoStudente) {
 		
 		elencoStudenti.add(nuovoStudente);
+		System.out.println("");
+		System.out.println("Studente aggiunto con successo");
 	}
 	
 	public void aggiungiDocente(Docenti nuovoDocente) {
 		
-		elencoDocenti.add(nuovoDocente);	
+		elencoDocenti.add(nuovoDocente);
+		System.out.println("");
+		System.out.println("Docente aggiunto con successo");
 	}
 	
 	public void aggiungiCorso(Corsi nuovoCorso) {
 		
 		elencoCorsi.add(nuovoCorso);
+		System.out.println("");
+		System.out.println("Corso aggiunto con successo");
 	}
 	
 	public Studenti cercaStudentePerCodice(String codiceStudente) {
@@ -55,7 +64,7 @@ public class GestoreSistema {
 	
 	public Corsi cercaCorsiPerCodice(String codiceCorso) {
 		
-		for(Corsi corsi : corso) {
+		for(Corsi corsi : elencoCorsi) {
 			if(corsi.getCodiceCorso().equalsIgnoreCase(codiceCorso)) {
 				return corsi;
 			}
@@ -67,51 +76,112 @@ public class GestoreSistema {
 	
 	
 	
-	public boolean modificaStudente(String codiceStudente, Studenti studenteModificato) {
+	public void modificaStudente(String codiceStudente, Studenti studenteModificato) {
 		
 		Studenti studenti = cercaStudentePerCodice(codiceStudente);
+
 		if(studenti != null) {
+			int size = studenti.corsiFrequentati.size();
+			if(size != 0){
+				for(Corsi corso : studenti.corsiFrequentati){
+					studenteModificato.corsiFrequentati.add(corso);
+				}
+			}
 			elencoStudenti.set(elencoStudenti.indexOf(studenti), studenteModificato);
-			
-			return true;
+			System.out.println("Studente modificato con successo\n");
+			visualizzaStudente(studenteModificato.getCodiceStudente());
+
+		} else {
+			System.out.println("Non e' stato possibile trovare lo studente da modificare");
+		}
+
+	}
+
+	public void modificaDocenteComeDocente(String codiceDocente){
+		Docenti docente = cercaDocentePerCodice((codiceDocente));
+		if (docente != null){
+			System.out.println("Menu modifiche consentite:\n");
+			System.out.println("1. Cambia nome");
+			System.out.println("2. Cambia cognome\n");
+			System.out.print("Scegli un opzione: ");
+			int scelta = scanner.nextInt();
+
+			System.out.println();
+
+			switch (scelta){
+				case 1:
+					System.out.print("Per favore, inserisci il nome: ");
+					String nome = scanner.next();
+					docente.setNome(nome);
+					break;
+				case 2:
+					System.out.print("Per favore, inserisci il cognome: ");
+					String cognome = scanner.next();
+					docente.setCognome(cognome);
+					break;
+				default:
+					System.out.println("Errore. Per favore inserisci un valore valido.");
+					scanner.nextLine();
+					break;
+			}
+		} else {
+			System.out.println("Errore. Non e' stato trovato nessun docente con questo codice.");
+		}
+	}
+
+
+	public void modificaDocente(String codiceDocente, Docenti docenteModificato) {
+
+		Docenti docente = cercaDocentePerCodice(codiceDocente);
+		if(docente != null) {
+			int size = docente.corsiInsegnati.size();
+			if(size != 0){
+				for(Corsi corso : docente.corsiInsegnati){
+					docenteModificato.corsiInsegnati.add(corso);
+				}
+			}
+			elencoDocenti.set(elencoDocenti.indexOf(docente), docenteModificato);
+			System.out.println("Docente modificato con successo\n");
+			visualizzaDocente(docenteModificato.getCodiceDocente());
+
+		} else {
+			System.out.println("Non e' stato possibile trovare il docente da modificare");
 		}
 		
-		return false;
+
 	}
 	
-	public boolean modificaDocente(String codiceDocente, Docenti docenteModificato) {
-		
-		Docenti docenti = cercaDocentePerCodice(codiceDocente);
-		if(docenti != null) {
-			elencoDocenti.set(elencoDocenti.indexOf(docenti), docenteModificato);
-			
-			return true;
-		}
-		
-		return false;
-	}
-	
-	public boolean eliminaStudente(String codiceStudente) {
+	public void eliminaStudente(String codiceStudente) {
         Studenti studenti = cercaStudentePerCodice(codiceStudente);
         if(studenti != null){
+			int size = studenti.corsiFrequentati.size();
+			if(size != 0){
+				for(Corsi corso : studenti.corsiFrequentati){
+					rimuoviStudenteDalCorso(codiceStudente, corso.getCodiceCorso());
+				}
+			}
         	elencoStudenti.remove(studenti);
-            return true;
-        }
-        return false;
+			System.out.println("Studente eliminato con successo");
+        } else {
+			System.out.println("Errore. Nessuno studente trovato con questo codice");
+		}
     }
 	
-	public boolean eliminaDocente(String codiceDocente) {
+	public void eliminaDocente(String codiceDocente) {
         Docenti docenti = cercaDocentePerCodice(codiceDocente);
         if(docenti != null){
         	elencoDocenti.remove(docenti);
-            return true;
-        }
-        return false;
+			System.out.println("Docente rimosso con successo");
+        } else {
+			System.out.println("Errore. Nessun docente trovato con questo codice.");
+		}
+
     }
 	
 	public void visualizzaStudente(String codiceStudente) {
 		Studenti studenti = cercaStudentePerCodice(codiceStudente);
 		if(studenti != null) {
+			System.out.println();
 			System.out.println(studenti);
 		} else {
 			System.out.println("Non e' stato trovato nessuno studente con questo codice");
@@ -122,9 +192,20 @@ public class GestoreSistema {
 	public void visualizzaDocente(String codiceDocente) {
 		Docenti docente = cercaDocentePerCodice(codiceDocente);
 		if(docente != null) {
+			System.out.println();
 			System.out.println(docente);
 		} else {
-			System.out.println("Non e' stato trovato nessuno studente con questo codice");
+			System.out.println("Non e' stato trovato nessun docente con questo codice");
+		}
+	}
+
+	public void visualizzaCorso(String codiceCorso) {
+		Corsi corso = cercaCorsiPerCodice(codiceCorso);
+		if(corso != null) {
+			System.out.println();
+			System.out.println(corso);
+		} else {
+			System.out.println("Non e' stato trovato nessun corso con questo codice");
 		}
 	}
 	
@@ -132,10 +213,11 @@ public class GestoreSistema {
 		Docenti docente = cercaDocentePerCodice(codiceDocente);
 		Corsi corso = cercaCorsiPerCodice(codiceCorso);
 		if((docente != null) && (corso != null)) {
-			corso.docente = docente;
+			corso.setDocente(docente);
 			System.out.println("Docente aggiunto al corso con successo");
+			visualizzaCorso(codiceCorso);
 		} else {
-			System.out.println("Errore. Nessun docente trovato con questo codice");
+			System.out.println("Errore. Nessun docente o corso trovato con questo codice");
 		}
 	}
 	
@@ -144,9 +226,11 @@ public class GestoreSistema {
 		Corsi corso = cercaCorsiPerCodice(codiceCorso);
 		if((studente != null) && (corso != null)) {
 			corso.studentiIscritti.add(studente);
+			studente.corsiFrequentati.add(corso);
 			System.out.println("Studente aggiunto al corso con successo");
+			visualizzaCorso(codiceCorso);
 		} else {
-			System.out.println("Errore. Nessuno studente trovato con questo codice");
+			System.out.println("Errore. Nessuno studente o corso trovato con questo codice");
 		}
 	}
 	
@@ -167,9 +251,9 @@ public class GestoreSistema {
 	
 	public void reportisticaStudenti(String codiceCorso) {
 		Corsi corso = cercaCorsiPerCodice(codiceCorso);
-		int size = 0;
+
 		if(corso != null) {
-			size = corso.studentiIscritti.size();
+			int size = corso.studentiIscritti.size();
 			if(size != 0) {
 				for(Studenti studente : corso.studentiIscritti) {
 					System.out.println(studente);
@@ -184,13 +268,13 @@ public class GestoreSistema {
 	
 	public void reportisticaCorsi(String codiceDocente) {
 		Docenti docente = cercaDocentePerCodice(codiceDocente);
-		int size = 0;
+
 		if(docente != null) {
-			size = docente.corsiInsegnati.size();
+			int size = docente.corsiInsegnati.size();
 			if(size != 0) {
 				for(Corsi corso : docente.corsiInsegnati) {
-					System.out.println(corso.nomeCorso);
-					System.out.println(corso.codiceCorso);
+					System.out.println(corso.getNomeCorso());
+					System.out.println(corso.getCodiceCorso());
 				}
 			} else {
 				System.out.println("Il docente selezionato non insegna nessun corso");
@@ -224,9 +308,13 @@ public class GestoreSistema {
 			size = studente.corsiFrequentati.size();
 			if(size != 0) {
 				for(Corsi corso : studente.corsiFrequentati) {
-					System.out.println(corso.docente);
+					System.out.println(corso.getDocente());
 				}
+			} else {
+				System.out.println("Lo studente non e' attualmente iscritto a nessun corso");
 			}
+		} else {
+			System.out.println("Non e' stato possibile trovare lo studente selezionato");
 		}
 	}
 	
