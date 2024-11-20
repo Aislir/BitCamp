@@ -49,7 +49,8 @@ public class Corsi {
 	//metodo toString()
 	@Override
 	public String toString() {
-		return "nomeCorso: " + nomeCorso + ", codiceCorso: " + codiceCorso + ", \n"+ docente;
+		return "nomeCorso: " + nomeCorso + ", codiceCorso: " + codiceCorso + ", \n"+
+				docente.InfoDocenteNoCorsi();
 	}
 	
 

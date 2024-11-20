@@ -8,7 +8,7 @@ public class Studenti {
 	private String cognome;
 	private String dataDiNascita;
 	private String codiceStudente;
-	public ArrayList<Corsi> corsiFrequentati;
+	private ArrayList<Corsi> corsiFrequentati;
 	
 	
 	//	COSTRUTTORE
@@ -41,6 +41,10 @@ public class Studenti {
 		return codiceStudente;
 	}
 
+	public ArrayList<Corsi> getCorsiFrequentati(){
+		return corsiFrequentati;
+	}
+
 	
 	
 	public void setNome(String nome) {
@@ -67,6 +71,12 @@ public class Studenti {
 				+dataDiNascita +" \n"
 				+"Codice Studente: " +codiceStudente+" - "
 				+"Corsi frequentati: "+corsiFrequentati;
+	}
+
+	public String InfoStudenteNoCorsi(){
+		return "Studente: " +nome +" " +cognome +" - "
+				+dataDiNascita +" - "
+				+"Codice Studente: " +codiceStudente;
 	}
 	
 	

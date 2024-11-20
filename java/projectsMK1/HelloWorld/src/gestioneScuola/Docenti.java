@@ -7,7 +7,7 @@ public class Docenti {
 	private String nome;
 	private String cognome;
 	private String codiceDocente;
-	public ArrayList<Corsi> corsiInsegnati;
+	private ArrayList<Corsi> corsiInsegnati;
 	
 	
 	//	COSTRUTTORE
@@ -32,10 +32,11 @@ public class Docenti {
 	public String getCodiceDocente() {
 		return codiceDocente;
 	}
-	
 
-	
-	
+	public ArrayList<Corsi> getCorsiInsegnati() {
+		return corsiInsegnati;
+	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
@@ -56,7 +57,10 @@ public class Docenti {
 				+"Codice docente: " +codiceDocente +" - "
 				+"Corsi insegnati: " +corsiInsegnati;
 	}
-	
-	
+
+	public String InfoDocenteNoCorsi(){
+		return "Docente: " +nome +" " +cognome +" - "
+				+"Codice Docente: " +codiceDocente;
+	}
 	
 }
