@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HelloWorld.iml" filepath="$PROJECT_DIR$/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ImplementazioneSQL/ImplementazioneSQL.iml" filepath="$PROJECT_DIR$/../ImplementazioneSQL/ImplementazioneSQL.iml" />
     </modules>
   </component>
 </project>
