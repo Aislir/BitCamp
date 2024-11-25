@@ -1,0 +1,10 @@
+CREATE DATABASE scuola;
+
+USE scuola;
+
+CREATE TABLE studenti(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cognome VARCHAR(100) NOT NULL,
+    eta INT NOT NULL
+);
