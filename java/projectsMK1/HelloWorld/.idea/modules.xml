@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../ImplementazioneSQL/GUI_Implementation/GUI_Implementation.iml" filepath="$PROJECT_DIR$/../ImplementazioneSQL/GUI_Implementation/GUI_Implementation.iml" />
       <module fileurl="file://$PROJECT_DIR$/HelloWorld.iml" filepath="$PROJECT_DIR$/HelloWorld.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ImplementazioneSQL/ImplementazioneSQL.iml" filepath="$PROJECT_DIR$/../ImplementazioneSQL/ImplementazioneSQL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ImplementazioneSQL/studioMedico/studioMedico.iml" filepath="$PROJECT_DIR$/../ImplementazioneSQL/studioMedico/studioMedico.iml" />
     </modules>
   </component>
 </project>

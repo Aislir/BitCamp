@@ -6,7 +6,7 @@ public class SQLInserimento {
     public static void main(String[] args) {
 
         //Dati del DB a cui ci vogliamo connettere
-        String url = "jdbc:mysql://localhost/scuola";
+        String url = "jdbc:mysql://localhost:3306/scuola";
         String username = "root";
         String password = "0104";
 

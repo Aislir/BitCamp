@@ -8,3 +8,5 @@ CREATE TABLE studenti(
     cognome VARCHAR(100) NOT NULL,
     eta INT NOT NULL
 );
+
+SELECT * FROM studenti;

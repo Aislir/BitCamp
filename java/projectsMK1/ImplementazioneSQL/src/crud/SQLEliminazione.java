@@ -9,7 +9,7 @@ public class SQLEliminazione {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost/scuola";
         String username = "root";
-        String password = "1234";
+        String password = "0104";
 
         //connessione al DB
         try{

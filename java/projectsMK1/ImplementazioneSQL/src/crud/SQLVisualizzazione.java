@@ -8,7 +8,7 @@ public class SQLVisualizzazione {
         //Dati nostro DB per connessione
         String url = "jdbc:mysql://localhost/scuola";
         String username = "root";
-        String password = "1234";
+        String password = "0104";
 
         try{
             Connection connection = DriverManager.getConnection(url, username, password);

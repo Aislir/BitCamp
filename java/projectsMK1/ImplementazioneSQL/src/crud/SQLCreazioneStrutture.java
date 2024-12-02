@@ -7,7 +7,7 @@ public class SQLCreazioneStrutture {
 
         String url = "jdbc:mysql://localhost:3306/scuola";
         String username = "root";
-        String password = "1234";
+        String password = "0104";
 
         try{
             Connection connection = DriverManager.getConnection(url, username, password);
