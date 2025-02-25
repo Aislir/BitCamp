@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS medical;
+USE medical;
+
+CREATE TABLE IF NOT EXISTS appuntamenti(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100),
+data DATE,
+ora TIME,
+descrizione VARCHAR(255)
+);
+
+SELECT * FROM appuntamenti;

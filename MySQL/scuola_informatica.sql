@@ -53,33 +53,28 @@ SELECT * FROM professori;
 #Creazione query di estrazione per visualizzare gli studenti e i loro corsi
 SELECT studenti.nome, studenti.cognome, corsi.nome_corso
 FROM studenti
-INNER JOIN corsi
-ON studenti.id_studenti = corsi.id_studente;
+INNER JOIN corsi ON studenti.id_studenti = corsi.id_studente;
 
 #Creazione query per mostrare tutti gli studenti e solo i corsi relazionati agli studenti
 SELECT studenti.nome, studenti.cognome, corsi.nome_corso
 FROM studenti
-LEFT JOIN corsi
-ON studenti.id_studente = corsi.id_studente;
+LEFT JOIN corsi ON studenti.id_studente = corsi.id_studente;
 
 #Creazione di una query per estrarre tutti i corsi e solo gli studenti che frequentano un corso
 SELECT studenti.nome, studenti.cognome, corsi.nome_corso
 FROM studenti
-RIGHT JOIN corsi
-ON studenti.id_studente = corsi.id_studente;
+RIGHT JOIN corsi ON studenti.id_studente = corsi.id_studente;
 
 #Creazione di una query per simulare FULL JOIN (non presente in mySQL)
 SELECT studenti.nome, studenti.cognome, corsi.nome_corso
 FROM studenti
-LEFT JOIN corsi
-ON studenti.id_studente = corsi.id_studente
+LEFT JOIN corsi ON studenti.id_studente = corsi.id_studente
 
 UNION #Unisce le query sopra e sotto
 
 SELECT studenti.nome, studenti.cognome, corsi.nome_corso
 FROM studenti
-RIGHT JOIN corsi
-ON studenti.id_studente = corsi.id_studente;
+RIGHT JOIN corsi ON studenti.id_studente = corsi.id_studente;
 
 
 #Creazione query per prodotto cartesiano
@@ -90,14 +85,11 @@ CROSS JOIN corsi;
 # Creazione di una inner join con filtro
 SELECT studenti.nome, studenti.cognome, corsi.nome_corso
 FROM studenti
-INNER JOIN corsi
-ON studenti.id_studente = corsi.id_studente
+INNER JOIN corsi ON studenti.id_studente = corsi.id_studente
 AND corsi.nome_corso = 'Matematica';
 
 # Creazione di una query di inner join tra 3 tabelle
 SELECT studenti.nome, studenti.cognome, corsi.nome_corso, professori.nome_professore
 FROM studenti
-INNER JOIN corsi
-ON studenti.id_studente = corsi.id_studente
-INNER JOIN professori
-ON corsi.id_corso = professori.id_corso;
+INNER JOIN corsi ON studenti.id_studente = corsi.id_studente
+INNER JOIN professori ON corsi.id_corso = professori.id_corso;

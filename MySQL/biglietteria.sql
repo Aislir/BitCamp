@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS biglietteria;
+USE biglietteria;
+
+CREATE TABLE IF NOT EXISTS biglietti(
+id INT PRIMARY KEY AUTO_INCREMENT,
+data VARCHAR(100),
+destinazione VARCHAR(100),
+prezzo DECIMAL(10,2)
+);

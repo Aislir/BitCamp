@@ -16,7 +16,7 @@ public class ClassDataEOra {
         LocalDateTime adesso = LocalDateTime.now();
         System.out.println("Data e ora corrente: "+adesso);
 
-        //settiamo il format con cui vogliamo visualizzate data e ora
+        //settiamo il format con cui vogliamo visualizzare data e ora
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         String adessoFormattato = adesso.format(formatter);
         System.out.println("Data e ora formattata: "+adessoFormattato);

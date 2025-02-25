@@ -3,8 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../ImplementazioneSQL/GUI_Implementation/GUI_Implementation.iml" filepath="$PROJECT_DIR$/../ImplementazioneSQL/GUI_Implementation/GUI_Implementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ImplementazioneSQL/GestionalePalestra/GestionalePalestra.iml" filepath="$PROJECT_DIR$/../ImplementazioneSQL/GestionalePalestra/GestionalePalestra.iml" />
       <module fileurl="file://$PROJECT_DIR$/HelloWorld.iml" filepath="$PROJECT_DIR$/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hibernate.iml" filepath="$PROJECT_DIR$/Hibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ImplementazioneSQL/ImplementazioneSQL.iml" filepath="$PROJECT_DIR$/../ImplementazioneSQL/ImplementazioneSQL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ImplementazioneSQL/GUI_Implementation/TestScraper/PrimoServerJava/PrimoServerJava.iml" filepath="$PROJECT_DIR$/../ImplementazioneSQL/GUI_Implementation/TestScraper/PrimoServerJava/PrimoServerJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ImplementazioneSQL/GUI_Implementation/TestScraper/TestScraper.iml" filepath="$PROJECT_DIR$/../ImplementazioneSQL/GUI_Implementation/TestScraper/TestScraper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ImplementazioneSQL/GUI_Implementation/TestScraper/PrimoServerJava/esempioHibernate/esempioHibernate.iml" filepath="$PROJECT_DIR$/../ImplementazioneSQL/GUI_Implementation/TestScraper/PrimoServerJava/esempioHibernate/esempioHibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ImplementazioneSQL/studioMedico/studioMedico.iml" filepath="$PROJECT_DIR$/../ImplementazioneSQL/studioMedico/studioMedico.iml" />
     </modules>
   </component>
