@@ -67,7 +67,6 @@ public class TableModel extends AbstractTableModel {
                 case 0:
                     // Gestione del checkbox
                     fornitore.setSelected((Boolean) aValue);
-                    System.out.println(fornitore.getSelected());
                     isClicked((List<Fornitore>) data);
                     break;
             }

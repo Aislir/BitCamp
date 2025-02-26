@@ -97,6 +97,7 @@ public class FornitoriController {
             }
             fornitoreDAO.deleteFornitore(eliminaList);
             ricaricaRisultati();
+            disableModificaRimuoviBtn();
         });
     }
 
@@ -143,6 +144,7 @@ public class FornitoriController {
             fornitoreDAO.updateFornitore(idModificaFornitore, fornitore, rappresentante, email, contatto);
             ricaricaRisultati();
             puliziaCampi();
+            disableModificaRimuoviBtn();
         });
     }
 
