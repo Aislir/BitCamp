@@ -12,6 +12,13 @@
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+            <!-- Show SQL statements in the logs -->
+            <property name="hibernate.show_sql" value="true"/>
+            <!-- Format SQL statements for better readability -->
+            <property name="hibernate.format_sql" value="true"/>
+            <!-- Add comments to the generated SQL -->
+            <property name="hibernate.use_sql_comments" value="true"/>
         </properties>
     </persistence-unit>
 </persistence>

@@ -50,6 +50,7 @@ public class FornitoriController {
 
     private void modificaFornitorePanel() {
         GestioneFornitoriFrame.getModifica().addActionListener(e -> {
+            //acquisizione elementi tabella per comprendere quale fornitore modificare
             TableModel model = (TableModel) gestioneFornitoriFrame.getRisultatiTable().getModel();
             List<Fornitore> retrieveList = (List<Fornitore>) model.getData();
             List<Fornitore> fornitoriSelezionati = new ArrayList<>();
@@ -60,16 +61,12 @@ public class FornitoriController {
             }
             fornitore = fornitoriSelezionati.getFirst();
 
+            //scambio pannelli, rimozione pannello aggiunta per mettere pannello modifica
             gestioneFornitoriFrame.getUpperPanel().remove(gestioneFornitoriFrame.getAggiungiPanel());
             gestioneFornitoriFrame.getUpperPanel().add(gestioneFornitoriFrame.getModificaPanel(), BorderLayout.CENTER);
 
             repaintPannello();
-
-            gestioneFornitoriFrame.getModificaNomeField().setText(fornitore.getNome());
-            gestioneFornitoriFrame.getModificaRappresentanteField().setText(fornitore.getRappresentante());
-            gestioneFornitoriFrame.getModificaContattoField().setText(fornitore.getContatti().getFirst().getContatti());
-            gestioneFornitoriFrame.getModificaEmailField().setText(fornitore.getContatti().getFirst().getEmail());
-            gestioneFornitoriFrame.getIdFornitoreField().setText(String.valueOf(fornitore.getId()));
+            passaggioValoriFornitoreAiFieldPerModifica();
 
             //isShowing() permette di capire se il pannello sia visibile
             if (gestioneFornitoriFrame.getAggiungiPanel().isShowing()){
@@ -148,6 +145,14 @@ public class FornitoriController {
         });
     }
 
+    private void passaggioValoriFornitoreAiFieldPerModifica() {
+        gestioneFornitoriFrame.getModificaNomeField().setText(fornitore.getNome());
+        gestioneFornitoriFrame.getModificaRappresentanteField().setText(fornitore.getRappresentante());
+        gestioneFornitoriFrame.getModificaContattoField().setText(fornitore.getContatti().getFirst().getContatti());
+        gestioneFornitoriFrame.getModificaEmailField().setText(fornitore.getContatti().getFirst().getEmail());
+        gestioneFornitoriFrame.getIdFornitoreField().setText(String.valueOf(fornitore.getId()));
+    }
+
     private void puliziaPannello(){
         //ridimensiona l'immagine e aggiunge il pannello per visualizzazione
         gestioneFornitoriFrame.getImageIcon().setImage(gestioneFornitoriFrame.getImageIcon().getImage().getScaledInstance(2000, 500, Image.SCALE_DEFAULT));
@@ -188,5 +193,6 @@ public class FornitoriController {
         GestioneFornitoriFrame.getModifica().setEnabled(false);
         GestioneFornitoriFrame.getRimuovi().setEnabled(false);
     }
+
 
 }

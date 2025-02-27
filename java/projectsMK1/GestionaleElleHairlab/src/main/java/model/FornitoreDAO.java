@@ -1,6 +1,7 @@
 package model;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 
 import java.util.List;
 
@@ -59,6 +60,30 @@ public class FornitoreDAO {
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Errore nel retrieval del fornitore By ID");
+            if(em.getTransaction() != null){
+                em.getTransaction().rollback();
+            }
+        } finally {
+            em.close();
+        }
+        return fornitore;
+    }
+
+    public Fornitore getFornitoreByNome(String nome) {
+        em = JPAUtil.getEntityManager();
+        Fornitore fornitore = null;
+        try{
+            System.out.println("Nella session il nome e': " + nome);
+            em.getTransaction().begin();
+            String hql = "FROM Fornitore F WHERE F.nome = :nome";
+            Query query = em.createQuery(hql, Fornitore.class);
+            query.setParameter("nome", nome);
+
+            fornitore = (Fornitore) query.getResultList().getFirst();
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Errore nel retrieval del fornitore By Nome");
             if(em.getTransaction() != null){
                 em.getTransaction().rollback();
             }

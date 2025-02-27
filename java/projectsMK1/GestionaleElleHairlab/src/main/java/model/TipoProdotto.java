@@ -1,7 +1,8 @@
 package model;
 
+
+
 public enum TipoProdotto {
-    NULL(""), //fa in modo che la combobox sia inizialmente vuota/non contenga nessun elemento
     SHAMPOO("Shampoo"),
     OLIO("Olio"),
     CREMA("Crema"),

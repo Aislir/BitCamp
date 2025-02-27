@@ -16,7 +16,7 @@ import java.util.List;
 
 public class TableModel extends AbstractTableModel {
     private List<?> data;  // I dati che vogliono essere visualizzati nella tabella
-    private List<?> data2;
+    //private List<?> data2;
     private String[] columnNames;  // I nomi delle colonne, passati dinamicamente
 
     // Costruttore che accetta i dati e i nomi delle colonne
@@ -54,6 +54,22 @@ public class TableModel extends AbstractTableModel {
             }
         }
 
+        if (row instanceof Prodotto) {
+            Prodotto prodotto = (Prodotto) row;
+            switch (columnIndex) {
+                case 0:
+                    //System.out.println("Sono stato chiamato");
+                    return prodotto.getSelected();
+                case 1: return prodotto.getNome();
+                case 2: return prodotto.getCodice();
+                case 3: return prodotto.getTipo().toString();
+                case 4: return prodotto.getContenuto();
+                case 5: return prodotto.getMarca().toString();
+                case 6: return prodotto.getFornitore().getNome();
+                default: return null;
+            }
+        }
+
         // Altri casi possono essere aggiunti in base ai dati che passano al modello
         return null;
     }
@@ -67,7 +83,18 @@ public class TableModel extends AbstractTableModel {
                 case 0:
                     // Gestione del checkbox
                     fornitore.setSelected((Boolean) aValue);
-                    isClicked((List<Fornitore>) data);
+                    isClicked(data, rowIndex);
+                    break;
+            }
+            fireTableCellUpdated(rowIndex, columnIndex); // Puoi aggiungere altri casi se vuoi rendere modificabili altre colonne
+        }
+        if (row instanceof Prodotto) {
+            Prodotto prodotto = (Prodotto) row;
+            switch (columnIndex) {
+                case 0:
+                    // Gestione del checkbox
+                    prodotto.setSelected((Boolean) aValue);
+                    isClicked(data, rowIndex);
                     break;
             }
             fireTableCellUpdated(rowIndex, columnIndex); // Puoi aggiungere altri casi se vuoi rendere modificabili altre colonne
@@ -88,19 +115,35 @@ public class TableModel extends AbstractTableModel {
 
     public List<?> getData() {return data;}
 
-    public void isClicked(List<Fornitore> data) {
+    public void isClicked(List<?> data, int rowIndex) {
+        Object row = data.get(rowIndex);
         int counter = 0;
-        for (Fornitore fornitore : data) {
-            if (fornitore.getSelected()) {
-                counter++;
+        if (row instanceof Fornitore) {
+            Fornitore fornitore = (Fornitore) row;
+                if (fornitore.getSelected()) {
+                    counter++;
+                }
+            if (counter != 0) {
+                GestioneFornitoriFrame.getModifica().setEnabled(true);
+                GestioneFornitoriFrame.getRimuovi().setEnabled(true);
+            } else {
+                GestioneFornitoriFrame.getModifica().setEnabled(false);
+                GestioneFornitoriFrame.getRimuovi().setEnabled(false);
             }
         }
-        if (counter != 0) {
-            GestioneFornitoriFrame.getModifica().setEnabled(true);
-            GestioneFornitoriFrame.getRimuovi().setEnabled(true);
-        } else {
-            GestioneFornitoriFrame.getModifica().setEnabled(false);
-            GestioneFornitoriFrame.getRimuovi().setEnabled(false);
+
+        if (row instanceof Prodotto) {
+            Prodotto prodotto = (Prodotto) row;
+            if (prodotto.getSelected()) {
+                counter++;
+            }
+            if (counter != 0) {
+                GestioneProdottiFrame.getModifica().setEnabled(true);
+                GestioneProdottiFrame.getRimuovi().setEnabled(true);
+            } else {
+                GestioneProdottiFrame.getModifica().setEnabled(false);
+                GestioneProdottiFrame.getRimuovi().setEnabled(false);
+            }
         }
     }
 
