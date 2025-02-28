@@ -3,6 +3,7 @@ package model;
 
 
 public enum TipoProdotto {
+    NULL(""),
     SHAMPOO("Shampoo"),
     OLIO("Olio"),
     CREMA("Crema"),

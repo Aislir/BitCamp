@@ -1,12 +1,14 @@
 package controller;
 
 import model.*;
+import view.GestioneFornitoriFrame;
 import view.GestioneProdottiFrame;
 import view.TableModel;
 
 import javax.swing.*;
 import javax.swing.table.TableColumn;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class GestioneProdottiController {
@@ -24,34 +26,53 @@ public class GestioneProdottiController {
         modificaProdottoPanel();
         rimuoviProdottoPanel();
         visualizzaProdottoPanel();
-
+        ricaricaFornitoreBox();
         //metodi per aggiungiPanel
         addProdotto();
+        modificaProdotto();
     }
 
     private void aggiungiProdottoPanel() {
         gestioneProdottiFrame.getAggiungi().addActionListener(e -> {
             puliziaPannello();
-            List<Fornitore> fornitoreList = fornitoreDAO.getAllFornitore();
-            for (Fornitore fornitore : fornitoreList) {
-                gestioneProdottiFrame.getFornitoreProdotto().addItem(fornitore.getNome());
-            }
 
             //opzione 'aggiungi' nel menu non piu' selezionabile
             enableBtn(gestioneProdottiFrame.getAggiungi());
 
-            //aggiunta pannello con elementi per aggiunta prodotto
-            gestioneProdottiFrame.getRisultatiPanel().add(gestioneProdottiFrame.getAggiungiPanel(), BorderLayout.NORTH);
+            //aggiunta pannello con elementi per aggiunta prodotto e rimozione pannello modifica se presente
+            gestioneProdottiFrame.getUpperPanel().remove(gestioneProdottiFrame.getModificaPanel());
+            gestioneProdottiFrame.getUpperPanel().add(gestioneProdottiFrame.getAggiungiPanel(), BorderLayout.CENTER);
             repaintPanel();
         });
     }
 
     private void modificaProdottoPanel() {
+        GestioneProdottiFrame.getModifica().addActionListener(e -> {
+            System.out.println("Sono dentro al modifica prodotto");
+            //acquisizione model per poter capire quali prodotti sono stati selezionati
+            TableModel model = (TableModel) gestioneProdottiFrame.getVisualizzaTable().getModel();
+            List<Prodotto> retrieveList = (List<Prodotto>) model.getData();
+            List<Prodotto> prodottiSelezionati = new ArrayList<>();
+            for (Prodotto prodotto : retrieveList) {
+               if (prodotto.getSelected()){
+                   prodottiSelezionati.add(prodotto);
+               }
+            }
+            //prendo solamente un elemento tra quelli selezionati
+            Prodotto prodotto = prodottiSelezionati.getFirst();
+            puliziaPannello();
+            gestioneProdottiFrame.getUpperPanel().remove(gestioneProdottiFrame.getAggiungiPanel());
+            gestioneProdottiFrame.getUpperPanel().add(gestioneProdottiFrame.getModificaPanel(), BorderLayout.CENTER);
 
+            repaintPanel();
+            passaggioValoriProdottoAiFieldPerModifica(prodotto);
+        });
     }
 
     private void rimuoviProdottoPanel() {
-
+        GestioneProdottiFrame.getRimuovi().addActionListener(e -> {
+            
+        });
     }
 
     private void visualizzaProdottoPanel() {
@@ -76,6 +97,24 @@ public class GestioneProdottiController {
 
             puliziaCampi();
             ricaricaRisultati();
+        });
+    }
+
+    private void modificaProdotto() {
+        gestioneProdottiFrame.getSalvaModificheBtn().addActionListener(e -> {
+            //prendo i valori nei campi modificati dall'utente
+            int id = Integer.parseInt(gestioneProdottiFrame.getIdModificaProdottoField().getText());
+            String nome = gestioneProdottiFrame.getModificaNomeField().getText();
+            String codice = gestioneProdottiFrame.getModificaCodiceField().getText();
+            TipoProdotto tipoProdotto = (TipoProdotto) gestioneProdottiFrame.getModificaTipoBox().getSelectedItem();
+            double contenuto = Double.parseDouble(gestioneProdottiFrame.getModificaContenutoField().getText());
+            Marca marca = (Marca) gestioneProdottiFrame.getModificaMarcaBox().getSelectedItem();
+            String fornitore = (String) gestioneProdottiFrame.getModificaFornitoreBox().getSelectedItem();
+
+            prodottoDAO.updateProdotto(id, nome, codice, tipoProdotto, contenuto, marca, fornitore);
+            ricaricaRisultati();
+            puliziaPannello();
+            puliziaCampi();
         });
     }
 
@@ -106,9 +145,39 @@ public class GestioneProdottiController {
     }
 
     private void puliziaCampi(){
+        //pulizia campi aggiungi panel
         gestioneProdottiFrame.getNomeProdottoField().setText("");
         gestioneProdottiFrame.getCodiceProdottoField().setText("");
         gestioneProdottiFrame.getContenutoProdottoField().setText("");
+        gestioneProdottiFrame.getTipoProdotto().setSelectedItem(TipoProdotto.NULL);
+        gestioneProdottiFrame.getMarcaProdotto().setSelectedItem(Marca.NULL);
+
+        //pulizia campi modifica panel
+        gestioneProdottiFrame.getIdModificaProdottoField().setText("");
+        gestioneProdottiFrame.getModificaNomeField().setText("");
+        gestioneProdottiFrame.getModificaCodiceField().setText("");
+        gestioneProdottiFrame.getModificaContenutoField().setText("");
+        gestioneProdottiFrame.getModificaMarcaBox().setSelectedItem(Marca.NULL);
+        gestioneProdottiFrame.getModificaTipoBox().setSelectedItem(Marca.NULL);
+    }
+
+    private void passaggioValoriProdottoAiFieldPerModifica(Prodotto prodotto){
+        gestioneProdottiFrame.getIdModificaProdottoField().setText(String.valueOf(prodotto.getId()));
+        gestioneProdottiFrame.getModificaNomeField().setText(prodotto.getNome());
+        gestioneProdottiFrame.getModificaCodiceField().setText(prodotto.getCodice());
+        gestioneProdottiFrame.getModificaTipoBox().setSelectedItem(prodotto.getTipo());
+        gestioneProdottiFrame.getModificaContenutoField().setText(String.valueOf(prodotto.getContenuto()));
+        gestioneProdottiFrame.getModificaMarcaBox().setSelectedItem(prodotto.getMarca());
+        gestioneProdottiFrame.getModificaFornitoreBox().setSelectedItem(prodotto.getFornitore());
+
+    }
+
+    private void ricaricaFornitoreBox(){
+        List<Fornitore> fornitoreList = fornitoreDAO.getAllFornitore();
+        for (Fornitore fornitore : fornitoreList) {
+            gestioneProdottiFrame.getFornitoreProdotto().addItem(fornitore.getNome());
+            gestioneProdottiFrame.getModificaFornitoreBox().addItem(fornitore.getNome());
+        }
     }
 
     private void enableBtn(JMenuItem menuItem) {

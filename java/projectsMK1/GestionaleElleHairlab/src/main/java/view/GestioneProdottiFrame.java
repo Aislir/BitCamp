@@ -62,12 +62,14 @@ public class GestioneProdottiFrame extends JPanel{
     JLabel modificaFornitoreLabel = new JLabel("Fornitore:");
     JLabel modificaMarcaLabel = new JLabel("Marca:");
     JLabel modificaTipoLabel = new JLabel("Tipo:");
-    JComboBox modificaFornitoreBox = new JComboBox();
-    JComboBox modificaMarcaBox = new JComboBox();
-    JComboBox modificaTipoBox = new JComboBox();
+    JLabel idModificaProdottoLabel = new JLabel("Id:");
+    JComboBox<String> modificaFornitoreBox = new JComboBox();
+    JComboBox<Marca> modificaMarcaBox = new JComboBox(Marca.values());
+    JComboBox<TipoProdotto> modificaTipoBox = new JComboBox(TipoProdotto.values());
     JTextField modificaNomeField = new JTextField(20);
     JTextField modificaCodiceField = new JTextField(20);
     JTextField modificaContenutoField = new JTextField(15);
+    JTextField idModificaProdottoField = new JTextField(10);
 
     ImageIcon imageIcon;
     JLabel imageLabel;
@@ -114,13 +116,6 @@ public class GestioneProdottiFrame extends JPanel{
         filtriPanel.add(lowerFiltri, BorderLayout.SOUTH);
 
 
-        upperPanel.add(menuBar, BorderLayout.NORTH);
-        //upperPanel.add(filtriPanel, BorderLayout.SOUTH);
-        //contentPanel.add(risultatiPanel);
-        //contentPanel.add(elementiPanel);
-        add(upperPanel, BorderLayout.NORTH);
-        add(contentPanel, BorderLayout.CENTER);
-
 
         //-----------------------------------------//
         //sezione per aggiunta elementi al pannello AGGIUNGI PRODOTTO
@@ -147,6 +142,31 @@ public class GestioneProdottiFrame extends JPanel{
         aggiungiPanel.add(upperAggiungiPanel, BorderLayout.NORTH);
         aggiungiPanel.add(lowerAggiungiPanel, BorderLayout.SOUTH);
 
+        //aggiunta elementi pannello modifica
+        modificaUpperPanel.add(idModificaProdottoLabel);
+        modificaUpperPanel.add(idModificaProdottoField);
+        idModificaProdottoField.setEditable(false);
+        modificaUpperPanel.add(modificaNomeLabel);
+        modificaUpperPanel.add(modificaNomeField);
+        modificaUpperPanel.add(modificaCodiceLabel);
+        modificaUpperPanel.add(modificaCodiceField);
+        modificaUpperPanel.add(modificaTipoLabel);
+        modificaUpperPanel.add(modificaTipoBox);
+        modificaUpperPanel.add(modificaContenutoLabel);
+        modificaUpperPanel.add(modificaContenutoField);
+        modificaUpperPanel.add(modificaMarcaLabel);
+        modificaUpperPanel.add(modificaMarcaBox);
+        modificaUpperPanel.add(modificaFornitoreLabel);
+        modificaUpperPanel.add(modificaFornitoreBox);
+        modificaLowerPanel.add(salvaModificheBtn);
+        modificaPanel.setLayout(new BorderLayout());
+        modificaPanel.add(modificaUpperPanel, BorderLayout.NORTH);
+        modificaPanel.add(modificaLowerPanel, BorderLayout.SOUTH);
+
+        upperPanel.add(menuBar, BorderLayout.NORTH);
+        add(upperPanel, BorderLayout.NORTH);
+        add(contentPanel, BorderLayout.CENTER);
+
         //aggiunta immagine a pannello principale
         imageIcon = new ImageIcon("src/main/resources/images/black3.png");
         imageIcon.setImage(imageIcon.getImage().getScaledInstance(2000, 1000, Image.SCALE_DEFAULT));
@@ -166,15 +186,18 @@ public class GestioneProdottiFrame extends JPanel{
     public JPanel getElementiPanel() {return elementiPanel;}
     public JPanel getContentPanel() {return contentPanel;}
     public JPanel getRisultatiPanel() {return risultatiPanel;}
+    public JPanel getUpperPanel() {return upperPanel;}
     public ImageIcon getImageIcon() {return imageIcon;}
     public JLabel getImageLabel() {return imageLabel;}
     public JPanel getModificaPanel() {return modificaPanel;}
     public JTextField getModificaNomeField() {return modificaNomeField;}
     public JTextField getModificaCodiceField() {return modificaCodiceField;}
     public JTextField getModificaContenutoField() {return modificaContenutoField;}
+    public JTextField getIdModificaProdottoField() {return idModificaProdottoField;}
     public JComboBox getModificaTipoBox() {return modificaTipoBox;}
     public JComboBox getModificaMarcaBox() {return modificaMarcaBox;}
     public JComboBox getModificaFornitoreBox() {return modificaFornitoreBox;}
+
 
     //metodi get e set per aggiungi panel
     public JPanel getAggiungiPanel() {return aggiungiPanel;}
