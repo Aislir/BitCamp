@@ -59,6 +59,7 @@ public class FornitoriController {
                     fornitoriSelezionati.add(fornitoreSelezionato);
                 }
             }
+            System.out.println(fornitoriSelezionati.get(0).getNome().toUpperCase());
             fornitore = fornitoriSelezionati.getFirst();
 
             //scambio pannelli, rimozione pannello aggiunta per mettere pannello modifica
@@ -81,16 +82,11 @@ public class FornitoriController {
         GestioneFornitoriFrame.getRimuovi().addActionListener(e -> {
             TableModel model = (TableModel) gestioneFornitoriFrame.getRisultatiTable().getModel();
             List<Fornitore> eliminaList = new ArrayList<>();
-            try {
-                List<Fornitore> retrieveList = (List<Fornitore>) model.getData();
-                for (Fornitore fornitore : retrieveList) {
-                    if (fornitore.getSelected()){
-                        eliminaList.add(fornitore);
-                    }
+            List<Fornitore> retrieveList = (List<Fornitore>) model.getData();
+            for (Fornitore fornitore : retrieveList) {
+                if (fornitore.getSelected()){
+                    eliminaList.add(fornitore);
                 }
-            } catch (Exception ex) {
-                ex.printStackTrace();
-                System.out.println("Errore durante il retrieval degli elementi selezionati");
             }
             fornitoreDAO.deleteFornitore(eliminaList);
             ricaricaRisultati();

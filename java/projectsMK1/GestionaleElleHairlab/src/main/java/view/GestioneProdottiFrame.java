@@ -1,6 +1,5 @@
 package view;
 
-import model.Fornitore;
 import model.Marca;
 import model.TipoProdotto;
 
@@ -20,7 +19,7 @@ public class GestioneProdottiFrame extends JPanel{
     JMenuBar menuBar = new JMenuBar();
     JMenu menu = new JMenu("Menu Gestione Prodotti");
     JMenuItem visualizza = new JMenuItem("Visualizza tutti i prodotti");
-    static JMenuItem modifica = new JMenuItem("Modifica prodotto");
+    static JMenuItem modificaProdotto = new JMenuItem("Modifica prodotto");
     JMenuItem aggiungi = new JMenuItem("Aggiungi nuovo prodotto");
     static JMenuItem rimuovi = new JMenuItem("Rimuovi prodotto permanentemente");
     JButton cercaPerNomeBtn = new JButton("Cerca");
@@ -33,7 +32,7 @@ public class GestioneProdottiFrame extends JPanel{
     TipoProdotto tipoProdotto;
     //ComboBox per tipo, marca e fornitore
     JComboBox<TipoProdotto> tipoBox = new JComboBox<>(TipoProdotto.values());
-    JComboBox<Marca> marcaBox = new JComboBox(Marca.values());
+    JComboBox<Marca> marcaBox = new JComboBox<>(Marca.values());
     JComboBox<String> fornitoreBox = new JComboBox<>();
 
     //elementi per pannello per aggiunta elementi
@@ -83,7 +82,7 @@ public class GestioneProdottiFrame extends JPanel{
         risultatiPanel.add(risultatiScrollPane, BorderLayout.CENTER);
         //aggiunta elementi MenuBar
         menu.add(visualizza);
-        menu.add(modifica);
+        menu.add(modificaProdotto);
         menu.add(aggiungi);
         menu.add(rimuovi);
         menuBar.add(menu);
@@ -165,7 +164,6 @@ public class GestioneProdottiFrame extends JPanel{
 
         upperPanel.add(menuBar, BorderLayout.NORTH);
         add(upperPanel, BorderLayout.NORTH);
-        add(contentPanel, BorderLayout.CENTER);
 
         //aggiunta immagine a pannello principale
         imageIcon = new ImageIcon("src/main/resources/images/black3.png");
@@ -178,7 +176,7 @@ public class GestioneProdottiFrame extends JPanel{
     //metodi get
     public JTable getVisualizzaTable() {return visualizzaTable;}
     public JButton getCercaPerNomeBtn() {return cercaPerNomeBtn;}
-    public static JMenuItem getModifica() {return modifica;}
+    public static JMenuItem getModificaProdotto() {return modificaProdotto;}
     public JMenuItem getAggiungi() {return aggiungi;}
     public static JMenuItem getRimuovi() {return rimuovi;}
     public JMenuItem getVisualizza() {return visualizza;}
@@ -194,9 +192,9 @@ public class GestioneProdottiFrame extends JPanel{
     public JTextField getModificaCodiceField() {return modificaCodiceField;}
     public JTextField getModificaContenutoField() {return modificaContenutoField;}
     public JTextField getIdModificaProdottoField() {return idModificaProdottoField;}
-    public JComboBox getModificaTipoBox() {return modificaTipoBox;}
-    public JComboBox getModificaMarcaBox() {return modificaMarcaBox;}
-    public JComboBox getModificaFornitoreBox() {return modificaFornitoreBox;}
+    public JComboBox<TipoProdotto> getModificaTipoBox() {return modificaTipoBox;}
+    public JComboBox<Marca> getModificaMarcaBox() {return modificaMarcaBox;}
+    public JComboBox<String> getModificaFornitoreBox() {return modificaFornitoreBox;}
 
 
     //metodi get e set per aggiungi panel
@@ -205,9 +203,9 @@ public class GestioneProdottiFrame extends JPanel{
     public JTextField getNomeProdottoField() {return nomeProdottoField;}
     public JTextField getCodiceProdottoField() {return codiceProdottoField;}
     public JTextField getContenutoProdottoField() {return contenutoProdottoField;}
-    public JComboBox getTipoProdotto() {return tipoBox;}
-    public JComboBox getMarcaProdotto() {return marcaBox;}
-    public JComboBox getFornitoreProdotto() {return fornitoreBox;}
+    public JComboBox<TipoProdotto> getTipoProdotto() {return tipoBox;}
+    public JComboBox<Marca> getMarcaProdotto() {return marcaBox;}
+    public JComboBox<String> getFornitoreProdotto() {return fornitoreBox;}
 
     public void setAggiungiPanel(JPanel aggiungiPanel) {this.aggiungiPanel = aggiungiPanel;}
     public void setNomeProdottoField(JTextField textField) {this.nomeProdottoField = textField;}

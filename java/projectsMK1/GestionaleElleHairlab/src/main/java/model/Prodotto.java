@@ -10,7 +10,8 @@ import java.util.List;
 public class Prodotto {
     //identifica il campo id della tabella
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "prodotto_generator")
+    @SequenceGenerator(name = "prodotto_generator", sequenceName = "prodotto_seq")
     private int id;
 
     private String nome;
@@ -32,7 +33,7 @@ public class Prodotto {
     @OneToMany (mappedBy = "prodotto", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true )
     private List<StoricoMagazzino> storicoProdotto = new ArrayList<>();
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "fornitore_id")
     private Fornitore fornitore;
 

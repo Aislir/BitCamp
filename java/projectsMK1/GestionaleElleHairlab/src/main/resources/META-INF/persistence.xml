@@ -1,24 +1,22 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
     <persistence-unit name="myPersistenceUnit">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
         <class>model.Fornitore</class>
         <class>model.ContattoFornitore</class>
         <class>model.DDT</class>
         <class>model.Prodotto</class>
         <class>model.StoricoMagazzino</class>
+
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/gestionaleElleHairlab"/>
-            <property name="javax.persistence.jdbc.user" value="root"/>
-            <property name="javax.persistence.jdbc.password" value="0104"/>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/gestionaleElleHairlab"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="0104"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
 
-            <!-- Show SQL statements in the logs -->
-            <property name="hibernate.show_sql" value="true"/>
-            <!-- Format SQL statements for better readability -->
-            <property name="hibernate.format_sql" value="true"/>
-            <!-- Add comments to the generated SQL -->
-            <property name="hibernate.use_sql_comments" value="true"/>
         </properties>
     </persistence-unit>
 </persistence>

@@ -1,0 +1,9 @@
+2025-03-11 17:46:28 DEBUG SQL:135 - select f1_0.id,f1_0.nome,f1_0.rappresentante from fornitore f1_0
+2025-03-11 17:46:28 DEBUG SQL:135 - select p1_0.fornitore_id,p1_0.id,p1_0.codice,p1_0.contenuto,p1_0.marca,p1_0.nome,p1_0.quantita,p1_0.tipo from prodotto p1_0 where p1_0.fornitore_id=?
+2025-03-11 17:46:28 DEBUG SQL:135 - select c1_0.fornitore_id,c1_0.id,c1_0.contatti,c1_0.email from contatti_fornitore c1_0 where c1_0.fornitore_id=?
+2025-03-11 17:46:28 DEBUG SQL:135 - select p1_0.fornitore_id,p1_0.id,p1_0.codice,p1_0.contenuto,p1_0.marca,p1_0.nome,p1_0.quantita,p1_0.tipo from prodotto p1_0 where p1_0.fornitore_id=?
+2025-03-11 17:46:28 DEBUG SQL:135 - select c1_0.fornitore_id,c1_0.id,c1_0.contatti,c1_0.email from contatti_fornitore c1_0 where c1_0.fornitore_id=?
+2025-03-11 17:46:28 DEBUG SQL:135 - select p1_0.fornitore_id,p1_0.id,p1_0.codice,p1_0.contenuto,p1_0.marca,p1_0.nome,p1_0.quantita,p1_0.tipo from prodotto p1_0 where p1_0.fornitore_id=?
+2025-03-11 17:46:28 DEBUG SQL:135 - select sp1_0.prodotto_id,sp1_0.id,sp1_0.dataMovimento,d1_0.id,d1_0.dataDDT,d1_0.dataReg,f1_0.id,f1_0.nome,f1_0.rappresentante,d1_0.numero,sp1_0.quantita,sp1_0.tipoMovimento from storicoMagazzino sp1_0 left join ddt d1_0 on d1_0.id=sp1_0.ddt_id left join fornitore f1_0 on f1_0.id=d1_0.fornitore_id where sp1_0.prodotto_id=?
+2025-03-11 17:46:28 DEBUG SQL:135 - select sp1_0.prodotto_id,sp1_0.id,sp1_0.dataMovimento,d1_0.id,d1_0.dataDDT,d1_0.dataReg,f1_0.id,f1_0.nome,f1_0.rappresentante,d1_0.numero,sp1_0.quantita,sp1_0.tipoMovimento from storicoMagazzino sp1_0 left join ddt d1_0 on d1_0.id=sp1_0.ddt_id left join fornitore f1_0 on f1_0.id=d1_0.fornitore_id where sp1_0.prodotto_id=?
+2025-03-11 17:46:28 DEBUG SQL:135 - select c1_0.fornitore_id,c1_0.id,c1_0.contatti,c1_0.email from contatti_fornitore c1_0 where c1_0.fornitore_id=?

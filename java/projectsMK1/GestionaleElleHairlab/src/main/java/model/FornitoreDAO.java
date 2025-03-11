@@ -26,6 +26,7 @@ public class FornitoreDAO {
             }
         } finally {
             em.close();
+            System.out.println(em.isOpen());
         }
         System.out.println("Usciti dalla session");
     }
@@ -100,6 +101,10 @@ public class FornitoreDAO {
             em.getTransaction().begin();
             for (Fornitore fornitore : fornitoreList) {
                 Fornitore matchedFornitore = em.find(Fornitore.class, fornitore.getId());
+                for (Prodotto prodotto : matchedFornitore.getProdotti()){
+                    prodotto = em.find(Prodotto.class, prodotto.getId());
+                    prodotto.setFornitore(null);
+                }
                 em.remove(matchedFornitore);
                 System.out.println("Il fornitore e' stato eliminato");
             }

@@ -1,7 +1,6 @@
 package controller;
 
 import model.*;
-import view.GestioneFornitoriFrame;
 import view.GestioneProdottiFrame;
 import view.TableModel;
 
@@ -30,24 +29,22 @@ public class GestioneProdottiController {
         //metodi per aggiungiPanel
         addProdotto();
         modificaProdotto();
+        disableModificaRimuoviBtn();
     }
 
     private void aggiungiProdottoPanel() {
         gestioneProdottiFrame.getAggiungi().addActionListener(e -> {
             puliziaPannello();
-
-            //opzione 'aggiungi' nel menu non piu' selezionabile
-            enableBtn(gestioneProdottiFrame.getAggiungi());
-
             //aggiunta pannello con elementi per aggiunta prodotto e rimozione pannello modifica se presente
             gestioneProdottiFrame.getUpperPanel().remove(gestioneProdottiFrame.getModificaPanel());
             gestioneProdottiFrame.getUpperPanel().add(gestioneProdottiFrame.getAggiungiPanel(), BorderLayout.CENTER);
             repaintPanel();
+
         });
     }
 
     private void modificaProdottoPanel() {
-        GestioneProdottiFrame.getModifica().addActionListener(e -> {
+        GestioneProdottiFrame.getModificaProdotto().addActionListener(e -> {
             System.out.println("Sono dentro al modifica prodotto");
             //acquisizione model per poter capire quali prodotti sono stati selezionati
             TableModel model = (TableModel) gestioneProdottiFrame.getVisualizzaTable().getModel();
@@ -71,7 +68,25 @@ public class GestioneProdottiController {
 
     private void rimuoviProdottoPanel() {
         GestioneProdottiFrame.getRimuovi().addActionListener(e -> {
-            
+            TableModel model = (TableModel) gestioneProdottiFrame.getVisualizzaTable().getModel();
+            List<Prodotto> eliminaList = new ArrayList<>();
+            try {
+                List<Prodotto> retrieveList = (List<Prodotto>) model.getData();
+                for (Prodotto prodotto : retrieveList) {
+                    if (prodotto.getSelected()){
+                        eliminaList.add(prodotto);
+                    }
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                System.out.println("Errore durante il retrieval degli elementi selezionati");
+            }
+            for (Prodotto prodotto : eliminaList) {
+                System.out.println(prodotto.getNome());
+            }
+            prodottoDAO.deleteProdotto(eliminaList);
+            ricaricaRisultati();
+            disableModificaRimuoviBtn();
         });
     }
 
@@ -80,6 +95,7 @@ public class GestioneProdottiController {
             ricaricaRisultati();
             puliziaPannello();
             repaintPanel();
+
         });
     }
 
@@ -113,8 +129,8 @@ public class GestioneProdottiController {
 
             prodottoDAO.updateProdotto(id, nome, codice, tipoProdotto, contenuto, marca, fornitore);
             ricaricaRisultati();
-            puliziaPannello();
             puliziaCampi();
+            disableModificaRimuoviBtn();
         });
     }
 
@@ -180,14 +196,8 @@ public class GestioneProdottiController {
         }
     }
 
-    private void enableBtn(JMenuItem menuItem) {
-        JMenuItem[] bottoniMenu = {gestioneProdottiFrame.getAggiungi(), GestioneProdottiFrame.getRimuovi(), GestioneProdottiFrame.getModifica(), gestioneProdottiFrame.getVisualizza()};
-        for (JMenuItem bottoniMenuItem : bottoniMenu) {
-            if (bottoniMenuItem.equals(menuItem)) {
-                bottoniMenuItem.setEnabled(false);
-            } else {
-                bottoniMenuItem.setEnabled(true);
-            }
-        }
+    public void disableModificaRimuoviBtn(){
+        GestioneProdottiFrame.getModificaProdotto().setEnabled(false);
+        GestioneProdottiFrame.getRimuovi().setEnabled(false);
     }
 }

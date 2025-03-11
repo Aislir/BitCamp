@@ -66,7 +66,7 @@ public class GestioneFornitoriFrame extends JPanel{
 
         setLayout(new BorderLayout());
         upperPanel.setLayout(new BorderLayout());
-        //contentPanel.setLayout(new GridLayout(1,1));
+        contentPanel.setLayout(new GridLayout(1,2));
         risultatiPanel.setLayout(new BorderLayout());
         //risultatiTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         idFornitoreField.setEditable(false);
@@ -78,14 +78,6 @@ public class GestioneFornitoriFrame extends JPanel{
         menu.add(aggiungi);
         menu.add(rimuovi);
         menuBar.add(menu);
-
-        //creazione elementi pannello filtri
-        JLabel nomeFornitoreFiltro = new JLabel("Nome Fornitore:");
-        JTextField nomeFornitoreField = new JTextField(10);
-        JLabel rappresentanteFornitoreFiltro = new JLabel("Nome Rappresentante:");
-        JTextField rappresentanteField = new JTextField(10);
-        filtriPanel.setLayout(new BorderLayout(5, 5));
-        upperFiltri.setLayout(new FlowLayout());
 
         //-----------------------------------------//
         //sezione per aggiunta elementi al pannello AGGIUNGI PRODOTTO

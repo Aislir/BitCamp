@@ -1,13 +1,10 @@
 package view;
 
-import controller.FornitoriController;
-import model.ContattoFornitore;
 import model.Fornitore;
 import model.Prodotto;
 
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableCellRenderer;
@@ -56,17 +53,21 @@ public class TableModel extends AbstractTableModel {
 
         if (row instanceof Prodotto) {
             Prodotto prodotto = (Prodotto) row;
-            switch (columnIndex) {
-                case 0:
-                    //System.out.println("Sono stato chiamato");
-                    return prodotto.getSelected();
-                case 1: return prodotto.getNome();
-                case 2: return prodotto.getCodice();
-                case 3: return prodotto.getTipo().toString();
-                case 4: return prodotto.getContenuto();
-                case 5: return prodotto.getMarca().toString();
-                case 6: return prodotto.getFornitore().getNome();
-                default: return null;
+            try{
+                switch (columnIndex) {
+                    case 0:
+                        //System.out.println("Sono stato chiamato");
+                        return prodotto.getSelected();
+                    case 1: return prodotto.getNome();
+                    case 2: return prodotto.getCodice();
+                    case 3: return prodotto.getTipo().toString();
+                    case 4: return prodotto.getContenuto();
+                    case 5: return prodotto.getMarca().toString();
+                    case 6: return prodotto.getFornitore().getNome();
+                    default: return null;
+                }
+            } catch (NullPointerException e) {
+                return null;
             }
         }
 
@@ -83,6 +84,7 @@ public class TableModel extends AbstractTableModel {
                 case 0:
                     // Gestione del checkbox
                     fornitore.setSelected((Boolean) aValue);
+                    //System.out.println(fornitore.getSelected());
                     isClicked(data, rowIndex);
                     break;
             }
@@ -138,10 +140,10 @@ public class TableModel extends AbstractTableModel {
                 counter++;
             }
             if (counter != 0) {
-                GestioneProdottiFrame.getModifica().setEnabled(true);
+                GestioneProdottiFrame.getModificaProdotto().setEnabled(true);
                 GestioneProdottiFrame.getRimuovi().setEnabled(true);
             } else {
-                GestioneProdottiFrame.getModifica().setEnabled(false);
+                GestioneProdottiFrame.getModificaProdotto().setEnabled(false);
                 GestioneProdottiFrame.getRimuovi().setEnabled(false);
             }
         }

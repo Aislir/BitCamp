@@ -22,7 +22,7 @@ public class Fornitore {
     @OneToMany (mappedBy = "fornitore", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ContattoFornitore> contatti = new ArrayList<>();
 
-    @OneToMany (mappedBy = "fornitore", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true )
+    @OneToMany (mappedBy = "fornitore", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
     private List<Prodotto> prodotti = new ArrayList<>();
 
     @OneToMany (mappedBy = "fornitore", cascade = CascadeType.ALL, orphanRemoval = true )

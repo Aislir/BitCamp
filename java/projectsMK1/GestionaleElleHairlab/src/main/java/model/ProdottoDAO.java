@@ -83,4 +83,29 @@ public class ProdottoDAO{
             em.close();
         }
     }
+
+    public void deleteProdotto(List<Prodotto> prodottiList) {
+        em = JPAUtil.getEntityManager();
+
+        try{
+            em.getTransaction().begin();
+            for (Prodotto prodotto : prodottiList){
+                Prodotto matchingProdotto = em.find(Prodotto.class, prodotto.getId());
+                Fornitore fornitore = em.find(Fornitore.class, prodotto.getFornitore().getId());
+                fornitore.getProdotti().remove(matchingProdotto);
+                em.remove(matchingProdotto);
+            }
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Errore nell'eliminazione del prodotto");
+            if (em.getTransaction() != null) {
+                em.getTransaction().rollback();
+            }
+        } finally {
+            System.out.println(em.getTransaction().isActive());
+            em.close();
+        }
+    }
+
 }
