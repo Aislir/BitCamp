@@ -37,20 +37,6 @@ public class TableModel extends AbstractTableModel {
     public Object getValueAt(int rowIndex, int columnIndex) {
         Object row = data.get(rowIndex);  // Ottieni l'oggetto della riga
 
-        if (row instanceof Fornitore) {
-            Fornitore fornitore = (Fornitore) row;
-            switch (columnIndex) {
-                case 0:
-                    //System.out.println("Sono stato chiamato");
-                    return fornitore.getSelected();
-                case 1: return fornitore.getNome();
-                case 2: return fornitore.getRappresentante();
-                case 3: return fornitore.getContatti().getFirst().getContatti();
-                case 4: return fornitore.getContatti().getFirst().getEmail();
-                default: return null;
-            }
-        }
-
         if (row instanceof Prodotto) {
             Prodotto prodotto = (Prodotto) row;
             try{
@@ -78,18 +64,6 @@ public class TableModel extends AbstractTableModel {
     @Override
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
         Object row = data.get(rowIndex);
-        if (row instanceof Fornitore) {
-            Fornitore fornitore = (Fornitore) row;
-            switch (columnIndex) {
-                case 0:
-                    // Gestione del checkbox
-                    fornitore.setSelected((Boolean) aValue);
-                    //System.out.println(fornitore.getSelected());
-                    isClicked(data, rowIndex);
-                    break;
-            }
-            fireTableCellUpdated(rowIndex, columnIndex); // Puoi aggiungere altri casi se vuoi rendere modificabili altre colonne
-        }
         if (row instanceof Prodotto) {
             Prodotto prodotto = (Prodotto) row;
             switch (columnIndex) {
@@ -120,19 +94,6 @@ public class TableModel extends AbstractTableModel {
     public void isClicked(List<?> data, int rowIndex) {
         Object row = data.get(rowIndex);
         int counter = 0;
-        if (row instanceof Fornitore) {
-            Fornitore fornitore = (Fornitore) row;
-                if (fornitore.getSelected()) {
-                    counter++;
-                }
-            if (counter != 0) {
-                GestioneFornitoriFrame.getModifica().setEnabled(true);
-                GestioneFornitoriFrame.getRimuovi().setEnabled(true);
-            } else {
-                GestioneFornitoriFrame.getModifica().setEnabled(false);
-                GestioneFornitoriFrame.getRimuovi().setEnabled(false);
-            }
-        }
 
         if (row instanceof Prodotto) {
             Prodotto prodotto = (Prodotto) row;

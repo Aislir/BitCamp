@@ -1,5 +1,6 @@
 package view;
 
+import model.Fornitore;
 import model.Marca;
 import model.TipoProdotto;
 
@@ -33,7 +34,7 @@ public class GestioneProdottiFrame extends JPanel{
     //ComboBox per tipo, marca e fornitore
     JComboBox<TipoProdotto> tipoBox = new JComboBox<>(TipoProdotto.values());
     JComboBox<Marca> marcaBox = new JComboBox<>(Marca.values());
-    JComboBox<String> fornitoreBox = new JComboBox<>();
+    JComboBox<Fornitore> fornitoreBox = new JComboBox<>(Fornitore.values());
 
     //elementi per pannello per aggiunta elementi
     JPanel aggiungiPanel = new JPanel();
@@ -62,7 +63,7 @@ public class GestioneProdottiFrame extends JPanel{
     JLabel modificaMarcaLabel = new JLabel("Marca:");
     JLabel modificaTipoLabel = new JLabel("Tipo:");
     JLabel idModificaProdottoLabel = new JLabel("Id:");
-    JComboBox<String> modificaFornitoreBox = new JComboBox();
+    JComboBox<Fornitore> modificaFornitoreBox = new JComboBox(Fornitore.values());
     JComboBox<Marca> modificaMarcaBox = new JComboBox(Marca.values());
     JComboBox<TipoProdotto> modificaTipoBox = new JComboBox(TipoProdotto.values());
     JTextField modificaNomeField = new JTextField(20);
@@ -194,7 +195,7 @@ public class GestioneProdottiFrame extends JPanel{
     public JTextField getIdModificaProdottoField() {return idModificaProdottoField;}
     public JComboBox<TipoProdotto> getModificaTipoBox() {return modificaTipoBox;}
     public JComboBox<Marca> getModificaMarcaBox() {return modificaMarcaBox;}
-    public JComboBox<String> getModificaFornitoreBox() {return modificaFornitoreBox;}
+    public JComboBox<Fornitore> getModificaFornitoreBox() {return modificaFornitoreBox;}
 
 
     //metodi get e set per aggiungi panel
@@ -205,7 +206,7 @@ public class GestioneProdottiFrame extends JPanel{
     public JTextField getContenutoProdottoField() {return contenutoProdottoField;}
     public JComboBox<TipoProdotto> getTipoProdotto() {return tipoBox;}
     public JComboBox<Marca> getMarcaProdotto() {return marcaBox;}
-    public JComboBox<String> getFornitoreProdotto() {return fornitoreBox;}
+    public JComboBox<Fornitore> getFornitoreProdotto() {return fornitoreBox;}
 
     public void setAggiungiPanel(JPanel aggiungiPanel) {this.aggiungiPanel = aggiungiPanel;}
     public void setNomeProdottoField(JTextField textField) {this.nomeProdottoField = textField;}

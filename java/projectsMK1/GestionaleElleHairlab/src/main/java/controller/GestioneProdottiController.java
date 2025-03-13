@@ -13,7 +13,6 @@ import java.util.List;
 public class GestioneProdottiController {
     String[] colVisProdotto = {"", "Prodotto", "Codice", "Tipo", "Contenuto", "Marca", "Fornitore"};
     ProdottoDAO prodottoDAO = new ProdottoDAO();
-    FornitoreDAO fornitoreDAO = new FornitoreDAO();
     GestioneProdottiFrame gestioneProdottiFrame = new GestioneProdottiFrame();
     public GestioneProdottiController() {
         initializeBtn();
@@ -25,7 +24,6 @@ public class GestioneProdottiController {
         modificaProdottoPanel();
         rimuoviProdottoPanel();
         visualizzaProdottoPanel();
-        ricaricaFornitoreBox();
         //metodi per aggiungiPanel
         addProdotto();
         modificaProdotto();
@@ -51,7 +49,7 @@ public class GestioneProdottiController {
             List<Prodotto> retrieveList = (List<Prodotto>) model.getData();
             List<Prodotto> prodottiSelezionati = new ArrayList<>();
             for (Prodotto prodotto : retrieveList) {
-               if (prodotto.getSelected()){
+               if (prodotto.getIsSelected()){
                    prodottiSelezionati.add(prodotto);
                }
             }
@@ -73,7 +71,7 @@ public class GestioneProdottiController {
             try {
                 List<Prodotto> retrieveList = (List<Prodotto>) model.getData();
                 for (Prodotto prodotto : retrieveList) {
-                    if (prodotto.getSelected()){
+                    if (prodotto.getIsSelected()){
                         eliminaList.add(prodotto);
                     }
                 }
@@ -107,9 +105,9 @@ public class GestioneProdottiController {
             String codice = gestioneProdottiFrame.getCodiceProdottoField().getText();
             double contenuto = Double.parseDouble(gestioneProdottiFrame.getContenutoProdottoField().getText());
             Marca marca = (Marca) gestioneProdottiFrame.getMarcaProdotto().getSelectedItem();
-            String nomeFornitore = (String) gestioneProdottiFrame.getFornitoreProdotto().getSelectedItem();
-            Prodotto prodotto = new Prodotto(nome, codice, tipoProdotto, contenuto, marca);
-            prodottoDAO.addProdotto(prodotto, nomeFornitore);
+            Fornitore fornitore = (Fornitore) gestioneProdottiFrame.getFornitoreProdotto().getSelectedItem();
+
+            prodottoDAO.addProdotto(nome, tipoProdotto, codice, contenuto, marca, fornitore);
 
             puliziaCampi();
             ricaricaRisultati();
@@ -167,6 +165,7 @@ public class GestioneProdottiController {
         gestioneProdottiFrame.getContenutoProdottoField().setText("");
         gestioneProdottiFrame.getTipoProdotto().setSelectedItem(TipoProdotto.NULL);
         gestioneProdottiFrame.getMarcaProdotto().setSelectedItem(Marca.NULL);
+        gestioneProdottiFrame.getFornitoreProdotto().setSelectedItem(Fornitore.NULL);
 
         //pulizia campi modifica panel
         gestioneProdottiFrame.getIdModificaProdottoField().setText("");
@@ -175,6 +174,7 @@ public class GestioneProdottiController {
         gestioneProdottiFrame.getModificaContenutoField().setText("");
         gestioneProdottiFrame.getModificaMarcaBox().setSelectedItem(Marca.NULL);
         gestioneProdottiFrame.getModificaTipoBox().setSelectedItem(Marca.NULL);
+        gestioneProdottiFrame.getModificaFornitoreBox().setSelectedItem(Fornitore.NULL);
     }
 
     private void passaggioValoriProdottoAiFieldPerModifica(Prodotto prodotto){
@@ -186,14 +186,6 @@ public class GestioneProdottiController {
         gestioneProdottiFrame.getModificaMarcaBox().setSelectedItem(prodotto.getMarca());
         gestioneProdottiFrame.getModificaFornitoreBox().setSelectedItem(prodotto.getFornitore());
 
-    }
-
-    private void ricaricaFornitoreBox(){
-        List<Fornitore> fornitoreList = fornitoreDAO.getAllFornitore();
-        for (Fornitore fornitore : fornitoreList) {
-            gestioneProdottiFrame.getFornitoreProdotto().addItem(fornitore.getNome());
-            gestioneProdottiFrame.getModificaFornitoreBox().addItem(fornitore.getNome());
-        }
     }
 
     public void disableModificaRimuoviBtn(){

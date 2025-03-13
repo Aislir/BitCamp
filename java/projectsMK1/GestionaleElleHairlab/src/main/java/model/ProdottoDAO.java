@@ -7,20 +7,19 @@ import java.util.List;
 
 public class ProdottoDAO{
     private EntityManager em;
-    FornitoreDAO fornitoreDAO = new FornitoreDAO();
 
-    public void addProdotto(Prodotto prodotto, String nome) {
+    public void addProdotto(String nome, TipoProdotto tipoProdotto, String codice, double contenuto, Marca marca, Fornitore fornitore) {
         em = JPAUtil.getEntityManager();
-        Fornitore fornitore = null;
         try{
             em.getTransaction().begin();
-            String hql = "FROM Fornitore F WHERE F.nome = :nome";
-            Query query = em.createQuery(hql, Fornitore.class);
-            query.setParameter("nome", nome);
+            Prodotto prodotto = new Prodotto();
+            prodotto.setNome(nome);
+            prodotto.setTipo(tipoProdotto);
+            prodotto.setCodice(codice);
+            prodotto.setContenuto(contenuto);
+            prodotto.setMarca(marca);
+            prodotto.setFornitore(fornitore);
 
-            fornitore = (Fornitore) query.getResultList().getFirst();
-            System.out.println(fornitore.getNome());
-            prodotto.addFornitore(fornitore);
             em.persist(prodotto);
             em.getTransaction().commit();
         } catch (Exception e) {
@@ -57,7 +56,6 @@ public class ProdottoDAO{
     public void updateProdotto(int id, String nomeProdotto, String codice, TipoProdotto tipo, double contenuto, Marca marca, String nome) {
         em = JPAUtil.getEntityManager();
         Prodotto prodotto = null;
-        Fornitore fornitore = null;
         try{
             em.getTransaction().begin();
             prodotto = em.find(Prodotto.class, id);
@@ -66,12 +64,10 @@ public class ProdottoDAO{
             prodotto.setTipo(tipo);
             prodotto.setContenuto(contenuto);
             prodotto.setMarca(marca);
-            String hql = "FROM Fornitore F WHERE F.nome = :nome";
-            Query query = em.createQuery(hql, Fornitore.class);
-            query.setParameter("nome", nome);
+            //String hql = "FROM Fornitore F WHERE F.nome = :nome";
+            //Query query = em.createQuery(hql, Fornitore.class);
+            //query.setParameter("nome", nome);
 
-            fornitore = (Fornitore) query.getResultList().getFirst();
-            prodotto.setFornitore(fornitore);
             em.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
@@ -89,12 +85,8 @@ public class ProdottoDAO{
 
         try{
             em.getTransaction().begin();
-            for (Prodotto prodotto : prodottiList){
-                Prodotto matchingProdotto = em.find(Prodotto.class, prodotto.getId());
-                Fornitore fornitore = em.find(Fornitore.class, prodotto.getFornitore().getId());
-                fornitore.getProdotti().remove(matchingProdotto);
-                em.remove(matchingProdotto);
-            }
+
+
             em.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();

@@ -3,8 +3,6 @@
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>model.Fornitore</class>
-        <class>model.ContattoFornitore</class>
         <class>model.DDT</class>
         <class>model.Prodotto</class>
         <class>model.StoricoMagazzino</class>

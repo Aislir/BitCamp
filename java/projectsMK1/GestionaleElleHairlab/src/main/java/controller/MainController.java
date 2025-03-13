@@ -3,8 +3,6 @@ package controller;
 import view.*;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class MainController extends JFrame{
     CardLayout cardLayout = new CardLayout();
@@ -14,7 +12,6 @@ public class MainController extends JFrame{
     JButton magazzinoButton = new JButton("Magazzino");
     JButton gestioneProdottiButton = new JButton("Gestione Prodotti");
     JButton DDTButton = new JButton("DDT");
-    JButton gestioneFornitoriButton = new JButton("Gestione Fornitori");
     JButton storicoButton = new JButton("Storico");
 
     public MainController() {
@@ -28,7 +25,6 @@ public class MainController extends JFrame{
         buttonsMenu.add(magazzinoButton);
         buttonsMenu.add(DDTButton);
         buttonsMenu.add(gestioneProdottiButton);
-        buttonsMenu.add(gestioneFornitoriButton);
         buttonsMenu.add(storicoButton);
 
         cardPanel.setLayout(cardLayout);
@@ -51,14 +47,6 @@ public class MainController extends JFrame{
             MagazzinoController magazzinoController = new MagazzinoController();
             cardPanel.add(magazzinoController.magazzinoFrame, "magazzino");
             cardLayout.show(cardPanel, "magazzino");
-            cardPanel.revalidate();
-            cardPanel.repaint();
-
-        });
-        gestioneFornitoriButton.addActionListener(e -> {
-            FornitoriController gestioneFornitori = new FornitoriController();
-            cardPanel.add(gestioneFornitori.gestioneFornitoriFrame, "gestioneFornitori");
-            cardLayout.show(cardPanel, "gestioneFornitori");
             cardPanel.revalidate();
             cardPanel.repaint();
 

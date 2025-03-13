@@ -11,8 +11,9 @@ import java.time.LocalDateTime;
 public class StoricoMagazzino {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "storico_generator")
+    @SequenceGenerator(name = "storico_generator", sequenceName = "storico_seq")
+    private long id;
     @Enumerated(EnumType.STRING)
     private TipoMovimento tipoMovimento;
     private LocalDateTime dataMovimento;
@@ -35,7 +36,7 @@ public class StoricoMagazzino {
     }
 
     public Prodotto getProdotto() {return prodotto;}
-    public int getStoricoMagazzino_id() {return id;}
+    public long getStoricoMagazzino_id() {return id;}
     public TipoMovimento getTipoMovimento() {return tipoMovimento;}
     public LocalDateTime getDataMovimento() {return dataMovimento;}
     public int getQuantita() {return quantita;}

@@ -1,6 +1,7 @@
 package model;
 
 public enum TipoMovimento {
+    NULL(""),
     ENTRATA("Entrata"),
     USCITA("Uscita");
 
